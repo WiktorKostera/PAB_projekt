@@ -1,0 +1,12 @@
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\bin\Debug\net6.0\RunningEventsSystem.SharedKernel.deps.json
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\bin\Debug\net6.0\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\bin\Debug\net6.0\RunningEventsSystem.SharedKernel.pdb
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.AssemblyInfo.cs
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\refint\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.pdb
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\ref\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.csproj.AssemblyReference.cache

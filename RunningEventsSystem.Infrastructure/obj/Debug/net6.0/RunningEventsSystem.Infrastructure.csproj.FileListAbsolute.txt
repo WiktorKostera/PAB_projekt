@@ -1,0 +1,17 @@
+C:\Users\wikto\Desktop\Studia\MAGISTERSKIE\SEMESTR 2\Programowanie aplikacji biznesowych\Projekt_RunningEventsSystem\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wikto\Desktop\Studia\MAGISTERSKIE\SEMESTR 2\Programowanie aplikacji biznesowych\Projekt_RunningEventsSystem\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\bin\Debug\net6.0\RunningEventsSystem.Infrastructure.deps.json
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\bin\Debug\net6.0\RunningEventsSystem.Infrastructure.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\bin\Debug\net6.0\RunningEventsSystem.Infrastructure.pdb
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\bin\Debug\net6.0\RunningEventsSystem.Domain.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\bin\Debug\net6.0\RunningEventsSystem.Domain.pdb
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningE.A1B0EBDF.Up2Date
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\refint\RunningEventsSystem.Infrastructure.dll
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\RunningEventsSystem.Infrastructure.pdb
+C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Infrastructure\obj\Debug\net6.0\ref\RunningEventsSystem.Infrastructure.dll
