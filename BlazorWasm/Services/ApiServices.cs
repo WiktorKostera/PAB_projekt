@@ -65,8 +65,8 @@ public interface IRegistrationApiService
     Task<List<RegistrationDto>> GetByUserAsync(int userId);
     Task<List<RegistrationDto>> GetByEventAsync(int eventId);
     Task<HttpResponseMessage> CreateAsync(CreateRegistrationDto dto);
-    Task CancelByUserAndEventAsync(int userId, int eventId);
-    Task PayAsync(int registrationId);
+    Task<HttpResponseMessage> CancelByUserAndEventAsync(int userId, int eventId);
+    Task<HttpResponseMessage> PayAsync(int registrationId);
 }
 
 public class RegistrationApiService : IRegistrationApiService

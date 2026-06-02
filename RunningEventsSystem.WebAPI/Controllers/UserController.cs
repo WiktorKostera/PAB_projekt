@@ -24,6 +24,23 @@ public class UserController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id }, null);
     }
 
+    [HttpPut("{id}")]
+    public IActionResult Update(int id, [FromBody] UpdateUserDto dto)
+    {
+        if (id != dto.Id)
+            return BadRequest("Id param is not valid");
+
+        _userService.Update(dto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+        _userService.Delete(id);
+        return NoContent();
+    }
+
     [HttpPost("login")]
     public ActionResult<LoginResultDto> Login([FromBody] LoginDto dto)
     {

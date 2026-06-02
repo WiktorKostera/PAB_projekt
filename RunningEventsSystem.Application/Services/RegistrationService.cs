@@ -9,6 +9,17 @@ public class RegistrationService : IRegistrationService
 	private readonly IRunningEventsUnitOfWork _uow;
 	public RegistrationService(IRunningEventsUnitOfWork uow) { _uow = uow; }
 
+	public List<RegistrationDto> GetAll() =>
+		_uow.RegistrationRepository
+			.GetAll()
+			.Select(MapToDto).ToList();
+
+	public RegistrationDto GetById(int id)
+	{
+		var reg = _uow.RegistrationRepository.Get(id) ?? throw new NotFoundException("Registration not found");
+		return MapToDto(reg);
+	}
+
 	public List<RegistrationDto> GetByEvent(int eventId) =>
 		_uow.RegistrationRepository
 			.GetByEventWithDetails(eventId)
@@ -58,9 +69,8 @@ public class RegistrationService : IRegistrationService
 
 	public void CancelByUserAndEvent(int userId, int eventId)
 	{
-		var reg = _uow.RegistrationRepository
-			.Find(r => r.UserId == userId && r.EventId == eventId && r.Status != RegistrationStatus.Cancelled)
-			.FirstOrDefault() ?? throw new NotFoundException("Registration not found");
+		var reg = _uow.RegistrationRepository.GetActiveByUserAndEvent(userId, eventId)
+			?? throw new NotFoundException("Registration not found");
 
 		reg.Status = RegistrationStatus.Cancelled;
 		reg.CancelledAt = DateTime.UtcNow;

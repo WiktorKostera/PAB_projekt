@@ -37,4 +37,10 @@ public class RegistrationRepository : Repository<Registration>, IRegistrationRep
             .OrderByDescending(x => x.RegistrationDate)
             .ToList();
     }
+
+    public Registration? GetActiveByUserAndEvent(int userId, int eventId)
+    {
+        return ((RunningEventsDbContext)_context).Registrations
+            .FirstOrDefault(x => x.UserId == userId && x.EventId == eventId && x.Status != RegistrationStatus.Cancelled);
+    }
 }

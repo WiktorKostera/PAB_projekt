@@ -185,4 +185,12 @@ C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\obj\Debug\
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\obj\Debug\net6.0\RunningEventsSystem.WebAPI.pdb
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\obj\Debug\net6.0\RunningEventsSystem.WebAPI.genruntimeconfig.cache
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\obj\Debug\net6.0\ref\RunningEventsSystem.WebAPI.dll
-C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.WebAPI\bin\Debug\net6.0\Serilog.Sinks.File.dll

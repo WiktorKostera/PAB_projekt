@@ -49,7 +49,8 @@ public class DataSeeder
                     RegistrationDeadline = DateTime.Now.AddMonths(1),
                     MaxParticipants = 100,
                     EntryFee = 80,
-                    IsActive = true
+                    IsActive = true,
+                    ImageUrl = "images/event-marathon.jpg"
                 },
                 new Event
                 {
@@ -62,7 +63,8 @@ public class DataSeeder
                     RegistrationDeadline = DateTime.Now.AddMonths(2),
                     MaxParticipants = 50,
                     EntryFee = 60,
-                    IsActive = true
+                    IsActive = true,
+                    ImageUrl = "images/event-night-run.jpg"
                 },
                 // przeszłe - mają wyniki
                 new Event
@@ -76,7 +78,8 @@ public class DataSeeder
                     RegistrationDeadline = DateTime.Now.AddMonths(-3),
                     MaxParticipants = 200,
                     EntryFee = 50,
-                    IsActive = false
+                    IsActive = false,
+                    ImageUrl = "images/event-half-marathon.jpg"
                 },
                 new Event
                 {
@@ -89,11 +92,35 @@ public class DataSeeder
                     RegistrationDeadline = DateTime.Now.AddMonths(-2),
                     MaxParticipants = 150,
                     EntryFee = 40,
-                    IsActive = false
+                    IsActive = false,
+                    ImageUrl = "images/event-10k.jpg"
                 }
             };
             _dbContext.Events.AddRange(events);
             _dbContext.SaveChanges();
+        }
+        else
+        {
+            var eventImages = new Dictionary<int, string>
+            {
+                [1] = "images/event-marathon.jpg",
+                [2] = "images/event-night-run.jpg",
+                [3] = "images/event-half-marathon.jpg",
+                [4] = "images/event-10k.jpg"
+            };
+
+            var changed = false;
+            foreach (var ev in _dbContext.Events)
+            {
+                if (string.IsNullOrWhiteSpace(ev.ImageUrl) && eventImages.TryGetValue(ev.Id, out var imageUrl))
+                {
+                    ev.ImageUrl = imageUrl;
+                    changed = true;
+                }
+            }
+
+            if (changed)
+                _dbContext.SaveChanges();
         }
 
         // REJESTRACJE dla przeszłych eventów

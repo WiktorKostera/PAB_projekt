@@ -12,6 +12,14 @@ public class RegistrationController : ControllerBase
     public RegistrationController(IRegistrationService registrationService)
     { _registrationService = registrationService; }
 
+    [HttpGet]
+    public ActionResult<IEnumerable<RegistrationDto>> GetAll()
+        => Ok(_registrationService.GetAll());
+
+    [HttpGet("{id}")]
+    public ActionResult<RegistrationDto> GetById(int id)
+        => Ok(_registrationService.GetById(id));
+
     [HttpGet("event/{eventId}")]
     public ActionResult<IEnumerable<RegistrationDto>> GetByEvent(int eventId)
         => Ok(_registrationService.GetByEvent(eventId));

@@ -11,7 +11,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 // HttpClient pointing at our WebAPI
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("https://localhost:7001/")
+    BaseAddress = new Uri("https://localhost:7225/")
 });
 
 // Application services

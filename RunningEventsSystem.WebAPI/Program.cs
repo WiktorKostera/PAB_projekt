@@ -7,9 +7,29 @@ using RunningEventsSystem.Infrastructure;
 using RunningEventsSystem.Infrastructure.Repositories;
 using RunningEventsSystem.SharedKernel.Dto;
 using RunningEventsSystem.WebAPI.Middleware;
+using Serilog;
+using Serilog.Events;
 
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+    .WriteTo.Logger(lc => lc
+        .Filter.ByExcluding(e => e.Level == LogEventLevel.Error || e.Level == LogEventLevel.Fatal)
+        .WriteTo.File(
+            path: "Logs/webapi-.log",
+            rollingInterval: RollingInterval.Day,
+            outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
+    .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Error || e.Level == LogEventLevel.Fatal)
+        .WriteTo.File(
+            path: "Logs/webapi-errors-.log",
+            rollingInterval: RollingInterval.Day,
+            outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}"))
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog();
 
 builder.Services.AddControllers();
 

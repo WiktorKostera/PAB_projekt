@@ -163,6 +163,26 @@
   },
   {
     "ContainingType": "RunningEventsSystem.WebAPI.Controllers.RegistrationController",
+    "Method": "GetAll",
+    "RelativePath": "Registration",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RunningEventsSystem.SharedKernel.Dto.RegistrationDto, RunningEventsSystem.SharedKernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.RegistrationController",
     "Method": "Create",
     "RelativePath": "Registration",
     "HttpMethod": "POST",
@@ -176,6 +196,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.RegistrationController",
+    "Method": "GetById",
+    "RelativePath": "Registration/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RunningEventsSystem.SharedKernel.Dto.RegistrationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "RunningEventsSystem.WebAPI.Controllers.RegistrationController",
@@ -305,6 +351,26 @@
   },
   {
     "ContainingType": "RunningEventsSystem.WebAPI.Controllers.ResultController",
+    "Method": "GetAll",
+    "RelativePath": "Result",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RunningEventsSystem.SharedKernel.Dto.ResultDto, RunningEventsSystem.SharedKernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.ResultController",
     "Method": "Create",
     "RelativePath": "Result",
     "HttpMethod": "POST",
@@ -314,6 +380,69 @@
       {
         "Name": "dto",
         "Type": "RunningEventsSystem.SharedKernel.Dto.CreateResultDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.ResultController",
+    "Method": "GetById",
+    "RelativePath": "Result/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RunningEventsSystem.SharedKernel.Dto.ResultDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.ResultController",
+    "Method": "Update",
+    "RelativePath": "Result/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "RunningEventsSystem.SharedKernel.Dto.UpdateResultDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.ResultController",
+    "Method": "Delete",
+    "RelativePath": "Result/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -406,6 +535,43 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "User/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "RunningEventsSystem.SharedKernel.Dto.UpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RunningEventsSystem.WebAPI.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "RunningEventsSystem.WebAPI.Controllers.UserController",
