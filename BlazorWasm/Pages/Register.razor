@@ -1,0 +1,161 @@
+@page "/register"
+@inject IUserApiService UserService
+@inject SessionService Session
+@inject NavigationManager Nav
+@inject ISnackbar Snackbar
+
+<PageTitle>Rejestracja – RunningEvents</PageTitle>
+
+<MudGrid Justify="Justify.Center" Class="mt-8">
+    <MudItem xs="12" sm="8" md="5">
+        <MudCard Elevation="4">
+            <MudCardHeader>
+                <CardHeaderAvatar>
+                    <MudAvatar Color="Color.Secondary" Size="Size.Large">
+                        <MudIcon Icon="@Icons.Material.Filled.PersonAdd" />
+                    </MudAvatar>
+                </CardHeaderAvatar>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Utwórz konto</MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">Dołącz do społeczności biegaczy</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudForm @ref="_form" @bind-IsValid="_isValid">
+                    <MudGrid>
+                        <MudItem xs="6">
+                            <MudTextField T="string"
+                                          Label="Imię"
+                                          @bind-Value="_dto.FirstName"
+                                          Required="true"
+                                          RequiredError="Imię jest wymagane"
+                                          Validation="@(new Func<string, string?>(v => string.IsNullOrWhiteSpace(v) ? "Imię jest wymagane" : v.Length < 2 ? "Min. 2 znaki" : null))" />
+                        </MudItem>
+                        <MudItem xs="6">
+                            <MudTextField T="string"
+                                          Label="Nazwisko"
+                                          @bind-Value="_dto.LastName"
+                                          Required="true"
+                                          RequiredError="Nazwisko jest wymagane"
+                                          Validation="@(new Func<string, string?>(v => string.IsNullOrWhiteSpace(v) ? "Nazwisko jest wymagane" : v.Length < 2 ? "Min. 2 znaki" : null))" />
+                        </MudItem>
+                    </MudGrid>
+
+                    <MudTextField T="string"
+                                  Label="Adres e-mail"
+                                  @bind-Value="_dto.Email"
+                                  InputType="InputType.Email"
+                                  Required="true"
+                                  RequiredError="E-mail jest wymagany"
+                                  Validation="@(new Func<string, string?>(ValidateEmail))"
+                                  Adornment="Adornment.Start"
+                                  AdornmentIcon="@Icons.Material.Filled.Email"
+                                  Class="mt-3" />
+
+                    <MudTextField T="string"
+                                  Label="Hasło"
+                                  @bind-Value="_dto.Password"
+                                  InputType="InputType.Password"
+                                  Required="true"
+                                  RequiredError="Hasło jest wymagane"
+                                  Validation="@(new Func<string, string?>(ValidatePassword))"
+                                  Adornment="Adornment.Start"
+                                  AdornmentIcon="@Icons.Material.Filled.Lock"
+                                  Class="mt-3" />
+
+                    <MudTextField T="string"
+                                  Label="Powtórz hasło"
+                                  @bind-Value="_confirmPassword"
+                                  InputType="InputType.Password"
+                                  Required="true"
+                                  Validation="@(new Func<string, string?>(ValidateConfirm))"
+                                  Adornment="Adornment.Start"
+                                  AdornmentIcon="@Icons.Material.Filled.LockOpen"
+                                  Class="mt-3" />
+                </MudForm>
+
+                @if (!string.IsNullOrEmpty(_errorMessage))
+                {
+                    <MudAlert Severity="Severity.Error" Class="mt-3">@_errorMessage</MudAlert>
+                }
+            </MudCardContent>
+            <MudCardActions Class="px-4 pb-4">
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Secondary"
+                           FullWidth="true"
+                           OnClick="HandleRegister"
+                           Disabled="_loading"
+                           Size="Size.Large">
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2" />
+                    }
+                    Zarejestruj się
+                </MudButton>
+            </MudCardActions>
+        </MudCard>
+        <MudText Align="Align.Center" Class="mt-3">
+            Masz już konto?
+            <MudLink Href="/login">Zaloguj się</MudLink>
+        </MudText>
+    </MudItem>
+</MudGrid>
+
+@code {
+    private readonly CreateUserDto _dto = new();
+    private string _confirmPassword = string.Empty;
+    private MudForm _form = null!;
+    private bool _isValid;
+    private bool _loading;
+    private string? _errorMessage;
+
+    private string? ValidateEmail(string email)
+    {
+        if (string.IsNullOrWhiteSpace(email)) return "E-mail jest wymagany";
+        if (!email.Contains('@') || !email.Contains('.')) return "Podaj poprawny adres e-mail";
+        return null;
+    }
+
+    private string? ValidatePassword(string password)
+    {
+        if (string.IsNullOrWhiteSpace(password)) return "Hasło jest wymagane";
+        if (password.Length < 6) return "Hasło musi mieć co najmniej 6 znaków";
+        return null;
+    }
+
+    private string? ValidateConfirm(string confirm)
+    {
+        if (confirm != _dto.Password) return "Hasła nie są identyczne";
+        return null;
+    }
+
+    private async Task HandleRegister()
+    {
+        await _form.Validate();
+        if (!_isValid) return;
+
+        _loading = true;
+        _errorMessage = null;
+
+        try
+        {
+            await UserService.RegisterAsync(_dto);
+            // Auto-login after register
+            var loginResult = await UserService.LoginAsync(new LoginDto { Email = _dto.Email, Password = _dto.Password });
+            if (loginResult != null)
+            {
+                Session.Login(loginResult);
+                Snackbar.Add("Konto utworzone! Witaj na pokładzie 🏃", Severity.Success);
+                Nav.NavigateTo("/");
+            }
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = "Błąd rejestracji: " + ex.Message;
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+}

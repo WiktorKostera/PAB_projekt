@@ -21,3 +21,16 @@ C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Domain\obj\Debug\
 C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.pdb
 C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Domain\obj\Debug\net6.0\ref\RunningEventsSystem.Domain.dll
 C:\Users\wikto\Desktop\RunningEventsSystem\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\bin\Debug\net6.0\RunningEventsSystem.Domain.deps.json
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\bin\Debug\net6.0\RunningEventsSystem.Domain.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\bin\Debug\net6.0\RunningEventsSystem.Domain.pdb
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.AssemblyInfo.cs
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.sourcelink.json
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\refint\RunningEventsSystem.Domain.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.pdb
+C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\ref\RunningEventsSystem.Domain.dll

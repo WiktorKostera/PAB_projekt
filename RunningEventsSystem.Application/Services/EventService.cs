@@ -1,8 +1,9 @@
-﻿using RunningEventsSystem.Application.Services;
+﻿using Microsoft.Extensions.Logging;
+using RunningEventsSystem.Application.Services;
 using RunningEventsSystem.Domain.Contracts;
-using RunningEventsSystem.SharedKernel.Dto;
-using RunningEventsSystem.Domain.Models;
 using RunningEventsSystem.Domain.Exceptions;
+using RunningEventsSystem.Domain.Models;
+using RunningEventsSystem.SharedKernel.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,14 @@ public class EventService : IEventService
             Id = e.Id,
             Name = e.Name,
             City = e.City,
-            EventDate = e.EventDate
+            Location = e.Location,
+            Description = e.Description,
+            EventDate = e.EventDate,
+            RegistrationDeadline = e.RegistrationDeadline,
+            MaxParticipants = e.MaxParticipants,
+            EntryFee = e.EntryFee,
+            ImageUrl = e.ImageUrl,
+            IsActive = e.IsActive
         }).ToList();
     }
 
@@ -43,7 +51,14 @@ public class EventService : IEventService
             Id = eventEntity.Id,
             Name = eventEntity.Name,
             City = eventEntity.City,
-            EventDate = eventEntity.EventDate
+            Location = eventEntity.Location,
+            Description = eventEntity.Description,
+            EventDate = eventEntity.EventDate,
+            RegistrationDeadline = eventEntity.RegistrationDeadline,
+            MaxParticipants = eventEntity.MaxParticipants,
+            EntryFee = eventEntity.EntryFee,
+            ImageUrl = eventEntity.ImageUrl,
+            IsActive = eventEntity.IsActive
         };
     }
 

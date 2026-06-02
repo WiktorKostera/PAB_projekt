@@ -1,0 +1,43 @@
+@inherits LayoutComponentBase
+@inject SessionService Session
+@inject NavigationManager Nav
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Color="Color.Primary" Fixed="true" Elevation="4">
+        <MudIcon Icon="@Icons.Material.Filled.DirectionsRun" Class="mr-2" />
+        <MudText Typo="Typo.h6">RunningEvents</MudText>
+        <MudSpacer />
+        <MudButton Color="Color.Inherit" Href="/" StartIcon="@Icons.Material.Filled.Home">Biegi</MudButton>
+        @if (Session.IsLoggedIn)
+        {
+            <MudButton Color="Color.Inherit" Href="/my-registrations" StartIcon="@Icons.Material.Filled.ListAlt">Moje zapisy</MudButton>
+            <MudChip Color="Color.Secondary" Icon="@Icons.Material.Filled.Person" Size="Size.Small" Class="mx-2">
+                @Session.CurrentUser!.FullName
+            </MudChip>
+            <MudButton Color="Color.Inherit" StartIcon="@Icons.Material.Filled.Logout" OnClick="Logout">Wyloguj</MudButton>
+        }
+        else
+        {
+            <MudButton Color="Color.Inherit" Href="/login" StartIcon="@Icons.Material.Filled.Login">Zaloguj</MudButton>
+            <MudButton Color="Color.Inherit" Href="/register" StartIcon="@Icons.Material.Filled.PersonAdd">Zarejestruj</MudButton>
+        }
+    </MudAppBar>
+
+    <MudMainContent Style="padding-top: 80px;">
+        <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="py-4">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private void Logout()
+    {
+        Session.Logout();
+        Nav.NavigateTo("/");
+    }
+}

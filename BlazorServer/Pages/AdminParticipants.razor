@@ -1,0 +1,200 @@
+@page "/admin/participants"
+@inject IAdminApiService Api
+@inject DialogService DialogSvc
+@inject NotificationService NotifySvc
+@inject ILogger<AdminParticipants> Logger
+
+<PageTitle>Uczestnicy – Admin</PageTitle>
+
+<RadzenText TextStyle="TextStyle.H4" Style="font-weight:700;margin-bottom:24px;">👥 Zarządzanie uczestnikami</RadzenText>
+
+<!-- Filtry / wyszukiwanie -->
+<RadzenCard Style="margin-bottom:16px;padding:16px;">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;">
+        <RadzenTextBox @bind-Value="_searchText" Placeholder="Szukaj po imieniu lub e-mail..."
+                       Style="width:300px;" Change="@((_) => ApplyFilter())" />
+        <RadzenDropDown @bind-Value="_roleFilter" Data="@_roles" Placeholder="Wszystkie role"
+                        Style="width:180px;" Change="@((_) => ApplyFilter())" AllowClear="true" />
+        <RadzenDropDown @bind-Value="_sortField" Data="@_sortOptions" TextProperty="Label" ValueProperty="Field"
+                        Style="width:200px;" Change="@((_) => ApplyFilter())" />
+        <RadzenButton Text="Wyczyść" ButtonStyle="ButtonStyle.Light" Icon="clear" Click="ClearFilters" />
+    </div>
+</RadzenCard>
+
+@if (_loading)
+{
+    <RadzenProgressBar Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{
+    <RadzenDataGrid Data="@_filteredUsers" TItem="UserDto"
+                    AllowSorting="true" AllowPaging="true" PageSize="15"
+                    Style="border-radius:8px;overflow:hidden;">
+        <Columns>
+            <RadzenDataGridColumn TItem="UserDto" Property="Id" Title="ID" Width="60px" />
+            <RadzenDataGridColumn TItem="UserDto" Title="Imię i nazwisko" Width="200px">
+                <Template Context="u">
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <RadzenImage Path="images/avatar-placeholder.png" Style="width:32px;height:32px;border-radius:50%;object-fit:cover;" />
+                        <span style="font-weight:500;">@u.FullName</span>
+                    </div>
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="UserDto" Property="Email" Title="E-mail" />
+            <RadzenDataGridColumn TItem="UserDto" Property="Role" Title="Rola" Width="110px">
+                <Template Context="u">
+                    <RadzenBadge Text="@u.Role"
+                                 BadgeStyle="@(u.Role == "Admin" ? BadgeStyle.Warning : BadgeStyle.Info)" />
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="UserDto" Property="IsActive" Title="Aktywny" Width="100px">
+                <Template Context="u">
+                    @if (u.IsActive)
+                    {
+                        <RadzenBadge Text="Aktywny" BadgeStyle="BadgeStyle.Success" />
+                    }
+                    else
+                    {
+                        <RadzenBadge Text="Nieaktywny" BadgeStyle="BadgeStyle.Danger" />
+                    }
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="UserDto" Title="Akcje" Width="120px" Sortable="false">
+                <Template Context="u">
+                    <RadzenButton Icon="visibility" ButtonStyle="ButtonStyle.Light" Size="ButtonSize.Small"
+                                  Click="@(() => ShowUserDetails(u))" Style="margin-right:4px;" Title="Szczegóły" />
+                    <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small"
+                                  Click="@(() => ConfirmDelete(u))" Title="Usuń" />
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid>
+    <RadzenText TextStyle="TextStyle.Caption" Style="margin-top:8px;color:#888;">
+        Wyświetlono @_filteredUsers.Count z @_allUsers.Count uczestników
+    </RadzenText>
+}
+
+<!-- Panel szczegółów użytkownika -->
+@if (_selectedUser != null)
+{
+    <RadzenCard Style="margin-top:24px;padding:24px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <RadzenText TextStyle="TextStyle.H6">📋 Szczegóły: @_selectedUser.FullName</RadzenText>
+            <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Light" Click="@(() => _selectedUser = null)" />
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+                <RadzenLabel Text="E-mail" />
+                <RadzenText>@_selectedUser.Email</RadzenText>
+            </div>
+            <div>
+                <RadzenLabel Text="Rola" />
+                <RadzenText>@_selectedUser.Role</RadzenText>
+            </div>
+            <div>
+                <RadzenLabel Text="Status" />
+                <RadzenText>@(_selectedUser.IsActive ? "Aktywny" : "Nieaktywny")</RadzenText>
+            </div>
+            <div>
+                <RadzenLabel Text="Liczba zapisów" />
+                <RadzenText>@_userRegistrations.Count</RadzenText>
+            </div>
+        </div>
+
+        @if (_userRegistrations.Any())
+        {
+            <RadzenText TextStyle="TextStyle.Subtitle1" Style="margin-bottom:8px;">Zapisy na biegi:</RadzenText>
+            <RadzenDataGrid Data="@_userRegistrations" TItem="RegistrationDto" AllowPaging="true" PageSize="5" Dense="true">
+                <Columns>
+                    <RadzenDataGridColumn TItem="RegistrationDto" Property="EventName" Title="Bieg" />
+                    <RadzenDataGridColumn TItem="RegistrationDto" Property="RegistrationDate" Title="Data zapisu" Width="130px" FormatString="{0:dd.MM.yyyy}" />
+                    <RadzenDataGridColumn TItem="RegistrationDto" Property="Status" Title="Status" Width="120px" />
+                    <RadzenDataGridColumn TItem="RegistrationDto" Property="PaymentStatus" Title="Płatność" Width="110px" />
+                    <RadzenDataGridColumn TItem="RegistrationDto" Property="StartNumber" Title="Nr start." Width="90px" />
+                </Columns>
+            </RadzenDataGrid>
+        }
+    </RadzenCard>
+}
+
+@code {
+    private List<UserDto> _allUsers = new();
+    private List<UserDto> _filteredUsers = new();
+    private List<string> _roles = new() { "Participant", "Admin" };
+    private string _searchText = string.Empty;
+    private string? _roleFilter;
+    private string _sortField = "FullName";
+    private bool _loading = true;
+
+    private UserDto? _selectedUser;
+    private List<RegistrationDto> _userRegistrations = new();
+
+    private List<(string Label, string Field)> _sortOptions = new()
+    {
+        ("Nazwisko A-Z", "FullName"),
+        ("E-mail A-Z", "Email"),
+        ("Rola", "Role"),
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        Logger.LogInformation("Ładowanie listy uczestników (admin)");
+        _allUsers = await Api.GetUsersAsync();
+        ApplyFilter();
+        _loading = false;
+    }
+
+    private void ApplyFilter()
+    {
+        var q = _allUsers.AsEnumerable();
+
+        if (!string.IsNullOrEmpty(_searchText))
+            q = q.Where(u => u.FullName.Contains(_searchText, StringComparison.OrdinalIgnoreCase)
+                           || u.Email.Contains(_searchText, StringComparison.OrdinalIgnoreCase));
+
+        if (!string.IsNullOrEmpty(_roleFilter))
+            q = q.Where(u => u.Role == _roleFilter);
+
+        q = _sortField switch
+        {
+            "Email" => q.OrderBy(u => u.Email),
+            "Role" => q.OrderBy(u => u.Role),
+            _ => q.OrderBy(u => u.LastName)
+        };
+
+        _filteredUsers = q.ToList();
+    }
+
+    private void ClearFilters()
+    {
+        _searchText = string.Empty;
+        _roleFilter = null;
+        _sortField = "FullName";
+        ApplyFilter();
+    }
+
+    private async Task ShowUserDetails(UserDto user)
+    {
+        _selectedUser = user;
+        _userRegistrations = await Api.GetRegistrationsByUserAsync(user.Id);
+    }
+
+    private async Task ConfirmDelete(UserDto user)
+    {
+        var confirmed = await DialogSvc.Confirm(
+            $"Usunąć uczestnika „{user.FullName}"?",
+            "Potwierdzenie",
+            new ConfirmOptions { OkButtonText = "Usuń", CancelButtonText = "Anuluj" });
+
+        if (confirmed != true) return;
+
+        await Api.DeleteUserAsync(user.Id);
+        Logger.LogWarning("Usunięto użytkownika ID={Id}", user.Id);
+        NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Uczestnik usunięty", Duration = 3000 });
+
+        if (_selectedUser?.Id == user.Id) _selectedUser = null;
+        _allUsers = await Api.GetUsersAsync();
+        ApplyFilter();
+    }
+}

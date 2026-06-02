@@ -1,0 +1,295 @@
+@page "/event/{Id:int}"
+@inject IEventApiService EventService
+@inject IRegistrationApiService RegistrationService
+@inject IResultApiService ResultService
+@inject SessionService Session
+@inject NavigationManager Nav
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
+<PageTitle>@(_event?.Name ?? "Bieg") – RunningEvents</PageTitle>
+
+@if (_loading)
+{
+    <MudProgressLinear Indeterminate="true" Color="Color.Primary" />
+}
+else if (_event == null)
+{
+    <MudAlert Severity="Severity.Error">Nie znaleziono biegu.</MudAlert>
+}
+else
+{
+    <MudGrid>
+        <!-- Left: info o biegu -->
+        <MudItem xs="12" md="8">
+            @if (!string.IsNullOrEmpty(_event.ImageUrl))
+            {
+                <img src="@_event.ImageUrl" alt="@_event.Name"
+                     style="width:100%;max-height:320px;object-fit:cover;border-radius:12px;margin-bottom:16px;"
+                     onerror="this.style.display='none'" />
+            }
+            else
+            {
+                <div style="width:100%;height:200px;background:linear-gradient(135deg,#1565C0,#42A5F5);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                    <MudIcon Icon="@Icons.Material.Filled.DirectionsRun" Style="font-size:80px;color:white;opacity:.7;" />
+                </div>
+            }
+
+            <MudText Typo="Typo.h4" Style="font-weight:700;margin-bottom:8px;">@_event.Name</MudText>
+
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+                <MudChip Color="Color.Primary" Icon="@Icons.Material.Filled.LocationOn">@_event.City</MudChip>
+                <MudChip Color="Color.Info" Icon="@Icons.Material.Filled.Place">@_event.Location</MudChip>
+                @if (!_event.IsActive)
+                {
+                    <MudChip Color="Color.Error">Bieg nieaktywny</MudChip>
+                }
+            </div>
+
+            <MudText Typo="Typo.body1" Class="mb-4">@_event.Description</MudText>
+
+            <!-- Wyniki -->
+            @if (_results.Any())
+            {
+                <MudText Typo="Typo.h6" Class="mt-4 mb-2">🏆 Wyniki biegu</MudText>
+                <MudTable Items="@_results" Hover="true" Striped="true" Dense="true" Elevation="2">
+                    <HeaderContent>
+                        <MudTh>Miejsce</MudTh>
+                        <MudTh>Zawodnik</MudTh>
+                        <MudTh>Czas ukończenia</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd>
+                            @if (context.Place == 1)
+                            {
+                                <MudText Style="font-size:1.3rem;">🥇</MudText>
+                            }
+                            else if (context.Place == 2)
+                            {
+                                <MudText Style="font-size:1.3rem;">🥈</MudText>
+                            }
+                            else if (context.Place == 3)
+                            {
+                                <MudText Style="font-size:1.3rem;">🥉</MudText>
+                            }
+                            else
+                            {
+                                <MudText Style="font-weight:600;">@context.Place</MudText>
+                            }
+                        </MudTd>
+                        <MudTd>@context.UserFullName</MudTd>
+                        <MudTd>@context.FinishTime.ToString(@"hh\:mm\:ss")</MudTd>
+                    </RowTemplate>
+                </MudTable>
+            }
+        </MudItem>
+
+        <!-- Right: panel zapisu -->
+        <MudItem xs="12" md="4">
+            <MudPaper Elevation="4" Class="pa-4" Style="position:sticky;top:90px;">
+                <MudText Typo="Typo.h6" Class="mb-3">Szczegóły</MudText>
+
+                <MudList Dense="true">
+                    <MudListItem Icon="@Icons.Material.Filled.CalendarToday">
+                        <b>Data biegu:</b>&nbsp;@_event.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("pl-PL"))
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.EventBusy">
+                        <b>Zapisy do:</b>&nbsp;@_event.RegistrationDeadline.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("pl-PL"))
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.People">
+                        <b>Max uczestników:</b>&nbsp;@_event.MaxParticipants
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Payments">
+                        <b>Opłata startowa:</b>&nbsp;<span style="color:#FF6B35;font-weight:700;">@_event.EntryFee.ToString("C", new System.Globalization.CultureInfo("pl-PL"))</span>
+                    </MudListItem>
+                </MudList>
+
+                <MudDivider Class="my-3" />
+
+                @if (!Session.IsLoggedIn)
+                {
+                    <MudAlert Severity="Severity.Info" Dense="true" Class="mb-3">
+                        <MudLink Href="/login">Zaloguj się</MudLink>, żeby się zapisać.
+                    </MudAlert>
+                }
+                else if (_userRegistration != null)
+                {
+                    <!-- Już zapisany -->
+                    <MudAlert Severity="Severity.Success" Dense="true" Class="mb-2">
+                        Jesteś zapisany/a! 🎉
+                    </MudAlert>
+                    <MudText Typo="Typo.body2" Class="mb-1">
+                        Status płatności:
+                        <span class="@GetPaymentClass(_userRegistration.PaymentStatus)">@_userRegistration.PaymentStatus</span>
+                    </MudText>
+                    @if (_userRegistration.StartNumber.HasValue)
+                    {
+                        <MudText Typo="Typo.body2" Class="mb-2">Numer startowy: <b>@_userRegistration.StartNumber</b></MudText>
+                    }
+
+                    @if (_userRegistration.PaymentStatus == "Unpaid")
+                    {
+                        <MudButton Variant="Variant.Filled"
+                                   Color="Color.Success"
+                                   StartIcon="@Icons.Material.Filled.CreditCard"
+                                   FullWidth="true"
+                                   OnClick="HandlePay"
+                                   Disabled="_actionLoading"
+                                   Class="mb-2">
+                            Zapłać (@_event.EntryFee.ToString("C", new System.Globalization.CultureInfo("pl-PL")))
+                        </MudButton>
+                    }
+
+                    <MudButton Variant="Variant.Outlined"
+                               Color="Color.Error"
+                               StartIcon="@Icons.Material.Filled.Cancel"
+                               FullWidth="true"
+                               OnClick="HandleCancel"
+                               Disabled="_actionLoading">
+                        Wypisz się z biegu
+                    </MudButton>
+                }
+                else if (_event.RegistrationDeadline < DateTime.Now)
+                {
+                    <MudAlert Severity="Severity.Warning" Dense="true">
+                        Termin rejestracji minął.
+                    </MudAlert>
+                }
+                else if (!_event.IsActive)
+                {
+                    <MudAlert Severity="Severity.Warning" Dense="true">
+                        Ten bieg jest nieaktywny.
+                    </MudAlert>
+                }
+                else
+                {
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               StartIcon="@Icons.Material.Filled.AddCircle"
+                               FullWidth="true"
+                               OnClick="HandleRegister"
+                               Disabled="_actionLoading"
+                               Size="Size.Large">
+                        @if (_actionLoading)
+                        {
+                            <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2" />
+                        }
+                        Zapisz się na bieg
+                    </MudButton>
+                }
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    private EventDto? _event;
+    private RegistrationDto? _userRegistration;
+    private List<ResultDto> _results = new();
+    private bool _loading = true;
+    private bool _actionLoading;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _event = await EventService.GetByIdAsync(Id);
+        _results = await ResultService.GetByEventAsync(Id);
+
+        if (Session.IsLoggedIn)
+        {
+            var myRegs = await RegistrationService.GetByUserAsync(Session.CurrentUser!.Id);
+            _userRegistration = myRegs.FirstOrDefault(r => r.EventId == Id && r.Status != "Cancelled");
+        }
+
+        _loading = false;
+    }
+
+    private async Task HandleRegister()
+    {
+        _actionLoading = true;
+        try
+        {
+            var dto = new CreateRegistrationDto
+            {
+                UserId = Session.CurrentUser!.Id,
+                EventId = Id
+            };
+            var response = await RegistrationService.CreateAsync(dto);
+            if (response.IsSuccessStatusCode)
+            {
+                Snackbar.Add("Zapisano na bieg! 🏃", Severity.Success);
+                var myRegs = await RegistrationService.GetByUserAsync(Session.CurrentUser.Id);
+                _userRegistration = myRegs.FirstOrDefault(r => r.EventId == Id && r.Status != "Cancelled");
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                Snackbar.Add("Błąd zapisu: " + error, Severity.Error);
+            }
+        }
+        finally
+        {
+            _actionLoading = false;
+        }
+    }
+
+    private async Task HandlePay()
+    {
+        _actionLoading = true;
+        try
+        {
+            var response = await RegistrationService.PayAsync(_userRegistration!.Id);
+            if (response.IsSuccessStatusCode)
+            {
+                Snackbar.Add("Płatność zarejestrowana! ✅", Severity.Success);
+                _userRegistration.PaymentStatus = "Paid";
+            }
+            else
+            {
+                Snackbar.Add("Błąd płatności.", Severity.Error);
+            }
+        }
+        finally
+        {
+            _actionLoading = false;
+        }
+    }
+
+    private async Task HandleCancel()
+    {
+        var result = await DialogService.ShowMessageBox(
+            "Potwierdzenie",
+            "Czy na pewno chcesz wypisać się z tego biegu?",
+            yesText: "Tak, wypisz mnie",
+            cancelText: "Anuluj");
+
+        if (result != true) return;
+
+        _actionLoading = true;
+        try
+        {
+            var response = await RegistrationService.CancelByUserAndEventAsync(Session.CurrentUser!.Id, Id);
+            if (response.IsSuccessStatusCode)
+            {
+                Snackbar.Add("Wypisano z biegu.", Severity.Info);
+                _userRegistration = null;
+            }
+            else
+            {
+                Snackbar.Add("Błąd wypisywania.", Severity.Error);
+            }
+        }
+        finally
+        {
+            _actionLoading = false;
+        }
+    }
+
+    private string GetPaymentClass(string status) => status switch
+    {
+        "Paid" => "status-paid",
+        "Unpaid" => "status-unpaid",
+        _ => ""
+    };
+}

@@ -149,23 +149,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wikto\\.nuget\\packages\\": {},
+    "C:\\Users\\rados\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
       "projectName": "RunningEventsSystem.Domain",
-      "projectPath": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
-      "packagesPath": "C:\\Users\\wikto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\obj\\",
+      "projectPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
+      "packagesPath": "C:\\Users\\rados\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\wikto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rados\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

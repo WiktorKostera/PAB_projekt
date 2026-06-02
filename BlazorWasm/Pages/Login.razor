@@ -1,0 +1,127 @@
+@page "/login"
+@inject IUserApiService UserService
+@inject SessionService Session
+@inject NavigationManager Nav
+@inject ISnackbar Snackbar
+
+<PageTitle>Logowanie – RunningEvents</PageTitle>
+
+<MudGrid Justify="Justify.Center" Class="mt-8">
+    <MudItem xs="12" sm="8" md="5">
+        <MudCard Elevation="4">
+            <MudCardHeader>
+                <CardHeaderAvatar>
+                    <MudAvatar Color="Color.Primary" Size="Size.Large">
+                        <MudIcon Icon="@Icons.Material.Filled.DirectionsRun" />
+                    </MudAvatar>
+                </CardHeaderAvatar>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Zaloguj się</MudText>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">RunningEvents – Portal biegacza</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudForm @ref="_form" @bind-IsValid="_isValid">
+                    <MudTextField T="string"
+                                  Label="Adres e-mail"
+                                  @bind-Value="_dto.Email"
+                                  InputType="InputType.Email"
+                                  Required="true"
+                                  RequiredError="E-mail jest wymagany"
+                                  Validation="@(new Func<string, string?>(ValidateEmail))"
+                                  Adornment="Adornment.Start"
+                                  AdornmentIcon="@Icons.Material.Filled.Email"
+                                  Class="mb-4" />
+
+                    <MudTextField T="string"
+                                  Label="Hasło"
+                                  @bind-Value="_dto.Password"
+                                  InputType="InputType.Password"
+                                  Required="true"
+                                  RequiredError="Hasło jest wymagane"
+                                  Validation="@(new Func<string, string?>(ValidatePassword))"
+                                  Adornment="Adornment.Start"
+                                  AdornmentIcon="@Icons.Material.Filled.Lock"
+                                  Class="mb-2" />
+                </MudForm>
+
+                @if (!string.IsNullOrEmpty(_errorMessage))
+                {
+                    <MudAlert Severity="Severity.Error" Class="mt-2">@_errorMessage</MudAlert>
+                }
+            </MudCardContent>
+            <MudCardActions Class="px-4 pb-4">
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           FullWidth="true"
+                           OnClick="HandleLogin"
+                           Disabled="_loading"
+                           Size="Size.Large">
+                    @if (_loading)
+                    {
+                        <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2" />
+                    }
+                    Zaloguj się
+                </MudButton>
+            </MudCardActions>
+        </MudCard>
+        <MudText Align="Align.Center" Class="mt-3">
+            Nie masz konta?
+            <MudLink Href="/register">Zarejestruj się</MudLink>
+        </MudText>
+    </MudItem>
+</MudGrid>
+
+@code {
+    private readonly LoginDto _dto = new();
+    private MudForm _form = null!;
+    private bool _isValid;
+    private bool _loading;
+    private string? _errorMessage;
+
+    private string? ValidateEmail(string email)
+    {
+        if (string.IsNullOrWhiteSpace(email)) return "E-mail jest wymagany";
+        if (!email.Contains('@')) return "Podaj poprawny adres e-mail";
+        return null;
+    }
+
+    private string? ValidatePassword(string password)
+    {
+        if (string.IsNullOrWhiteSpace(password)) return "Hasło jest wymagane";
+        if (password.Length < 3) return "Hasło musi mieć co najmniej 3 znaki";
+        return null;
+    }
+
+    private async Task HandleLogin()
+    {
+        await _form.Validate();
+        if (!_isValid) return;
+
+        _loading = true;
+        _errorMessage = null;
+
+        try
+        {
+            var result = await UserService.LoginAsync(_dto);
+            if (result == null)
+            {
+                _errorMessage = "Nieprawidłowy e-mail lub hasło.";
+            }
+            else
+            {
+                Session.Login(result);
+                Snackbar.Add($"Witaj, {result.FirstName}!", Severity.Success);
+                Nav.NavigateTo("/");
+            }
+        }
+        catch
+        {
+            _errorMessage = "Błąd połączenia z serwerem. Sprawdź, czy API jest uruchomione.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+}

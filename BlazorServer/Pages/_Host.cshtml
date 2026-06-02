@@ -1,0 +1,34 @@
+@page "/"
+@namespace RunningEventsSystem.BlazorServer.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RunningEvents – Panel Administratora</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="RunningEventsSystem.BlazorServer.styles.css" />
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/default.css" />
+</head>
+<body>
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            Wystąpił błąd. Odśwież stronę.
+        </environment>
+        <environment include="Development">
+            Nieobsłużony wyjątek – sprawdź konsolę.
+        </environment>
+        <a href="" class="reload">Odśwież</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.server.js"></script>
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+</body>
+</html>

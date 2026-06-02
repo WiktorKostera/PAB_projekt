@@ -18,7 +18,7 @@ public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity :
         return _context.Set<TEntity>().Count();
     }
 
-    public TEntity Get(int id)
+    public TEntity? Get(int id)
     {
         return _context.Set<TEntity>().Find(id);
     }

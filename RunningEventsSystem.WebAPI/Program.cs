@@ -16,13 +16,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddFluentValidation(fv =>
-{
-    fv.RegisterValidatorsFromAssemblyContaining<CreateEventDtoValidator>();
-});
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateEventDtoValidator>();
 
 builder.Services.AddDbContext<RunningEventsDbContext>(options =>
-    options.UseSqlite("Data Source=runningevents.db"));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IValidator<CreateEventDto>, CreateEventDtoValidator>();
 builder.Services.AddScoped<IValidator<UpdateEventDto>, UpdateEventDtoValidator>();
@@ -36,8 +34,17 @@ builder.Services.AddScoped<IResultRepository, ResultRepository>();
 builder.Services.AddScoped<IRunningEventsUnitOfWork, RunningEventsUnitOfWork>();
 
 builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IRegistrationService, RegistrationService>();
+builder.Services.AddScoped<IResultService, ResultService>();
 builder.Services.AddScoped<DataSeeder>();
 builder.Services.AddScoped<ExceptionMiddleware>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 
 var app = builder.Build();
 
@@ -50,7 +57,7 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
-
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();

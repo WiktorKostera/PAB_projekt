@@ -13,6 +13,13 @@ public enum RegistrationStatus
     Cancelled
 }
 
+public enum PaymentStatus
+{
+    Unpaid,
+    Paid,
+    Refunded
+}
+
 public class Registration
 {
     public int Id { get; set; }
@@ -26,6 +33,10 @@ public class Registration
     public DateTime RegistrationDate { get; set; } = DateTime.UtcNow;
 
     public RegistrationStatus Status { get; set; }
+    public PaymentStatus PaymentStatus { get; set; } = PaymentStatus.Unpaid;
+    public DateTime? PaidAt { get; set; }
+    public decimal PaymentAmount { get; set; }
+    public DateTime? CancelledAt { get; set; }
 
     public int? StartNumber { get; set; }
 

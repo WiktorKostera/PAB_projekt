@@ -1,158 +1,39 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.webapi\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|solutionrelative:runningeventssystem.webapi\\controllers\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|c:\\users\\rados\\source\\repos\\c#\\pab_projekt\\blazorserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|solutionrelative:blazorserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|solutionrelative:runningeventssystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|c:\\users\\rados\\source\\repos\\c#\\pab_projekt\\blazorserver\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|solutionrelative:blazorserver\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.application\\validators\\createeventdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|solutionrelative:runningeventssystem.application\\validators\\createeventdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|c:\\users\\rados\\source\\repos\\c#\\pab_projekt\\blazorserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|solutionrelative:blazorserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.application\\validators\\updateeventdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|solutionrelative:runningeventssystem.application\\validators\\updateeventdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|c:\\users\\rados\\source\\repos\\c#\\pab_projekt\\blazorserver\\runningeventssystem.blazorserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{105D7F36-3198-1DC1-8ACC-EC047278B7B5}|BlazorServer\\RunningEventsSystem.BlazorServer.csproj|solutionrelative:blazorserver\\runningeventssystem.blazorserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.webapi\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|solutionrelative:runningeventssystem.webapi\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rados\\AppData\\Local\\Temp\\2e2bfb3a-a43a-4c70-ae79-4eac9fd700d5_RunningEventsSystem_BlazorProjects.zip.0d5\\BlazorServer\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.application\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|solutionrelative:runningeventssystem.application\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rados\\AppData\\Local\\Temp\\4ee670b9-4f10-4aad-9159-cfe994ad7a24_RunningEventsSystem_BlazorProjects.zip.a24\\BlazorWasm\\App.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rados\\AppData\\Local\\Temp\\e201d9e4-97eb-42b6-b14b-366f9a83b9db_RunningEventsSystem_BlazorProjects.zip.9db\\BlazorWasm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|c:\\users\\rados\\source\\repos\\c#\\pab_projekt\\runningeventssystem.webapi\\runningeventssystem.webapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|solutionrelative:runningeventssystem.webapi\\runningeventssystem.webapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\runningeventssystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\runningeventssystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.application\\services\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|solutionrelative:runningeventssystem.application\\services\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}|RunningEventsSystem.SharedKernel\\RunningEventsSystem.SharedKernel.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.sharedkernel\\dto\\createeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}|RunningEventsSystem.SharedKernel\\RunningEventsSystem.SharedKernel.csproj|solutionrelative:runningeventssystem.sharedkernel\\dto\\createeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}|RunningEventsSystem.SharedKernel\\RunningEventsSystem.SharedKernel.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.sharedkernel\\dto\\updateeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}|RunningEventsSystem.SharedKernel\\RunningEventsSystem.SharedKernel.csproj|solutionrelative:runningeventssystem.sharedkernel\\dto\\updateeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}|RunningEventsSystem.SharedKernel\\RunningEventsSystem.SharedKernel.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.sharedkernel\\dto\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}|RunningEventsSystem.SharedKernel\\RunningEventsSystem.SharedKernel.csproj|solutionrelative:runningeventssystem.sharedkernel\\dto\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\runningeventsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\runningeventsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.webapi\\runningeventssystem.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|c:\\users\\rados\\source\\repos\\c#\\pab_projekt\\runningeventssystem.webapi\\runningeventssystem.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{768E6B2F-DBED-471E-809F-28EFE0D0FBA0}|RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj|solutionrelative:runningeventssystem.webapi\\runningeventssystem.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.application\\runningeventssystem.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D43690A1-0221-4AE1-9A74-EA8B16C7C9CB}|RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj|solutionrelative:runningeventssystem.application\\runningeventssystem.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\runningeventsunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\runningeventsunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\runningeventssystem.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\runningeventssystem.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\contracts\\irunningeventsunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\contracts\\irunningeventsunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\repositories\\registrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\repositories\\registrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\repositories\\resultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\repositories\\resultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.infrastructure\\repositories\\sponsorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC466AD4-9D6C-4101-B876-7582C73F750A}|RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj|solutionrelative:runningeventssystem.infrastructure\\repositories\\sponsorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\contracts\\iresultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\contracts\\iresultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\contracts\\isponsorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\contracts\\isponsorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\contracts\\iregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\contracts\\iregistrationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\contracts\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\contracts\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\contracts\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\contracts\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\contracts\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\contracts\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\models\\eventsponsor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\models\\eventsponsor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\models\\sponsor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\models\\sponsor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|c:\\users\\wikto\\desktop\\runningeventssystem\\runningeventssystem.domain\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4174C023-C0EA-46D9-86D5-D0C7E8DF77EB}|RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj|solutionrelative:runningeventssystem.domain\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -162,500 +43,122 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateEventDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Validators\\CreateEventDtoValidator.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Application\\Validators\\CreateEventDtoValidator.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Validators\\CreateEventDtoValidator.cs",
-              "RelativeToolTip": "RunningEventsSystem.Application\\Validators\\CreateEventDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorServer\\Program.cs",
+              "ToolTip": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\Program.cs",
+              "RelativeToolTip": "BlazorServer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T10:28:54.023Z",
+              "WhenOpened": "2026-06-02T05:41:04.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\Program.cs",
-              "RelativeToolTip": "RunningEventsSystem.WebAPI\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAB0AAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T11:43:55.059Z",
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\App.razor",
+              "RelativeDocumentMoniker": "BlazorServer\\App.razor",
+              "ToolTip": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\App.razor",
+              "RelativeToolTip": "BlazorServer\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T05:40:59.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\Controllers\\EventController.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.WebAPI\\Controllers\\EventController.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\Controllers\\EventController.cs",
-              "RelativeToolTip": "RunningEventsSystem.WebAPI\\Controllers\\EventController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:50:01.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateEventDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Validators\\UpdateEventDtoValidator.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Application\\Validators\\UpdateEventDtoValidator.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Validators\\UpdateEventDtoValidator.cs",
-              "RelativeToolTip": "RunningEventsSystem.Application\\Validators\\UpdateEventDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T10:30:06.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EventService.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Services\\EventService.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Application\\Services\\EventService.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Services\\EventService.cs",
-              "RelativeToolTip": "RunningEventsSystem.Application\\Services\\EventService.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwCwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T16:15:36.711Z",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\appsettings.json",
+              "RelativeDocumentMoniker": "BlazorServer\\appsettings.json",
+              "ToolTip": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\appsettings.json",
+              "RelativeToolTip": "BlazorServer\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-02T05:40:14.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.WebAPI\\Middleware\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "RunningEventsSystem.WebAPI\\Middleware\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rados\\AppData\\Local\\Temp\\2e2bfb3a-a43a-4c70-ae79-4eac9fd700d5_RunningEventsSystem_BlazorProjects.zip.0d5\\BlazorServer\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\2e2bfb3a-a43a-4c70-ae79-4eac9fd700d5_RunningEventsSystem_BlazorProjects.zip.0d5\\BlazorServer\\Program.cs",
+              "ToolTip": "C:\\Users\\rados\\AppData\\Local\\Temp\\2e2bfb3a-a43a-4c70-ae79-4eac9fd700d5_RunningEventsSystem_BlazorProjects.zip.0d5\\BlazorServer\\Program.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\2e2bfb3a-a43a-4c70-ae79-4eac9fd700d5_RunningEventsSystem_BlazorProjects.zip.0d5\\BlazorServer\\Program.cs[Tylko do odczytu]",
+              "ViewState": "AgIAABUAAAAAAAAAAAAewAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T09:50:37.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T05:39:15.898Z",
+              "EditorCaption": "[Tylko do odczytu]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BadRequestException.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Exceptions\\BadRequestException.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Exceptions\\BadRequestException.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Exceptions\\BadRequestException.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Exceptions\\BadRequestException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T09:50:02.431Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\rados\\AppData\\Local\\Temp\\4ee670b9-4f10-4aad-9159-cfe994ad7a24_RunningEventsSystem_BlazorProjects.zip.a24\\BlazorWasm\\App.razor",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\4ee670b9-4f10-4aad-9159-cfe994ad7a24_RunningEventsSystem_BlazorProjects.zip.a24\\BlazorWasm\\App.razor",
+              "ToolTip": "C:\\Users\\rados\\AppData\\Local\\Temp\\4ee670b9-4f10-4aad-9159-cfe994ad7a24_RunningEventsSystem_BlazorProjects.zip.a24\\BlazorWasm\\App.razor[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\4ee670b9-4f10-4aad-9159-cfe994ad7a24_RunningEventsSystem_BlazorProjects.zip.a24\\BlazorWasm\\App.razor[Tylko do odczytu]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-02T05:38:58.762Z",
+              "EditorCaption": "[Tylko do odczytu]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "NotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Exceptions\\NotFoundException.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Exceptions\\NotFoundException.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Exceptions\\NotFoundException.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Exceptions\\NotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T09:49:38.645Z",
+              "Title": "RunningEventsSystem.WebAPI",
+              "DocumentMoniker": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+              "RelativeDocumentMoniker": "RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+              "ToolTip": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+              "RelativeToolTip": "RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-02T05:38:06.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RunningEventsSystem.Domain",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-21T09:48:58.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CreateEventDto.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.SharedKernel\\Dto\\CreateEventDto.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.SharedKernel\\Dto\\CreateEventDto.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.SharedKernel\\Dto\\CreateEventDto.cs",
-              "RelativeToolTip": "RunningEventsSystem.SharedKernel\\Dto\\CreateEventDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T09:28:40.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EventRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\EventRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\Repositories\\EventRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\EventRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\Repositories\\EventRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:59:52.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IEventService.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Services\\IEventService.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Application\\Services\\IEventService.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\Services\\IEventService.cs",
-              "RelativeToolTip": "RunningEventsSystem.Application\\Services\\IEventService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T16:02:35.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UpdateEventDto.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.SharedKernel\\Dto\\UpdateEventDto.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.SharedKernel\\Dto\\UpdateEventDto.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.SharedKernel\\Dto\\UpdateEventDto.cs",
-              "RelativeToolTip": "RunningEventsSystem.SharedKernel\\Dto\\UpdateEventDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T09:33:13.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Event.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Models\\Event.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Event.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Models\\Event.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:08:41.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DataSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\DataSeeder.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\DataSeeder.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\DataSeeder.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\DataSeeder.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAuwCwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T16:24:24.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EventDto.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.SharedKernel\\Dto\\EventDto.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.SharedKernel\\Dto\\EventDto.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.SharedKernel\\Dto\\EventDto.cs",
-              "RelativeToolTip": "RunningEventsSystem.SharedKernel\\Dto\\EventDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T15:57:39.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:00:49.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RunningEventsDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\RunningEventsDbContext.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\RunningEventsDbContext.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\RunningEventsDbContext.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\RunningEventsDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:22:22.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RunningEventsSystem.Application.csproj",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj",
-              "RelativeToolTip": "RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-16T16:04:36.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RunningEventsSystem.WebAPI.csproj",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+              "Title": "RunningEventsSystem.WebAPI",
+              "DocumentMoniker": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
               "RelativeDocumentMoniker": "RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+              "ToolTip": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
               "RelativeToolTip": "RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-16T11:44:45.158Z",
+              "WhenOpened": "2026-06-02T05:38:02.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RunningEventsUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\RunningEventsUnitOfWork.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\RunningEventsUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\RunningEventsUnitOfWork.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\RunningEventsUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rados\\AppData\\Local\\Temp\\e201d9e4-97eb-42b6-b14b-366f9a83b9db_RunningEventsSystem_BlazorProjects.zip.9db\\BlazorWasm\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\e201d9e4-97eb-42b6-b14b-366f9a83b9db_RunningEventsSystem_BlazorProjects.zip.9db\\BlazorWasm\\Program.cs",
+              "ToolTip": "C:\\Users\\rados\\AppData\\Local\\Temp\\e201d9e4-97eb-42b6-b14b-366f9a83b9db_RunningEventsSystem_BlazorProjects.zip.9db\\BlazorWasm\\Program.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\e201d9e4-97eb-42b6-b14b-366f9a83b9db_RunningEventsSystem_BlazorProjects.zip.9db\\BlazorWasm\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:34:20.778Z",
+              "WhenOpened": "2026-06-02T05:37:30.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "RunningEventsSystem.Infrastructure.csproj",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "RunningEventsSystem.BlazorServer",
+              "DocumentMoniker": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\RunningEventsSystem.BlazorServer.csproj",
+              "RelativeDocumentMoniker": "BlazorServer\\RunningEventsSystem.BlazorServer.csproj",
+              "ToolTip": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\BlazorServer\\RunningEventsSystem.BlazorServer.csproj",
+              "RelativeToolTip": "BlazorServer\\RunningEventsSystem.BlazorServer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-16T15:00:12.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\User.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\User.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:07:09.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\Repositories\\Repository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\Repositories\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:59:26.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IRunningEventsUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IRunningEventsUnitOfWork.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Contracts\\IRunningEventsUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IRunningEventsUnitOfWork.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Contracts\\IRunningEventsUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:08:42.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "RegistrationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\RegistrationRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\Repositories\\RegistrationRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\RegistrationRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\Repositories\\RegistrationRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:01:03.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ResultRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\ResultRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\Repositories\\ResultRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\ResultRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\Repositories\\ResultRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:01:23.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SponsorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\SponsorRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Infrastructure\\Repositories\\SponsorRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Infrastructure\\Repositories\\SponsorRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Infrastructure\\Repositories\\SponsorRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:01:13.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "IResultRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IResultRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Contracts\\IResultRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IResultRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Contracts\\IResultRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:59:00.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ISponsorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\ISponsorRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Contracts\\ISponsorRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\ISponsorRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Contracts\\ISponsorRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:58:47.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IRegistrationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IRegistrationRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Contracts\\IRegistrationRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IRegistrationRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Contracts\\IRegistrationRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:58:25.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Contracts\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IUserRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Contracts\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:58:11.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "IEventRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IEventRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Contracts\\IEventRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IEventRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Contracts\\IEventRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:50:47.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IRepository.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Contracts\\IRepository.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Contracts\\IRepository.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Contracts\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:50:20.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "EventSponsor.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\EventSponsor.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Models\\EventSponsor.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\EventSponsor.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Models\\EventSponsor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:09:43.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Sponsor.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Sponsor.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Models\\Sponsor.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Sponsor.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Models\\Sponsor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:09:22.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Result.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Models\\Result.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Result.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Models\\Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:08:26.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Registration.cs",
-              "DocumentMoniker": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Registration.cs",
-              "RelativeDocumentMoniker": "RunningEventsSystem.Domain\\Models\\Registration.cs",
-              "ToolTip": "C:\\Users\\wikto\\Desktop\\RunningEventsSystem\\RunningEventsSystem.Domain\\Models\\Registration.cs",
-              "RelativeToolTip": "RunningEventsSystem.Domain\\Models\\Registration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T17:07:53.724Z",
+              "WhenOpened": "2026-06-02T05:07:36.252Z",
               "EditorCaption": ""
             }
           ]

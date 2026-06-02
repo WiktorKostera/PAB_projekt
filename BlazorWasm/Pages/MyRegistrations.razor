@@ -1,0 +1,184 @@
+@page "/my-registrations"
+@inject IRegistrationApiService RegistrationService
+@inject SessionService Session
+@inject NavigationManager Nav
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
+<PageTitle>Moje zapisy – RunningEvents</PageTitle>
+
+@if (!Session.IsLoggedIn)
+{
+    Nav.NavigateTo("/login");
+    return;
+}
+
+<MudText Typo="Typo.h4" Style="font-weight:700;margin-bottom:24px;">
+    🎽 Moje zapisy na biegi
+</MudText>
+
+@if (_loading)
+{
+    <MudProgressLinear Indeterminate="true" Color="Color.Primary" />
+}
+else if (!_registrations.Any())
+{
+    <MudPaper Elevation="2" Class="pa-8 text-center">
+        <MudIcon Icon="@Icons.Material.Filled.SportsScore" Style="font-size:72px;color:#bdbdbd;" />
+        <MudText Typo="Typo.h6" Color="Color.Secondary" Class="mt-2">Nie jesteś jeszcze zapisany/a na żaden bieg</MudText>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/" Class="mt-4">
+            Przeglądaj biegi
+        </MudButton>
+    </MudPaper>
+}
+else
+{
+    <!-- Statystyki -->
+    <MudGrid Class="mb-4">
+        <MudItem xs="12" sm="4">
+            <MudPaper Elevation="2" Class="pa-3 text-center">
+                <MudText Typo="Typo.h4" Color="Color.Primary" Style="font-weight:700;">@_registrations.Count</MudText>
+                <MudText Typo="Typo.body2" Color="Color.Secondary">Wszystkich zapisów</MudText>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudPaper Elevation="2" Class="pa-3 text-center">
+                <MudText Typo="Typo.h4" Color="Color.Success" Style="font-weight:700;">@_registrations.Count(r => r.PaymentStatus == "Paid")</MudText>
+                <MudText Typo="Typo.body2" Color="Color.Secondary">Opłaconych</MudText>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudPaper Elevation="2" Class="pa-3 text-center">
+                <MudText Typo="Typo.h4" Color="Color.Warning" Style="font-weight:700;">@_registrations.Count(r => r.PaymentStatus == "Unpaid")</MudText>
+                <MudText Typo="Typo.body2" Color="Color.Secondary">Oczekuje na płatność</MudText>
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+
+    <MudTable Items="@_registrations" Hover="true" Striped="true" Elevation="3"
+              Filter="new Func<RegistrationDto, bool>(FilterFunc)">
+        <ToolBarContent>
+            <MudTextField @bind-Value="_searchString"
+                          Placeholder="Szukaj..."
+                          Adornment="Adornment.Start"
+                          AdornmentIcon="@Icons.Material.Filled.Search"
+                          Immediate="true"
+                          Class="mt-0" />
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh><MudTableSortLabel SortBy="new Func<RegistrationDto, object>(x => x.EventName)">Bieg</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortBy="new Func<RegistrationDto, object>(x => x.RegistrationDate)">Data zapisu</MudTableSortLabel></MudTh>
+            <MudTh>Status</MudTh>
+            <MudTh>Płatność</MudTh>
+            <MudTh>Kwota</MudTh>
+            <MudTh>Nr startowy</MudTh>
+            <MudTh>Akcje</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>
+                <MudLink Href="@($"/event/{context.EventId}")" Typo="Typo.body2">
+                    @context.EventName
+                </MudLink>
+            </MudTd>
+            <MudTd>@context.RegistrationDate.ToString("dd.MM.yyyy")</MudTd>
+            <MudTd>
+                <MudChip Size="Size.Small" Color="@GetStatusColor(context.Status)">@context.Status</MudChip>
+            </MudTd>
+            <MudTd>
+                <span class="@GetPaymentClass(context.PaymentStatus)">@context.PaymentStatus</span>
+            </MudTd>
+            <MudTd>@context.PaymentAmount.ToString("C", new System.Globalization.CultureInfo("pl-PL"))</MudTd>
+            <MudTd>@(context.StartNumber?.ToString() ?? "–")</MudTd>
+            <MudTd>
+                <div style="display:flex;gap:4px;">
+                    @if (context.PaymentStatus == "Unpaid" && context.Status != "Cancelled")
+                    {
+                        <MudIconButton Icon="@Icons.Material.Filled.CreditCard"
+                                       Color="Color.Success"
+                                       Size="Size.Small"
+                                       Title="Zapłać"
+                                       OnClick="@(() => HandlePay(context))" />
+                    }
+                    @if (context.Status != "Cancelled")
+                    {
+                        <MudIconButton Icon="@Icons.Material.Filled.Cancel"
+                                       Color="Color.Error"
+                                       Size="Size.Small"
+                                       Title="Wypisz się"
+                                       OnClick="@(() => HandleCancel(context))" />
+                    }
+                </div>
+            </MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager PageSizeOptions="new int[]{ 5, 10, 25 }" />
+        </PagerContent>
+    </MudTable>
+}
+
+@code {
+    private List<RegistrationDto> _registrations = new();
+    private bool _loading = true;
+    private string _searchString = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Session.IsLoggedIn) return;
+        _registrations = await RegistrationService.GetByUserAsync(Session.CurrentUser!.Id);
+        _loading = false;
+    }
+
+    private bool FilterFunc(RegistrationDto r) =>
+        string.IsNullOrEmpty(_searchString) ||
+        r.EventName.Contains(_searchString, StringComparison.OrdinalIgnoreCase);
+
+    private async Task HandlePay(RegistrationDto reg)
+    {
+        var response = await RegistrationService.PayAsync(reg.Id);
+        if (response.IsSuccessStatusCode)
+        {
+            reg.PaymentStatus = "Paid";
+            Snackbar.Add("Płatność zarejestrowana! ✅", Severity.Success);
+        }
+        else
+        {
+            Snackbar.Add("Błąd płatności.", Severity.Error);
+        }
+    }
+
+    private async Task HandleCancel(RegistrationDto reg)
+    {
+        var result = await DialogService.ShowMessageBox(
+            "Potwierdzenie",
+            $"Wypisać się z biegu \"{reg.EventName}\"?",
+            yesText: "Wypisz mnie",
+            cancelText: "Anuluj");
+
+        if (result != true) return;
+
+        var response = await RegistrationService.CancelByUserAndEventAsync(Session.CurrentUser!.Id, reg.EventId);
+        if (response.IsSuccessStatusCode)
+        {
+            reg.Status = "Cancelled";
+            Snackbar.Add("Wypisano z biegu.", Severity.Info);
+        }
+        else
+        {
+            Snackbar.Add("Błąd wypisywania.", Severity.Error);
+        }
+    }
+
+    private Color GetStatusColor(string status) => status switch
+    {
+        "Confirmed" => Color.Success,
+        "Cancelled" => Color.Error,
+        _ => Color.Warning
+    };
+
+    private string GetPaymentClass(string status) => status switch
+    {
+        "Paid" => "status-paid",
+        "Unpaid" => "status-unpaid",
+        _ => "status-cancelled"
+    };
+}

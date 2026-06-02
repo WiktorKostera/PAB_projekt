@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningEventsSystem.WebAPI"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningEventsSystem.SharedKernel", "RunningEventsSystem.SharedKernel\RunningEventsSystem.SharedKernel.csproj", "{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningEventsSystem.WpfClient", "RunningEventsSystem.WpfClient\RunningEventsSystem.WpfClient.csproj", "{F6820BE9-44E7-3354-F7F5-2427A0F58887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningEventsSystem.BlazorServer", "BlazorServer\RunningEventsSystem.BlazorServer.csproj", "{105D7F36-3198-1DC1-8ACC-EC047278B7B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7C57721-2C94-4C47-A9FB-2B15587EFF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6820BE9-44E7-3354-F7F5-2427A0F58887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6820BE9-44E7-3354-F7F5-2427A0F58887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6820BE9-44E7-3354-F7F5-2427A0F58887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6820BE9-44E7-3354-F7F5-2427A0F58887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105D7F36-3198-1DC1-8ACC-EC047278B7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105D7F36-3198-1DC1-8ACC-EC047278B7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105D7F36-3198-1DC1-8ACC-EC047278B7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105D7F36-3198-1DC1-8ACC-EC047278B7B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,166 @@
+@page "/"
+@inject IEventApiService EventService
+@inject SessionService Session
+@inject NavigationManager Nav
+
+<PageTitle>Biegi – RunningEvents</PageTitle>
+
+<!-- Hero -->
+<div class="hero-section">
+    <MudGrid AlignItems="AlignItems.Center">
+        <MudItem xs="12" md="8">
+            <MudText Typo="Typo.h3" Style="font-weight:700;">🏃 RunningEvents</MudText>
+            <MudText Typo="Typo.h6" Style="opacity:.85;margin-top:8px;">
+                Znajdź swój bieg, zapisz się i pobij rekord!
+            </MudText>
+        </MudItem>
+        <MudItem xs="12" md="4" Class="d-flex justify-end">
+            <img src="images/runner-hero.png" alt="Biegacz" style="height:120px;opacity:.9;" onerror="this.style.display='none'" />
+        </MudItem>
+    </MudGrid>
+</div>
+
+<!-- Filtry -->
+<MudPaper Elevation="2" Class="pa-4 mb-4">
+    <MudGrid>
+        <MudItem xs="12" md="6">
+            <MudTextField T="string"
+                          @bind-Value="_searchText"
+                          Label="Szukaj biegu..."
+                          Adornment="Adornment.Start"
+                          AdornmentIcon="@Icons.Material.Filled.Search"
+                          Immediate="true"
+                          DebounceInterval="300"
+                          OnDebounceIntervalElapsed="FilterEvents" />
+        </MudItem>
+        <MudItem xs="12" md="3">
+            <MudSelect T="string" Label="Miasto" @bind-Value="_selectedCity" AnchorOrigin="Origin.BottomLeft">
+                <MudSelectItem Value="@("")">Wszystkie miasta</MudSelectItem>
+                @foreach (var city in _cities)
+                {
+                    <MudSelectItem Value="@city">@city</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+        <MudItem xs="12" md="3" Class="d-flex align-center">
+            <MudCheckBox @bind-Checked="_onlyActive" Label="Tylko aktywne" Color="Color.Primary" />
+        </MudItem>
+    </MudGrid>
+</MudPaper>
+
+<!-- Lista biegów -->
+@if (_loading)
+{
+    <MudGrid>
+        @for (int i = 0; i < 6; i++)
+        {
+            <MudItem xs="12" sm="6" md="4">
+                <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="340px" />
+            </MudItem>
+        }
+    </MudGrid>
+}
+else if (!_filteredEvents.Any())
+{
+    <MudAlert Severity="Severity.Info" Icon="@Icons.Material.Filled.SearchOff">
+        Brak biegów spełniających kryteria.
+    </MudAlert>
+}
+else
+{
+    <MudGrid>
+        @foreach (var ev in _filteredEvents)
+        {
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard Elevation="3" Style="height:100%;display:flex;flex-direction:column;">
+                    @if (!string.IsNullOrEmpty(ev.ImageUrl))
+                    {
+                        <img src="@ev.ImageUrl" alt="@ev.Name" class="event-card-image" onerror="this.style.display='none'" />
+                    }
+                    else
+                    {
+                        <div class="event-card-placeholder">
+                            <MudIcon Icon="@Icons.Material.Filled.DirectionsRun" Style="font-size:64px;color:white;opacity:.7;" />
+                        </div>
+                    }
+                    <MudCardContent Style="flex:1;">
+                        <MudText Typo="Typo.h6" Style="font-weight:600;">@ev.Name</MudText>
+                        <MudChip Size="Size.Small" Color="Color.Primary" Icon="@Icons.Material.Filled.LocationOn" Class="mb-2">
+                            @ev.City
+                        </MudChip>
+                        @if (!ev.IsActive)
+                        {
+                            <MudChip Size="Size.Small" Color="Color.Error" Class="ml-1 mb-2">Nieaktywny</MudChip>
+                        }
+                        <MudText Typo="Typo.body2" Color="Color.Secondary" Style="margin-bottom:8px;">
+                            @ev.Description.Length > 100 ? ev.Description[..97] + "..." : ev.Description
+                        </MudText>
+                        <MudDivider Class="my-2" />
+                        <MudGrid>
+                            <MudItem xs="6">
+                                <MudText Typo="Typo.caption" Color="Color.Secondary">Data biegu</MudText>
+                                <MudText Typo="Typo.body2" Style="font-weight:500;">@ev.EventDate.ToString("dd.MM.yyyy")</MudText>
+                            </MudItem>
+                            <MudItem xs="6">
+                                <MudText Typo="Typo.caption" Color="Color.Secondary">Opłata</MudText>
+                                <MudText Typo="Typo.body2" Style="font-weight:600;color:#FF6B35;">@ev.EntryFee.ToString("C", new System.Globalization.CultureInfo("pl-PL"))</MudText>
+                            </MudItem>
+                        </MudGrid>
+                        <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mt-1">
+                            Zapisy do: @ev.RegistrationDeadline.ToString("dd.MM.yyyy")
+                        </MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text"
+                                   Color="Color.Primary"
+                                   Href="@($"/event/{ev.Id}")">
+                            Szczegóły
+                        </MudButton>
+                        <MudSpacer />
+                        <MudButton Variant="Variant.Filled"
+                                   Color="Color.Primary"
+                                   Size="Size.Small"
+                                   Href="@($"/event/{ev.Id}")"
+                                   Disabled="@(!ev.IsActive || ev.RegistrationDeadline < DateTime.Now)">
+                            Zapisz się
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+    <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mt-4 d-block text-center">
+        Wyświetlono @_filteredEvents.Count z @_allEvents.Count biegów
+    </MudText>
+}
+
+@code {
+    private List<EventDto> _allEvents = new();
+    private List<EventDto> _filteredEvents = new();
+    private List<string> _cities = new();
+    private bool _loading = true;
+    private string _searchText = string.Empty;
+    private string _selectedCity = string.Empty;
+    private bool _onlyActive;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _allEvents = await EventService.GetAllAsync();
+        _cities = _allEvents.Select(e => e.City).Distinct().OrderBy(c => c).ToList();
+        ApplyFilter();
+        _loading = false;
+    }
+
+    private void FilterEvents() => ApplyFilter();
+
+    private void ApplyFilter()
+    {
+        _filteredEvents = _allEvents
+            .Where(e =>
+                (string.IsNullOrEmpty(_searchText) || e.Name.Contains(_searchText, StringComparison.OrdinalIgnoreCase) || e.City.Contains(_searchText, StringComparison.OrdinalIgnoreCase))
+                && (string.IsNullOrEmpty(_selectedCity) || e.City == _selectedCity)
+                && (!_onlyActive || e.IsActive))
+            .OrderBy(e => e.EventDate)
+            .ToList();
+    }
+}

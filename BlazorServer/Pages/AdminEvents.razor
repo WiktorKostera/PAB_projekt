@@ -1,0 +1,282 @@
+@page "/admin/events"
+@inject IAdminApiService Api
+@inject DialogService DialogSvc
+@inject NotificationService NotifySvc
+@inject NavigationManager Nav
+@inject ILogger<AdminEvents> Logger
+
+<PageTitle>Zarządzanie biegami – Admin</PageTitle>
+
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
+    <RadzenText TextStyle="TextStyle.H4" Style="font-weight:700;">🏁 Zarządzanie biegami</RadzenText>
+    <RadzenButton Text="+ Dodaj bieg" ButtonStyle="ButtonStyle.Primary" Icon="add_circle"
+                  Click="OpenCreateDialog" />
+</div>
+
+<!-- Filtry -->
+<RadzenCard Style="margin-bottom:16px;padding:16px;">
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;">
+        <RadzenTextBox @bind-Value="_searchText" Placeholder="Szukaj po nazwie..." Style="width:280px;"
+                       Change="@((_) => FilterEvents())" />
+        <RadzenDropDown @bind-Value="_cityFilter" Data="@_cities" Placeholder="Wszystkie miasta"
+                        Style="width:200px;" Change="@((_) => FilterEvents())" AllowClear="true" />
+        <RadzenCheckBox @bind-Value="_onlyActive" Change="@((_) => FilterEvents())" />
+        <RadzenLabel Text="Tylko aktywne" Style="margin-left:-8px;" />
+        <RadzenButton Text="Wyczyść" ButtonStyle="ButtonStyle.Light" Icon="clear"
+                      Click="ClearFilters" />
+    </div>
+</RadzenCard>
+
+@if (_loading)
+{
+    <RadzenProgressBar Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{
+    <RadzenDataGrid @ref="_grid" Data="@_filteredEvents" TItem="EventDto"
+                    AllowSorting="true" AllowFiltering="false"
+                    AllowPaging="true" PageSize="10"
+                    Style="border-radius:8px;overflow:hidden;" RowSelect="OnRowSelect">
+        <Columns>
+            <RadzenDataGridColumn TItem="EventDto" Property="Id" Title="ID" Width="60px" />
+            <RadzenDataGridColumn TItem="EventDto" Property="Name" Title="Nazwa biegu" />
+            <RadzenDataGridColumn TItem="EventDto" Property="City" Title="Miasto" Width="130px" />
+            <RadzenDataGridColumn TItem="EventDto" Property="EventDate" Title="Data biegu" Width="130px" FormatString="{0:dd.MM.yyyy}" />
+            <RadzenDataGridColumn TItem="EventDto" Property="RegistrationDeadline" Title="Zap. do" Width="120px" FormatString="{0:dd.MM.yyyy}" />
+            <RadzenDataGridColumn TItem="EventDto" Property="MaxParticipants" Title="Max" Width="80px" />
+            <RadzenDataGridColumn TItem="EventDto" Property="EntryFee" Title="Opłata" Width="100px" FormatString="{0:C}" />
+            <RadzenDataGridColumn TItem="EventDto" Property="IsActive" Title="Aktywny" Width="95px">
+                <Template Context="ev">
+                    @if (ev.IsActive)
+                    {
+                        <RadzenBadge Text="Tak" BadgeStyle="BadgeStyle.Success" />
+                    }
+                    else
+                    {
+                        <RadzenBadge Text="Nie" BadgeStyle="BadgeStyle.Danger" />
+                    }
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="EventDto" Title="Akcje" Width="140px" Sortable="false">
+                <Template Context="ev">
+                    <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Info" Size="ButtonSize.Small"
+                                  Click="@(() => OpenEditDialog(ev))" Style="margin-right:4px;" />
+                    <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small"
+                                  Click="@(() => ConfirmDelete(ev))" />
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid>
+    <RadzenText TextStyle="TextStyle.Caption" Style="margin-top:8px;color:#888;">
+        Wyświetlono @_filteredEvents.Count z @_allEvents.Count biegów
+    </RadzenText>
+}
+
+<!-- Dialog tworzenia / edycji -->
+@if (_showDialog)
+{
+    <RadzenDialog>
+        <RadzenCard Style="min-width:520px;max-width:640px;padding:24px;">
+            <RadzenText TextStyle="TextStyle.H6" Style="margin-bottom:16px;">
+                @(_editingEvent == null ? "➕ Nowy bieg" : "✏️ Edytuj bieg")
+            </RadzenText>
+
+            <RadzenTemplateForm TItem="EventFormModel" Data="@_form" Submit="OnFormSubmit" InvalidSubmit="OnInvalidSubmit">
+                <div style="display:grid;gap:12px;">
+                    <RadzenFormField Text="Nazwa biegu *">
+                        <RadzenTextBox @bind-Value="_form.Name" Name="Name" Style="width:100%;" />
+                        <RadzenRequiredValidator Component="Name" Text="Nazwa jest wymagana" />
+                    </RadzenFormField>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                        <RadzenFormField Text="Miasto *">
+                            <RadzenTextBox @bind-Value="_form.City" Name="City" />
+                            <RadzenRequiredValidator Component="City" Text="Wymagane" />
+                        </RadzenFormField>
+                        <RadzenFormField Text="Lokalizacja *">
+                            <RadzenTextBox @bind-Value="_form.Location" Name="Location" />
+                            <RadzenRequiredValidator Component="Location" Text="Wymagana" />
+                        </RadzenFormField>
+                    </div>
+
+                    <RadzenFormField Text="Opis">
+                        <RadzenTextArea @bind-Value="_form.Description" Rows="3" Style="width:100%;" />
+                    </RadzenFormField>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                        <RadzenFormField Text="Data biegu *">
+                            <RadzenDatePicker @bind-Value="_form.EventDate" Name="EventDate" DateFormat="dd.MM.yyyy" />
+                            <RadzenRequiredValidator Component="EventDate" Text="Wymagana" />
+                        </RadzenFormField>
+                        <RadzenFormField Text="Zapisy do *">
+                            <RadzenDatePicker @bind-Value="_form.RegistrationDeadline" Name="RegDeadline" DateFormat="dd.MM.yyyy" />
+                            <RadzenRequiredValidator Component="RegDeadline" Text="Wymagana" />
+                        </RadzenFormField>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                        <RadzenFormField Text="Maks. uczestników *">
+                            <RadzenNumeric @bind-Value="_form.MaxParticipants" Name="MaxP" Min="1" />
+                            <RadzenRequiredValidator Component="MaxP" Text="Wymagane" />
+                        </RadzenFormField>
+                        <RadzenFormField Text="Opłata startowa (PLN) *">
+                            <RadzenNumeric @bind-Value="_form.EntryFee" Name="Fee" Min="0" Step="5" TValue="decimal" />
+                            <RadzenRequiredValidator Component="Fee" Text="Wymagana" />
+                        </RadzenFormField>
+                    </div>
+
+                    <RadzenFormField Text="URL grafiki (opcjonalnie)">
+                        <RadzenTextBox @bind-Value="_form.ImageUrl" Style="width:100%;" />
+                    </RadzenFormField>
+
+                    @if (_editingEvent != null)
+                    {
+                        <div style="display:flex;align-items:center;gap:8px;">
+                            <RadzenCheckBox @bind-Value="_form.IsActive" />
+                            <RadzenLabel Text="Bieg aktywny" />
+                        </div>
+                    }
+                </div>
+
+                <div style="display:flex;gap:8px;margin-top:20px;justify-content:flex-end;">
+                    <RadzenButton ButtonType="ButtonType.Submit" Text="Zapisz" ButtonStyle="ButtonStyle.Primary" Icon="save" />
+                    <RadzenButton Text="Anuluj" ButtonStyle="ButtonStyle.Light" Click="CloseDialog" />
+                </div>
+            </RadzenTemplateForm>
+        </RadzenCard>
+    </RadzenDialog>
+}
+
+@code {
+    private List<EventDto> _allEvents = new();
+    private List<EventDto> _filteredEvents = new();
+    private List<string> _cities = new();
+    private bool _loading = true;
+    private string _searchText = string.Empty;
+    private string? _cityFilter;
+    private bool _onlyActive;
+    private bool _showDialog;
+    private EventDto? _editingEvent;
+    private EventFormModel _form = new();
+    private RadzenDataGrid<EventDto>? _grid;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Logger.LogInformation("Ładowanie listy biegów (admin)");
+        await LoadEvents();
+    }
+
+    private async Task LoadEvents()
+    {
+        _loading = true;
+        _allEvents = await Api.GetEventsAsync();
+        _cities = _allEvents.Select(e => e.City).Distinct().OrderBy(c => c).ToList();
+        FilterEvents();
+        _loading = false;
+    }
+
+    private void FilterEvents()
+    {
+        _filteredEvents = _allEvents
+            .Where(e =>
+                (string.IsNullOrEmpty(_searchText) || e.Name.Contains(_searchText, StringComparison.OrdinalIgnoreCase))
+                && (_cityFilter == null || e.City == _cityFilter)
+                && (!_onlyActive || e.IsActive))
+            .OrderBy(e => e.EventDate)
+            .ToList();
+    }
+
+    private void ClearFilters()
+    {
+        _searchText = string.Empty;
+        _cityFilter = null;
+        _onlyActive = false;
+        FilterEvents();
+    }
+
+    private void OnRowSelect(EventDto ev) { }
+
+    private void OpenCreateDialog()
+    {
+        _editingEvent = null;
+        _form = new EventFormModel { EventDate = DateTime.Now.AddMonths(1), RegistrationDeadline = DateTime.Now.AddMonths(1).AddDays(-7) };
+        _showDialog = true;
+    }
+
+    private void OpenEditDialog(EventDto ev)
+    {
+        _editingEvent = ev;
+        _form = new EventFormModel
+        {
+            Name = ev.Name, Description = ev.Description, City = ev.City,
+            Location = ev.Location, EventDate = ev.EventDate, RegistrationDeadline = ev.RegistrationDeadline,
+            MaxParticipants = ev.MaxParticipants, EntryFee = ev.EntryFee, ImageUrl = ev.ImageUrl, IsActive = ev.IsActive
+        };
+        _showDialog = true;
+    }
+
+    private void CloseDialog() => _showDialog = false;
+
+    private async Task OnFormSubmit()
+    {
+        if (_editingEvent == null)
+        {
+            var dto = new CreateEventDto
+            {
+                Name = _form.Name!, Description = _form.Description ?? "", City = _form.City!, Location = _form.Location!,
+                EventDate = _form.EventDate, RegistrationDeadline = _form.RegistrationDeadline,
+                MaxParticipants = _form.MaxParticipants, EntryFee = _form.EntryFee, ImageUrl = _form.ImageUrl
+            };
+            await Api.CreateEventAsync(dto);
+            Logger.LogInformation("Utworzono nowy bieg: {Name}", dto.Name);
+            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Bieg utworzony!", Duration = 3000 });
+        }
+        else
+        {
+            var dto = new UpdateEventDto
+            {
+                Id = _editingEvent.Id, Name = _form.Name!, Description = _form.Description ?? "", City = _form.City!, Location = _form.Location!,
+                EventDate = _form.EventDate, RegistrationDeadline = _form.RegistrationDeadline,
+                MaxParticipants = _form.MaxParticipants, EntryFee = _form.EntryFee, ImageUrl = _form.ImageUrl, IsActive = _form.IsActive
+            };
+            await Api.UpdateEventAsync(_editingEvent.Id, dto);
+            Logger.LogInformation("Zaktualizowano bieg ID={Id}", _editingEvent.Id);
+            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Bieg zaktualizowany!", Duration = 3000 });
+        }
+
+        _showDialog = false;
+        await LoadEvents();
+    }
+
+    private void OnInvalidSubmit() =>
+        NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Wypełnij wszystkie wymagane pola", Duration = 3000 });
+
+    private async Task ConfirmDelete(EventDto ev)
+    {
+        var confirmed = await DialogSvc.Confirm(
+            $"Usunąć bieg „{ev.Name}"? Tej operacji nie można cofnąć.",
+            "Potwierdzenie usunięcia",
+            new ConfirmOptions { OkButtonText = "Usuń", CancelButtonText = "Anuluj" });
+
+        if (confirmed != true) return;
+
+        await Api.DeleteEventAsync(ev.Id);
+        Logger.LogWarning("Usunięto bieg ID={Id} Name={Name}", ev.Id, ev.Name);
+        NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Bieg usunięty", Duration = 3000 });
+        await LoadEvents();
+    }
+
+    private class EventFormModel
+    {
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public string? City { get; set; }
+        public string? Location { get; set; }
+        public DateTime EventDate { get; set; } = DateTime.Now.AddMonths(1);
+        public DateTime RegistrationDeadline { get; set; } = DateTime.Now.AddMonths(1).AddDays(-7);
+        public int MaxParticipants { get; set; } = 100;
+        public decimal EntryFee { get; set; } = 50;
+        public string? ImageUrl { get; set; }
+        public bool IsActive { get; set; } = true;
+    }
+}

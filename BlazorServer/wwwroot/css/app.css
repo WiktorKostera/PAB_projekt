@@ -1,0 +1,48 @@
+:root {
+    --rz-primary: #1565C0;
+    --rz-secondary: #FF6B35;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    background: #f0f2f5;
+}
+
+.rz-header {
+    background: linear-gradient(135deg, #1565C0, #1976D2) !important;
+    color: white !important;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    border-left: 4px solid var(--rz-primary);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1565C0;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+#blazor-error-ui {
+    background: #ff5252;
+    color: white;
+    bottom: 0; left: 0;
+    display: none;
+    padding: 12px 20px;
+    position: fixed;
+    width: 100%; z-index: 1000;
+}
+
+#blazor-error-ui .dismiss { cursor: pointer; position: absolute; right: 12px; top: 8px; }

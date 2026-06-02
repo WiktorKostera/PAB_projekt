@@ -1,0 +1,35 @@
+@inherits LayoutComponentBase
+@inject NavigationManager Nav
+
+<RadzenLayout>
+    <RadzenHeader>
+        <div style="display:flex;align-items:center;gap:12px;padding:0 16px;">
+            <RadzenImage Path="images/logo.png" Style="height:36px;" AlternateText="Logo" />
+            <RadzenText TextStyle="TextStyle.H5" Style="color:white;margin:0;font-weight:700;">
+                🏃 RunningEvents – Panel Administratora
+            </RadzenText>
+            <div style="flex:1;"></div>
+            <RadzenBadge Text="ADMIN" BadgeStyle="BadgeStyle.Warning" />
+        </div>
+    </RadzenHeader>
+
+    <RadzenSidebar>
+        <RadzenPanelMenu>
+            <RadzenPanelMenuItem Text="Pulpit" Icon="dashboard" Path="/" />
+            <RadzenPanelMenuItem Text="Biegi (Events)" Icon="event" Path="/admin/events" />
+            <RadzenPanelMenuItem Text="Uczestnicy" Icon="people" Path="/admin/participants" />
+            <RadzenPanelMenuItem Text="Wyniki" Icon="emoji_events" Path="/admin/results" />
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+
+    <RadzenBody>
+        <div style="padding:24px;">
+            @Body
+        </div>
+    </RadzenBody>
+</RadzenLayout>
+
+<RadzenDialog />
+<RadzenNotification />
+<RadzenTooltip />
+<RadzenContextMenu />
