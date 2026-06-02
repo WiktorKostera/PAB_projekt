@@ -34,3 +34,16 @@ C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\refint\RunningEventsSystem.Domain.dll
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.pdb
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\ref\RunningEventsSystem.Domain.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\bin\Debug\net6.0\RunningEventsSystem.Domain.deps.json
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\bin\Debug\net6.0\RunningEventsSystem.Domain.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\bin\Debug\net6.0\RunningEventsSystem.Domain.pdb
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.AssemblyInfo.cs
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.sourcelink.json
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\refint\RunningEventsSystem.Domain.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\RunningEventsSystem.Domain.pdb
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Domain\obj\Debug\net6.0\ref\RunningEventsSystem.Domain.dll

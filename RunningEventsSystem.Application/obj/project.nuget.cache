@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mUhkWf/QKJU=",
+  "dgSpecHash": "0WPq2OEo0mw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj",
+  "projectFilePath": "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rados\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
-    "C:\\Users\\rados\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
-    "C:\\Users\\rados\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
-    "C:\\Users\\rados\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+    "C:\\Users\\wikto\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
+    "C:\\Users\\wikto\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\wikto\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
+    "C:\\Users\\wikto\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,5 +1,6 @@
 using Radzen;
 using RunningEventsSystem.BlazorServer.Services;
+using Microsoft.AspNetCore.DataProtection;
 using Serilog;
 using Serilog.Events;
 
@@ -24,6 +25,11 @@ Log.Logger = new LoggerConfiguration()
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
+
+var dataProtectionKeysPath = Path.Combine(builder.Environment.ContentRootPath, "DataProtectionKeys");
+Directory.CreateDirectory(dataProtectionKeysPath);
+builder.Services.AddDataProtection()
+    .PersistKeysToFileSystem(new DirectoryInfo(dataProtectionKeysPath));
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

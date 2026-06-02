@@ -2296,23 +2296,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rados\\.nuget\\packages\\": {},
+    "C:\\Users\\wikto\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
       "projectName": "RunningEventsSystem.WebAPI",
-      "projectPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
-      "packagesPath": "C:\\Users\\rados\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.WebAPI\\RunningEventsSystem.WebAPI.csproj",
+      "packagesPath": "C:\\Users\\wikto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rados\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wikto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2327,14 +2327,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj": {
-              "projectPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj"
+            "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj": {
+              "projectPath": "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.Application\\RunningEventsSystem.Application.csproj"
             },
-            "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj": {
-              "projectPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj"
+            "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj": {
+              "projectPath": "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.Domain\\RunningEventsSystem.Domain.csproj"
             },
-            "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj"
+            "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\wikto\\source\\repos\\WiktorKostera\\PAB_projekt\\RunningEventsSystem.Infrastructure\\RunningEventsSystem.Infrastructure.csproj"
             }
           }
         }

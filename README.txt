@@ -33,21 +33,21 @@ URUCHAMIANIE
 1. Uruchom WebAPI (musi być pierwsze):
    cd RunningEventsSystem.WebAPI
    dotnet run
-   → Domyślnie: https://localhost:7001  (lub http://localhost:5001)
+   → Domyślnie: http://localhost:5234
 
 2. Uruchom Blazor Server (panel admina):
    cd RunningEventsSystem.BlazorServer
    dotnet run
-   → Domyślnie: https://localhost:7002
+   → Domyślnie: http://localhost:55766
 
 3. Uruchom Blazor WebAssembly (klient):
    cd RunningEventsSystem.BlazorWasm
    dotnet run
-   → Domyślnie: https://localhost:7003
+   → Domyślnie: http://localhost:55803
 
 Uwaga: Port WebAPI można zmienić w:
   - BlazorServer/appsettings.json  → "ApiBaseUrl"
-  - BlazorWasm/Program.cs          → BaseAddress w HttpClient
+  - BlazorWasm/wwwroot/appsettings.json  → "ApiBaseUrl"
 
 ===========================================================
 BAZA DANYCH (SQLite)

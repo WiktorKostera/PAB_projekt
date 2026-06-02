@@ -22,3 +22,15 @@ C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.SharedKernel\obj\
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\refint\RunningEventsSystem.SharedKernel.dll
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.pdb
 C:\Users\rados\source\repos\C#\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\ref\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\bin\Debug\net6.0\RunningEventsSystem.SharedKernel.deps.json
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\bin\Debug\net6.0\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\bin\Debug\net6.0\RunningEventsSystem.SharedKernel.pdb
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.AssemblyInfo.cs
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.sourcelink.json
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\refint\RunningEventsSystem.SharedKernel.dll
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.pdb
+C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\ref\RunningEventsSystem.SharedKernel.dll

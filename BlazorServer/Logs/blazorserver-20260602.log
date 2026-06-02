@@ -1,18 +1,18 @@
-2026-06-02 20:04:53 [INF] BlazorServer (Admin Panel) uruchomiony
-2026-06-02 20:04:56 [INF] Ładowanie pulpitu administratora
+﻿2026-06-02 20:04:53 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 20:04:56 [INF] Ladowanie pulpitu administratora
 2026-06-02 20:04:56 [INF] Start processing HTTP request GET "https://localhost:7225/event"
 2026-06-02 20:04:56 [INF] Sending HTTP request GET "https://localhost:7225/event"
 2026-06-02 20:05:00 [INF] Start processing HTTP request GET "https://localhost:7225/user"
 2026-06-02 20:05:00 [INF] Sending HTTP request GET "https://localhost:7225/user"
-2026-06-02 20:05:06 [INF] Ładowanie pulpitu administratora
+2026-06-02 20:05:06 [INF] Ladowanie pulpitu administratora
 2026-06-02 20:05:06 [INF] Start processing HTTP request GET "https://localhost:7225/event"
 2026-06-02 20:05:06 [INF] Sending HTTP request GET "https://localhost:7225/event"
 2026-06-02 20:05:10 [INF] Start processing HTTP request GET "https://localhost:7225/user"
 2026-06-02 20:05:10 [INF] Sending HTTP request GET "https://localhost:7225/user"
-2026-06-02 20:06:37 [INF] Ĺadowanie listy biegĂłw (admin)
+2026-06-02 20:06:37 [INF] L�adowanie listy biegAlw (admin)
 2026-06-02 20:06:37 [INF] Start processing HTTP request GET "https://localhost:7225/event"
 2026-06-02 20:06:37 [INF] Sending HTTP request GET "https://localhost:7225/event"
-2026-06-02 20:06:41 [INF] Ĺadowanie listy uczestnikĂłw (admin)
+2026-06-02 20:06:41 [INF] L�adowanie listy uczestnikAlw (admin)
 2026-06-02 20:06:41 [INF] Start processing HTTP request GET "https://localhost:7225/user"
 2026-06-02 20:06:41 [INF] Sending HTTP request GET "https://localhost:7225/user"
 2026-06-02 20:06:41 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
@@ -35,3 +35,239 @@ System.ObjectDisposedException: Cannot access a disposed object.
    at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
    at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
    at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-02 22:24:30 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 22:24:32 [INF] Ladowanie pulpitu administratora
+2026-06-02 22:24:32 [INF] Start processing HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:24:32 [INF] Sending HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:24:37 [INF] Start processing HTTP request GET "https://localhost:7225/user"
+2026-06-02 22:24:37 [INF] Sending HTTP request GET "https://localhost:7225/user"
+2026-06-02 22:24:42 [INF] Ladowanie pulpitu administratora
+2026-06-02 22:24:42 [INF] Start processing HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:24:42 [INF] Sending HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:24:46 [INF] Start processing HTTP request GET "https://localhost:7225/user"
+2026-06-02 22:24:46 [INF] Sending HTTP request GET "https://localhost:7225/user"
+2026-06-02 22:25:31 [INF] L�adowanie listy biegAlw (admin)
+2026-06-02 22:25:31 [INF] Start processing HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:25:31 [INF] Sending HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:25:37 [WRN] Unhandled exception rendering component: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+System.InvalidOperationException: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.ThrowForUnknownIncomingParameterName(Type targetType, String parameterName)
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.SetProperties(ParameterView& parameters, Object target)
+   at Microsoft.AspNetCore.Components.ParameterView.SetParameterProperties(Object target)
+   at Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SupplyCombinedParameters(ParameterView directAndCascadingParameters)
+2026-06-02 22:25:37 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.Append(T[] source, Int32 startIndex, Int32 length)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-02 22:26:37 [INF] Ladowanie panelu wynik�w (admin)
+2026-06-02 22:26:37 [INF] Start processing HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:26:37 [INF] Sending HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:26:41 [INF] Ladowanie panelu wynik�w (admin)
+2026-06-02 22:26:41 [INF] Start processing HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:26:41 [INF] Sending HTTP request GET "https://localhost:7225/event"
+2026-06-02 22:26:46 [INF] L�adowanie listy uczestnikAlw (admin)
+2026-06-02 22:26:46 [INF] Start processing HTTP request GET "https://localhost:7225/user"
+2026-06-02 22:26:46 [INF] Sending HTTP request GET "https://localhost:7225/user"
+2026-06-02 22:26:46 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-02 22:26:46 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-02 22:52:54 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 22:53:01 [WRN] Failed to determine the https port for redirect.
+2026-06-02 22:53:47 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 22:53:55 [WRN] Failed to determine the https port for redirect.
+2026-06-02 22:54:56 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 22:54:56 [WRN] No XML encryptor configured. Key {e701c880-3048-4b76-8e92-89a5c55a6bf5} may be persisted to storage in unencrypted form.
+2026-06-02 22:55:03 [WRN] Failed to determine the https port for redirect.
+2026-06-02 22:55:03 [INF] Ladowanie pulpitu administratora
+2026-06-02 22:55:03 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:55:03 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:55:04 [INF] Received HTTP response headers after 244.0768ms - 200
+2026-06-02 22:55:04 [INF] End processing HTTP request after 257.6987ms - 200
+2026-06-02 22:55:04 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:55:04 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:55:04 [INF] Received HTTP response headers after 75.0815ms - 200
+2026-06-02 22:55:04 [INF] End processing HTTP request after 75.4368ms - 200
+2026-06-02 22:58:10 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 22:58:18 [WRN] Failed to determine the https port for redirect.
+2026-06-02 22:58:18 [INF] Ladowanie pulpitu administratora
+2026-06-02 22:58:18 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:58:18 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:58:18 [INF] Received HTTP response headers after 80.6002ms - 200
+2026-06-02 22:58:18 [INF] End processing HTTP request after 95.2231ms - 200
+2026-06-02 22:58:18 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:58:18 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:58:18 [INF] Received HTTP response headers after 1.8924ms - 200
+2026-06-02 22:58:18 [INF] End processing HTTP request after 2.4502ms - 200
+2026-06-02 22:59:26 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 22:59:27 [WRN] Failed to determine the https port for redirect.
+2026-06-02 22:59:27 [INF] Ladowanie pulpitu administratora
+2026-06-02 22:59:27 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:59:27 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:59:32 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:59:32 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:59:37 [INF] Ladowanie pulpitu administratora
+2026-06-02 22:59:37 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:59:37 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:59:41 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:59:41 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:59:50 [INF] L�adowanie listy biegAlw (admin)
+2026-06-02 22:59:50 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:59:50 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 22:59:56 [INF] L�adowanie listy uczestnikAlw (admin)
+2026-06-02 22:59:56 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:59:56 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 22:59:56 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-02 22:59:56 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-02 23:05:07 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 23:05:08 [WRN] Failed to determine the https port for redirect.
+2026-06-02 23:05:09 [INF] Ładowanie pulpitu administratora
+2026-06-02 23:05:09 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:05:09 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:05:13 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:13 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:18 [INF] Ładowanie pulpitu administratora
+2026-06-02 23:05:18 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:05:18 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:05:22 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:22 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:27 [INF] Ładowanie listy uczestników (admin)
+2026-06-02 23:05:27 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:27 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:27 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-02 23:05:27 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-02 23:05:44 [INF] Ładowanie listy uczestników (admin)
+2026-06-02 23:05:44 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:44 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:46 [INF] Ładowanie listy uczestników (admin)
+2026-06-02 23:05:46 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:05:46 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:06:26 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-02 23:06:28 [WRN] Failed to determine the https port for redirect.
+2026-06-02 23:06:28 [INF] Ładowanie pulpitu administratora
+2026-06-02 23:06:28 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:06:28 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:06:32 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:06:32 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:06:37 [INF] Ładowanie pulpitu administratora
+2026-06-02 23:06:37 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:06:37 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:06:41 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:06:41 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:06:44 [INF] Ładowanie listy uczestników (admin)
+2026-06-02 23:06:44 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:06:44 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:06:44 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-02 23:06:44 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-02 23:06:48 [INF] Ładowanie listy biegów (admin)
+2026-06-02 23:06:48 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:06:48 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:06:53 [INF] Ładowanie listy biegów (admin)
+2026-06-02 23:06:53 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:06:53 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:07:00 [INF] Ładowanie listy uczestników (admin)
+2026-06-02 23:07:00 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:07:00 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-02 23:07:00 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-02 23:07:00 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-02 23:07:10 [INF] Ładowanie panelu wyników (admin)
+2026-06-02 23:07:10 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:07:10 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:07:15 [INF] Ładowanie panelu wyników (admin)
+2026-06-02 23:07:15 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-02 23:07:15 [INF] Sending HTTP request GET "http://localhost:5234/event"
