@@ -30,39 +30,7 @@ else
 {
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
         <RadzenText TextStyle="TextStyle.H6">Wyniki: @(_events.FirstOrDefault(e => e.Id == _selectedEventId)?.Name)</RadzenText>
-        <RadzenButton Text="+ Dodaj wynik" ButtonStyle="ButtonStyle.Primary" Icon="add" Click="@(() => _showAddForm = !_showAddForm)" />
     </div>
-
-    @if (_showAddForm)
-    {
-        <RadzenCard Style="margin-bottom:16px;padding:20px;">
-            <RadzenText TextStyle="TextStyle.Subtitle1" Style="margin-bottom:12px;">Nowy wynik</RadzenText>
-            <RadzenTemplateForm TItem="ResultFormModel" Data="@_resultForm" Submit="AddResult">
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
-                    <RadzenFormField Text="Zapis (Registration ID)">
-                        <RadzenNumeric @bind-Value="_resultForm.RegistrationId" Name="RegId" Min="1" />
-                        <RadzenRequiredValidator Component="RegId" Text="Wymagane" />
-                    </RadzenFormField>
-                    <RadzenFormField Text="ID uczestnika">
-                        <RadzenNumeric @bind-Value="_resultForm.UserId" Name="UserId" Min="1" />
-                        <RadzenRequiredValidator Component="UserId" Text="Wymagane" />
-                    </RadzenFormField>
-                    <RadzenFormField Text="Czas ukończenia (hh:mm:ss)">
-                        <RadzenTextBox @bind-Value="_finishTimeStr" Name="FinishTime" Placeholder="01:23:45" />
-                        <RadzenRequiredValidator Component="FinishTime" Text="Wymagane" />
-                    </RadzenFormField>
-                    <RadzenFormField Text="Miejsce">
-                        <RadzenNumeric @bind-Value="_resultForm.Place" Name="Place" Min="1" />
-                        <RadzenRequiredValidator Component="Place" Text="Wymagane" />
-                    </RadzenFormField>
-                </div>
-                <div style="margin-top:12px;display:flex;gap:8px;">
-                    <RadzenButton ButtonType="ButtonType.Submit" Text="Zapisz wynik" ButtonStyle="ButtonStyle.Primary" Icon="save" />
-                    <RadzenButton Text="Anuluj" ButtonStyle="ButtonStyle.Light" Click="@(() => _showAddForm = false)" />
-                </div>
-            </RadzenTemplateForm>
-        </RadzenCard>
-    }
 
     @if (!_results.Any())
     {
@@ -97,9 +65,6 @@ else
     private List<ResultDto> _results = new();
     private int _selectedEventId;
     private bool _loadingResults;
-    private bool _showAddForm;
-    private string _finishTimeStr = string.Empty;
-    private ResultFormModel _resultForm = new();
 
     protected override async Task OnInitializedAsync()
     {
@@ -113,39 +78,5 @@ else
         _loadingResults = true;
         _results = await Api.GetResultsByEventAsync(_selectedEventId);
         _loadingResults = false;
-        _showAddForm = false;
-    }
-
-    private async Task AddResult()
-    {
-        if (!TimeSpan.TryParse(_finishTimeStr, out var ts))
-        {
-            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Nieprawidłowy format czasu (oczekiwany: hh:mm:ss)", Duration = 3000 });
-            return;
-        }
-
-        var dto = new CreateResultDto
-        {
-            RegistrationId = _resultForm.RegistrationId,
-            UserId = _resultForm.UserId,
-            EventId = _selectedEventId,
-            FinishTime = ts,
-            Place = _resultForm.Place
-        };
-
-        await Api.CreateResultAsync(dto);
-        Logger.LogInformation("Dodano wynik dla eventu {EventId}, miejsce {Place}", _selectedEventId, dto.Place);
-        NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Wynik dodany!", Duration = 3000 });
-        _showAddForm = false;
-        _resultForm = new();
-        _finishTimeStr = string.Empty;
-        await LoadResults();
-    }
-
-    private class ResultFormModel
-    {
-        public int RegistrationId { get; set; }
-        public int UserId { get; set; }
-        public int Place { get; set; } = 1;
     }
 }

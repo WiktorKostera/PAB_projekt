@@ -1,120 +1,163 @@
-===========================================================
-  RunningEventsSystem – System zarządzania biegami
-===========================================================
+RunningEventsSystem - system zarzadzania biegami
+=================================================
 
-SKŁAD GRUPY PROJEKTOWEJ:
-  [Uzupełnij nazwiska]
+Sklad grupy projektowej
+-----------------------
 
-===========================================================
-ARCHITEKTURA SYSTEMU
-===========================================================
+1. Wiktor Kostera
+2. Radoslaw Ciemiega
 
-Rozwiązanie składa się z 7 projektów .NET 6:
+Opis projektu
+-------------
 
-  RunningEventsSystem.SharedKernel    – DTO, elementy wspólne
-  RunningEventsSystem.Domain          – Modele, interfejsy repozytoriów
-  RunningEventsSystem.Application     – Serwisy aplikacyjne (logika biznesowa)
-  RunningEventsSystem.Infrastructure  – EF Core + SQLite, repozytoria, UoW
-  RunningEventsSystem.WebAPI          – ASP.NET Core WebAPI (REST)
-  RunningEventsSystem.BlazorWasm      – Blazor WebAssembly (klient / uczestnik)
-  RunningEventsSystem.BlazorServer    – Blazor Server (panel administratora)
+Projekt jest aplikacja biznesowa do obslugi wydarzen biegowych. System pozwala
+na zarzadzanie biegami, uczestnikami, zapisami oraz wynikami. Czesc dla
+administratora jest przygotowana w Blazor Server, a czesc dla uczestnika w
+Blazor WebAssembly.
 
-===========================================================
-WYMAGANIA WSTĘPNE
-===========================================================
+W projekcie zastosowano baze SQLite oraz podzial na warstwy zgodnie z zalozeniami
+czystej architektury.
 
-  - .NET 6 SDK (https://dotnet.microsoft.com/download/dotnet/6.0)
-  - Visual Studio 2022 lub VS Code z rozszerzeniem C#
+Wymagania do uruchomienia
+-------------------------
 
-===========================================================
-URUCHAMIANIE
-===========================================================
+- .NET 6 SDK
+- Visual Studio 2022
+- Przy pierwszym uruchomieniu Visual Studio moze pobrac brakujace pakiety NuGet.
+  Jezeli pakiety nie odtworza sie automatycznie, nalezy wykonac Restore NuGet
+  Packages dla calego rozwiazania.
 
-1. Uruchom WebAPI (musi być pierwsze):
-   cd RunningEventsSystem.WebAPI
-   dotnet run
-   → Domyślnie: http://localhost:5234
+Projekty startowe
+-----------------
 
-2. Uruchom Blazor Server (panel admina):
-   cd RunningEventsSystem.BlazorServer
-   dotnet run
-   → Domyślnie: http://localhost:55766
+W Visual Studio najlepiej ustawic kilka projektow startowych:
 
-3. Uruchom Blazor WebAssembly (klient):
-   cd RunningEventsSystem.BlazorWasm
-   dotnet run
-   → Domyślnie: http://localhost:55803
+1. RunningEventsSystem.WebAPI
+2. RunningEventsSystem.BlazorServer
+3. RunningEventsSystem.BlazorWasm
 
-Uwaga: Port WebAPI można zmienić w:
-  - BlazorServer/appsettings.json  → "ApiBaseUrl"
-  - BlazorWasm/wwwroot/appsettings.json  → "ApiBaseUrl"
+WebAPI powinno wystartowac na porcie:
 
-===========================================================
-BAZA DANYCH (SQLite)
-===========================================================
+http://localhost:5234
 
-Baza tworzy się automatycznie przy pierwszym uruchomieniu WebAPI.
-Plik: RunningEventsSystem.WebAPI/running_events.db
+Panel administratora Blazor Server:
 
-Tabele (≥ 5):
-  Users           – Użytkownicy (uczestnicy + administratorzy)
-  Events          – Biegi / eventy
-  Registrations   – Zapisy uczestników na biegi
-  Results         – Wyniki biegów
-  Sponsors        – Sponsorzy
-  EventSponsors   – Powiązanie sponsor–event (tabela pośrednia)
+http://localhost:55766
 
-===========================================================
-KONTA DOMYŚLNE (seed)
-===========================================================
+Panel uczestnika Blazor WebAssembly:
 
-  Admin:
-    e-mail:  admin@running.pl
-    hasło:   Admin123
+http://localhost:55803
 
-  Uczestnik testowy:
-    e-mail:  jan.kowalski@example.com
-    hasło:   Test123
+Adres API jest ustawiony w plikach:
 
-===========================================================
-LOGOWANIE
-===========================================================
+- BlazorServer/appsettings.json
+- BlazorWasm/wwwroot/appsettings.json
 
-WebAPI i BlazorServer zapisują logi do katalogu Logs/:
-  - Logs/webapi-YYYYMMDD.log          – informacje ogólne
-  - Logs/webapi-errors-YYYYMMDD.log   – tylko błędy
-  - Logs/blazorserver-YYYYMMDD.log
-  - Logs/blazorserver-errors-YYYYMMDD.log
+Oba powinny wskazywac na:
 
-Nowy plik tworzony każdego dnia (RollingInterval.Day).
+http://localhost:5234/
 
-===========================================================
-FUNKCJONALNOŚCI
-===========================================================
+Baza danych
+-----------
 
-Blazor WebAssembly (klient / uczestnik):
-  ✓ Rejestracja nowego konta
-  ✓ Logowanie / wylogowanie
-  ✓ Przeglądanie listy biegów (filtry: miasto, nazwa, aktywność)
-  ✓ Szczegóły biegu (opis, data, opłata, wyniki)
-  ✓ Zapis na bieg
-  ✓ Wypisanie się z biegu
-  ✓ Symulacja płatności
-  ✓ Lista własnych zapisów (tabela z sortowaniem i paginacją)
-  ✓ Wyniki biegów (podgląd)
+System korzysta z bazy SQLite. Plik bazy znajduje sie w projekcie WebAPI:
 
-Blazor Server (administrator):
-  ✓ Pulpit z podsumowaniem statystyk
-  ✓ Zarządzanie biegami: CRUD + filtry + sortowanie
-  ✓ Zarządzanie uczestnikami: lista, filtrowanie, sortowanie, usuwanie
-  ✓ Podgląd szczegółów uczestnika (z listą jego zapisów)
-  ✓ Zarządzanie wynikami: dodawanie wyników dla biegu
+RunningEventsSystem.WebAPI/runningevents.db
 
-===========================================================
-BIBLIOTEKI UI
-===========================================================
+Baza jest tworzona i uzupelniana danymi startowymi przy uruchomieniu WebAPI.
+W projekcie uzywane sa m.in. tabele:
 
-  BlazorWasm:   MudBlazor 6.x  (karty, tabele, dialogi, formularze)
-  BlazorServer: Radzen.Blazor 4.x (DataGrid, Dialog, Notification, Menu)
+- Users
+- Events
+- Registrations
+- Results
+- Sponsors
+- EventSponsors
 
-===========================================================
+Konta i dane zapisane w bazie
+-----------------------------
+
+Przykladowe konta uzytkownikow tworzone przez seeder:
+
+- Anna Nowak, anna@test.pl, haslo: test123
+- Piotr Wisniewski, piotr@test.pl, haslo: test123
+- Katarzyna Wojcik, kasia@test.pl, haslo: test123
+- Marek Zielinski, marek@test.pl, haslo: test123
+
+Konto administratora:
+
+- Piotr Wisniewski, piotr@test.pl, haslo: test123
+
+W bazie sa takze przykladowe biegi:
+
+- Cracovia Marathon 2026
+- Warsaw Night Run 2026
+- Poznan Half Marathon 2024
+- Gdansk 10km 2024
+
+Dwa starsze biegi maja przygotowane zapisy uczestnikow oraz wyniki z czasami.
+Dwa nowsze biegi sa aktywne i widoczne po stronie uczestnika jako biegi do zapisu.
+
+Architektura projektu
+---------------------
+
+Rozwiazanie sklada sie z nastepujacych projektow:
+
+- RunningEventsSystem.Domain - modele domenowe i interfejsy repozytoriow
+- RunningEventsSystem.Application - logika aplikacyjna, serwisy, walidatory
+- RunningEventsSystem.Infrastructure - Entity Framework Core, SQLite, repozytoria, Unit of Work, seeder
+- RunningEventsSystem.WebAPI - kontrolery REST API i Swagger
+- RunningEventsSystem.BlazorServer - panel administratora
+- RunningEventsSystem.BlazorWasm - panel uczestnika
+- RunningEventsSystem.SharedKernel - DTO i elementy wspolne
+
+Logowanie
+---------
+
+WebAPI oraz Blazor Server korzystaja z Serilog. Logi sa zapisywane w katalogach
+Logs odpowiednich projektow. System tworzy osobne pliki na kazdy dzien oraz
+osobne pliki dla bledow:
+
+- webapi-.log
+- webapi-errors-.log
+- blazorserver-.log
+- blazorserver-errors-.log
+
+Najwazniejsze funkcje
+---------------------
+
+Blazor WebAssembly:
+
+- rejestracja i logowanie uczestnika
+- lista biegow
+- szczegoly wybranego biegu
+- zapis na bieg po oplaceniu
+- podglad wlasnych zapisow
+- anulowanie zapisu
+- podglad wynikow
+
+Blazor Server:
+
+- pulpit administratora
+- lista biegow
+- dodawanie, edycja i usuwanie biegow
+- lista uczestnikow
+- usuwanie uczestnikow
+- podglad i dodawanie wynikow
+
+Biblioteki UI
+-------------
+
+W projekcie wykorzystano zewnetrzne biblioteki komponentow:
+
+- Radzen.Blazor w panelu Blazor Server
+- MudBlazor w panelu Blazor WebAssembly
+
+W interfejsie sa wykorzystywane obrazy z katalogow wwwroot/images.
+
+Uwagi
+-----
+
+Projekt jest przygotowany pod .NET 6. W przypadku problemow z portami nalezy
+zamknac poprzednie uruchomione procesy WebAPI lub Blazor i uruchomic rozwiazanie
+ponownie z Visual Studio.
