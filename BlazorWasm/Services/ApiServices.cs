@@ -47,7 +47,14 @@ public class UserApiService : IUserApiService
     public async Task<int> RegisterAsync(CreateUserDto dto)
     {
         var response = await _http.PostAsJsonAsync("user", dto);
-        response.EnsureSuccessStatusCode();
+        if (!response.IsSuccessStatusCode)
+        {
+            var error = await response.Content.ReadAsStringAsync();
+            throw new InvalidOperationException(string.IsNullOrWhiteSpace(error)
+                ? "Nie udało się utworzyć konta."
+                : error);
+        }
+
         // Created returns 201 with Location header; we get id from location
         var location = response.Headers.Location?.ToString() ?? "";
         if (int.TryParse(location.Split('/').LastOrDefault(), out var id)) return id;

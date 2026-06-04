@@ -31,6 +31,34 @@ html, body {
 .status-unpaid { color: #FF9800; font-weight: 600; }
 .status-cancelled { color: #f44336; font-weight: 600; }
 
+.event-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    margin: 0 4px 8px 0;
+    border-radius: 14px;
+    background: #e3f2fd;
+    color: #1565c0;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.event-chip-info {
+    background: #e0f7fa;
+    color: #006064;
+}
+
+.event-chip-inactive {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.event-detail-list {
+    display: grid;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
 .hero-section {
     background: linear-gradient(135deg, #1565C0 0%, #1976D2 50%, #42A5F5 100%);
     color: white;

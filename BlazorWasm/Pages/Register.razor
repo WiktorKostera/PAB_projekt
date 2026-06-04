@@ -148,6 +148,10 @@
                 Snackbar.Add("Konto utworzone! Witaj na pokładzie 🏃", Severity.Success);
                 Nav.NavigateTo("/");
             }
+            else
+            {
+                _errorMessage = "Konto zostało utworzone, ale automatyczne logowanie się nie powiodło. Spróbuj zalogować się ręcznie.";
+            }
         }
         catch (Exception ex)
         {

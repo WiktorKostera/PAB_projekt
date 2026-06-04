@@ -1,0 +1,497 @@
+2026-06-04 11:15:37 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 11:15:38 [WRN] No XML encryptor configured. Key {6acffb8e-8f1b-475a-bd29-a0afa4cd47bc} may be persisted to storage in unencrypted form.
+2026-06-04 11:15:39 [WRN] Failed to determine the https port for redirect.
+2026-06-04 11:15:40 [INF] Ładowanie pulpitu administratora
+2026-06-04 11:15:40 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:15:40 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:15:44 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:15:44 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:15:51 [INF] Ładowanie pulpitu administratora
+2026-06-04 11:15:51 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:15:51 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:15:55 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:15:55 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:21:34 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 11:44:04 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 11:44:06 [WRN] Failed to determine the https port for redirect.
+2026-06-04 11:44:06 [INF] Ładowanie pulpitu administratora
+2026-06-04 11:44:06 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:44:06 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:44:11 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:44:11 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:44:16 [INF] Ładowanie pulpitu administratora
+2026-06-04 11:44:16 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:44:16 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:44:20 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:44:20 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:53:03 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 11:53:06 [WRN] Failed to determine the https port for redirect.
+2026-06-04 11:53:07 [INF] Ładowanie pulpitu administratora
+2026-06-04 11:53:07 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:53:07 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:53:11 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:53:11 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:53:16 [INF] Ładowanie pulpitu administratora
+2026-06-04 11:53:16 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:53:16 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 11:53:20 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 11:53:20 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:01:11 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:01:13 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:01:14 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:01:14 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:01:14 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:01:14 [INF] Received HTTP response headers after 35.3116ms - 200
+2026-06-04 12:01:14 [INF] End processing HTTP request after 80.4655ms - 200
+2026-06-04 12:01:14 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:01:14 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:01:14 [INF] Received HTTP response headers after 17.6006ms - 200
+2026-06-04 12:01:14 [INF] End processing HTTP request after 18.29ms - 200
+2026-06-04 12:01:16 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:01:16 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:01:16 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:01:16 [INF] Received HTTP response headers after 5.5767ms - 200
+2026-06-04 12:01:16 [INF] End processing HTTP request after 6.0953ms - 200
+2026-06-04 12:01:17 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:01:17 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:01:17 [INF] Received HTTP response headers after 2.57ms - 200
+2026-06-04 12:01:17 [INF] End processing HTTP request after 3.8259ms - 200
+2026-06-04 12:01:26 [INF] Ładowanie listy biegów (admin)
+2026-06-04 12:01:26 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:01:26 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:01:26 [INF] Received HTTP response headers after 6.9519ms - 200
+2026-06-04 12:01:26 [INF] End processing HTTP request after 12.175ms - 200
+2026-06-04 12:01:27 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 12:01:27 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:01:27 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:01:27 [INF] Received HTTP response headers after 1.9337ms - 200
+2026-06-04 12:01:27 [INF] End processing HTTP request after 2.4113ms - 200
+2026-06-04 12:01:27 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-04 12:01:27 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 12:02:01 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:02:03 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:02:04 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:02:04 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:02:04 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:02:04 [INF] Received HTTP response headers after 60.7772ms - 200
+2026-06-04 12:02:04 [INF] End processing HTTP request after 165.7834ms - 200
+2026-06-04 12:02:04 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:02:04 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:02:04 [INF] Received HTTP response headers after 36.9152ms - 200
+2026-06-04 12:02:04 [INF] End processing HTTP request after 41.563ms - 200
+2026-06-04 12:02:06 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:02:06 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:02:06 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:02:06 [INF] Received HTTP response headers after 2.7645ms - 200
+2026-06-04 12:02:06 [INF] End processing HTTP request after 3.3858ms - 200
+2026-06-04 12:02:06 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:02:06 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:02:06 [INF] Received HTTP response headers after 2.3542ms - 200
+2026-06-04 12:02:06 [INF] End processing HTTP request after 2.9739ms - 200
+2026-06-04 12:05:45 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:05:47 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:05:47 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:05:47 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:05:47 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:05:47 [INF] Received HTTP response headers after 46.7357ms - 200
+2026-06-04 12:05:47 [INF] End processing HTTP request after 81.3273ms - 200
+2026-06-04 12:05:47 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:05:47 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:05:47 [INF] Received HTTP response headers after 3.2824ms - 200
+2026-06-04 12:05:47 [INF] End processing HTTP request after 3.9109ms - 200
+2026-06-04 12:05:48 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:05:48 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:05:48 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:05:48 [INF] Received HTTP response headers after 3.0877ms - 200
+2026-06-04 12:05:48 [INF] End processing HTTP request after 4.5324ms - 200
+2026-06-04 12:05:48 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:05:48 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:05:48 [INF] Received HTTP response headers after 1.6998ms - 200
+2026-06-04 12:05:48 [INF] End processing HTTP request after 2.4904ms - 200
+2026-06-04 12:06:02 [INF] Ładowanie listy biegów (admin)
+2026-06-04 12:06:02 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:06:02 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:06:02 [INF] Received HTTP response headers after 3.2562ms - 200
+2026-06-04 12:06:02 [INF] End processing HTTP request after 3.6338ms - 200
+2026-06-04 12:06:04 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 12:06:04 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:06:04 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:06:04 [INF] Received HTTP response headers after 3.1099ms - 200
+2026-06-04 12:06:04 [INF] End processing HTTP request after 4.0153ms - 200
+2026-06-04 12:06:08 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 12:06:08 [INF] Sending HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 12:06:08 [INF] Received HTTP response headers after 22.712ms - 200
+2026-06-04 12:06:08 [INF] End processing HTTP request after 23.1736ms - 200
+2026-06-04 12:06:12 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 12:06:12 [INF] Sending HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 12:06:12 [INF] Received HTTP response headers after 4.2466ms - 200
+2026-06-04 12:06:12 [INF] End processing HTTP request after 5.0485ms - 200
+2026-06-04 12:06:14 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 12:06:14 [INF] Sending HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 12:06:14 [INF] Received HTTP response headers after 4.1096ms - 200
+2026-06-04 12:06:14 [INF] End processing HTTP request after 5.8188ms - 200
+2026-06-04 12:06:17 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/1"
+2026-06-04 12:06:17 [INF] Sending HTTP request GET "http://localhost:5234/result/event/1"
+2026-06-04 12:06:17 [INF] Received HTTP response headers after 2.9335ms - 200
+2026-06-04 12:06:17 [INF] End processing HTTP request after 4.3004ms - 200
+2026-06-04 12:06:20 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 12:06:20 [INF] Sending HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 12:06:20 [INF] Received HTTP response headers after 1.875ms - 200
+2026-06-04 12:06:20 [INF] End processing HTTP request after 2.3706ms - 200
+2026-06-04 12:06:21 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 12:06:21 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:06:21 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:06:21 [INF] Received HTTP response headers after 1.2843ms - 200
+2026-06-04 12:06:21 [INF] End processing HTTP request after 1.7388ms - 200
+2026-06-04 12:06:21 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-04 12:06:21 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 12:14:13 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:14:14 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:14:15 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:14:15 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:14:15 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:14:15 [INF] Received HTTP response headers after 19.726ms - 200
+2026-06-04 12:14:15 [INF] End processing HTTP request after 43.5465ms - 200
+2026-06-04 12:14:15 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:14:15 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:14:15 [INF] Received HTTP response headers after 1.9766ms - 200
+2026-06-04 12:14:15 [INF] End processing HTTP request after 2.8719ms - 200
+2026-06-04 12:14:16 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:14:16 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:14:16 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:14:16 [INF] Received HTTP response headers after 1.7325ms - 200
+2026-06-04 12:14:16 [INF] End processing HTTP request after 2.1283ms - 200
+2026-06-04 12:14:16 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:14:16 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:14:16 [INF] Received HTTP response headers after 1.3975ms - 200
+2026-06-04 12:14:16 [INF] End processing HTTP request after 1.7996ms - 200
+2026-06-04 12:33:54 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:33:56 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:33:56 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:33:56 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:33:56 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:34:00 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:34:00 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:34:05 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:34:05 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:34:05 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:34:09 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:34:09 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:37:04 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:37:07 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:37:08 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:37:08 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:37:08 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:37:15 [INF] Received HTTP response headers after 6360.5869ms - 200
+2026-06-04 12:37:15 [INF] End processing HTTP request after 6453.0543ms - 200
+2026-06-04 12:37:15 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:37:15 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:37:15 [INF] Received HTTP response headers after 147.8709ms - 200
+2026-06-04 12:37:15 [INF] End processing HTTP request after 148.4961ms - 200
+2026-06-04 12:37:16 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:37:16 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:37:16 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:37:16 [INF] Received HTTP response headers after 13.2637ms - 200
+2026-06-04 12:37:16 [INF] End processing HTTP request after 13.6694ms - 200
+2026-06-04 12:37:16 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:37:16 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:37:16 [INF] Received HTTP response headers after 5.8735ms - 200
+2026-06-04 12:37:16 [INF] End processing HTTP request after 6.3548ms - 200
+2026-06-04 12:38:42 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:38:42 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:38:42 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:38:43 [INF] Received HTTP response headers after 30.6852ms - 200
+2026-06-04 12:38:43 [INF] End processing HTTP request after 31.0191ms - 200
+2026-06-04 12:38:43 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:38:43 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:38:43 [INF] Received HTTP response headers after 5.2598ms - 200
+2026-06-04 12:38:43 [INF] End processing HTTP request after 5.6913ms - 200
+2026-06-04 12:39:59 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:39:59 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:39:59 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:39:59 [INF] Received HTTP response headers after 58.9069ms - 200
+2026-06-04 12:39:59 [INF] End processing HTTP request after 59.3231ms - 200
+2026-06-04 12:39:59 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:39:59 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:39:59 [INF] Received HTTP response headers after 21.4541ms - 200
+2026-06-04 12:39:59 [INF] End processing HTTP request after 21.8936ms - 200
+2026-06-04 12:42:59 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:43:02 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:43:03 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:43:03 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:43:03 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:43:06 [INF] Received HTTP response headers after 3511.1446ms - 200
+2026-06-04 12:43:06 [INF] End processing HTTP request after 3561.9817ms - 200
+2026-06-04 12:43:07 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:43:07 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:43:07 [INF] Received HTTP response headers after 178.1753ms - 200
+2026-06-04 12:43:07 [INF] End processing HTTP request after 178.7169ms - 200
+2026-06-04 12:43:08 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:43:08 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:43:08 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:43:08 [INF] Received HTTP response headers after 3.2216ms - 200
+2026-06-04 12:43:08 [INF] End processing HTTP request after 3.5475ms - 200
+2026-06-04 12:43:08 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:43:08 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:43:08 [INF] Received HTTP response headers after 3.2206ms - 200
+2026-06-04 12:43:08 [INF] End processing HTTP request after 3.6916ms - 200
+2026-06-04 12:48:39 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:48:41 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:48:42 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:48:42 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:48:42 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:48:47 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:48:47 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:48:51 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:48:51 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:48:51 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:48:55 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:48:55 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:53:30 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 12:53:32 [WRN] Failed to determine the https port for redirect.
+2026-06-04 12:53:32 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:53:32 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:53:32 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:53:37 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:53:37 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:53:45 [INF] Ładowanie pulpitu administratora
+2026-06-04 12:53:45 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:53:45 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 12:53:49 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 12:53:49 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:01:57 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:02:00 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:02:00 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:02:01 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:02:01 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:02:05 [INF] Received HTTP response headers after 4846.0517ms - 200
+2026-06-04 13:02:05 [INF] End processing HTTP request after 4895.0703ms - 200
+2026-06-04 13:02:05 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:02:05 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:02:06 [INF] Received HTTP response headers after 102.953ms - 200
+2026-06-04 13:02:06 [INF] End processing HTTP request after 103.6442ms - 200
+2026-06-04 13:02:07 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:02:07 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:02:07 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:02:07 [INF] Received HTTP response headers after 5.2957ms - 200
+2026-06-04 13:02:07 [INF] End processing HTTP request after 5.7048ms - 200
+2026-06-04 13:02:07 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:02:07 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:02:07 [INF] Received HTTP response headers after 4.8355ms - 200
+2026-06-04 13:02:07 [INF] End processing HTTP request after 5.3001ms - 200
+2026-06-04 13:14:33 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:14:34 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:14:34 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:14:34 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:14:34 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:14:39 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:14:39 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:14:44 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:14:44 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:14:44 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:14:48 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:14:48 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:15:35 [INF] Ładowanie listy biegów (admin)
+2026-06-04 13:15:35 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:15:35 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:15:39 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 13:15:39 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:15:39 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:15:39 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-04 13:15:39 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 13:20:30 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:20:32 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:20:33 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:20:33 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:20:33 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:20:37 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:20:37 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:20:42 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:20:42 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:20:42 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:20:46 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:20:46 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:21:04 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:21:06 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:21:07 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:21:07 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:21:07 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:21:11 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:21:11 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:21:16 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:21:16 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:21:16 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:21:20 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:21:20 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:21:22 [INF] Ładowanie listy biegów (admin)
+2026-06-04 13:21:22 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:21:22 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:21:23 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 13:21:23 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:21:23 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:21:23 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-04 13:21:23 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 13:35:49 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:35:51 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:35:51 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:35:51 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:35:51 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:35:55 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:35:55 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:36:00 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:36:00 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:36:00 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:36:04 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:36:04 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:46:33 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:46:35 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:46:35 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:46:35 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:46:35 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:46:43 [INF] Received HTTP response headers after 7550.724ms - 200
+2026-06-04 13:46:43 [INF] End processing HTTP request after 7579.8346ms - 200
+2026-06-04 13:46:43 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:46:43 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:46:43 [INF] Received HTTP response headers after 113.8427ms - 200
+2026-06-04 13:46:43 [INF] End processing HTTP request after 114.3652ms - 200
+2026-06-04 13:46:44 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:46:44 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:46:44 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:46:44 [INF] Received HTTP response headers after 32.4345ms - 200
+2026-06-04 13:46:44 [INF] End processing HTTP request after 32.8589ms - 200
+2026-06-04 13:46:44 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:46:44 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:46:44 [INF] Received HTTP response headers after 9.5657ms - 200
+2026-06-04 13:46:44 [INF] End processing HTTP request after 10.0581ms - 200
+2026-06-04 13:47:59 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:48:00 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:48:00 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:48:00 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:48:00 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:48:07 [INF] Received HTTP response headers after 7054.8435ms - 200
+2026-06-04 13:48:07 [INF] End processing HTTP request after 7081.2243ms - 200
+2026-06-04 13:48:07 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:48:07 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:48:07 [INF] Received HTTP response headers after 82.6727ms - 200
+2026-06-04 13:48:07 [INF] End processing HTTP request after 83.3015ms - 200
+2026-06-04 13:48:08 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:48:08 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:48:08 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:48:08 [INF] Received HTTP response headers after 4.0194ms - 200
+2026-06-04 13:48:08 [INF] End processing HTTP request after 4.3838ms - 200
+2026-06-04 13:48:08 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:48:08 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:48:08 [INF] Received HTTP response headers after 3.4267ms - 200
+2026-06-04 13:48:08 [INF] End processing HTTP request after 3.9037ms - 200
+2026-06-04 13:50:04 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 13:50:06 [WRN] Failed to determine the https port for redirect.
+2026-06-04 13:50:07 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:50:07 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:50:07 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:50:12 [INF] Received HTTP response headers after 5340.3212ms - 200
+2026-06-04 13:50:12 [INF] End processing HTTP request after 5388.6236ms - 200
+2026-06-04 13:50:12 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:50:12 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:50:12 [INF] Received HTTP response headers after 129.8351ms - 200
+2026-06-04 13:50:12 [INF] End processing HTTP request after 130.4773ms - 200
+2026-06-04 13:50:14 [INF] Ładowanie pulpitu administratora
+2026-06-04 13:50:14 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:50:14 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 13:50:14 [INF] Received HTTP response headers after 19.8263ms - 200
+2026-06-04 13:50:14 [INF] End processing HTTP request after 20.3007ms - 200
+2026-06-04 13:50:14 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:50:14 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 13:50:14 [INF] Received HTTP response headers after 12.0255ms - 200
+2026-06-04 13:50:14 [INF] End processing HTTP request after 12.7151ms - 200
+2026-06-04 14:05:51 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 14:05:54 [WRN] Failed to determine the https port for redirect.
+2026-06-04 14:05:54 [INF] Ładowanie pulpitu administratora
+2026-06-04 14:05:54 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 14:05:54 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 14:05:59 [INF] Received HTTP response headers after 4244.7479ms - 200
+2026-06-04 14:05:59 [INF] End processing HTTP request after 4294.0682ms - 200
+2026-06-04 14:05:59 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 14:05:59 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 14:05:59 [INF] Received HTTP response headers after 247.1635ms - 200
+2026-06-04 14:05:59 [INF] End processing HTTP request after 248.4042ms - 200
+2026-06-04 14:06:00 [INF] Ładowanie pulpitu administratora
+2026-06-04 14:06:00 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 14:06:00 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 14:06:00 [INF] Received HTTP response headers after 9.0129ms - 200
+2026-06-04 14:06:00 [INF] End processing HTTP request after 9.4078ms - 200
+2026-06-04 14:06:01 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 14:06:01 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 14:06:01 [INF] Received HTTP response headers after 2.3659ms - 200
+2026-06-04 14:06:01 [INF] End processing HTTP request after 2.8225ms - 200

@@ -87,7 +87,7 @@ else
             <MudTd>
                 <span class="@GetPaymentClass(context.PaymentStatus)">@context.PaymentStatus</span>
             </MudTd>
-            <MudTd>@context.PaymentAmount.ToString("C", new System.Globalization.CultureInfo("pl-PL"))</MudTd>
+            <MudTd>@FormatMoney(context.PaymentAmount)</MudTd>
             <MudTd>@(context.StartNumber?.ToString() ?? "–")</MudTd>
             <MudTd>
                 <div style="display:flex;gap:4px;">
@@ -124,9 +124,21 @@ else
     protected override async Task OnInitializedAsync()
     {
         if (!Session.IsLoggedIn) return;
-        _registrations = await RegistrationService.GetByUserAsync(Session.CurrentUser!.Id);
+        var registrations = await RegistrationService.GetByUserAsync(Session.CurrentUser!.Id);
+        _registrations = NormalizeRegistrations(registrations);
         _loading = false;
     }
+
+    private static List<RegistrationDto> NormalizeRegistrations(IEnumerable<RegistrationDto> registrations) =>
+        registrations
+            .Where(r => r.Status != "Cancelled")
+            .GroupBy(r => r.EventId)
+            .Select(g => g
+                .OrderByDescending(r => r.PaymentStatus == "Paid")
+                .ThenByDescending(r => r.RegistrationDate)
+                .First())
+            .OrderByDescending(r => r.RegistrationDate)
+            .ToList();
 
     private bool FilterFunc(RegistrationDto r) =>
         string.IsNullOrEmpty(_searchString) ||
@@ -159,7 +171,7 @@ else
         var response = await RegistrationService.CancelByUserAndEventAsync(Session.CurrentUser!.Id, reg.EventId);
         if (response.IsSuccessStatusCode)
         {
-            reg.Status = "Cancelled";
+            _registrations.Remove(reg);
             Snackbar.Add("Wypisano z biegu.", Severity.Info);
         }
         else
@@ -181,4 +193,7 @@ else
         "Unpaid" => "status-unpaid",
         _ => "status-cancelled"
     };
+
+    private static string FormatMoney(decimal amount) =>
+        $"{amount:0.00}".Replace('.', ',') + " zł";
 }

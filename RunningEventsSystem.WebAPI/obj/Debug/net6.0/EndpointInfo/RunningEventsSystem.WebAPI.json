@@ -811,6 +811,18 @@
         }
       }
     },
+    "/": {
+      "get": {
+        "tags": [
+          "RunningEventsSystem.WebAPI"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/User": {
       "get": {
         "tags": [

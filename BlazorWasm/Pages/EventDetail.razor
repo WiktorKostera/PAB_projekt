@@ -24,7 +24,7 @@ else
         <MudItem xs="12" md="8">
             @if (!string.IsNullOrEmpty(_event.ImageUrl))
             {
-                <img src="@_event.ImageUrl" alt="@_event.Name"
+                <img src="@GetImageUrl(_event.ImageUrl)" alt="@_event.Name"
                      style="width:100%;max-height:320px;object-fit:cover;border-radius:12px;margin-bottom:16px;"
                      onerror="this.style.display='none'" />
             }
@@ -38,11 +38,11 @@ else
             <MudText Typo="Typo.h4" Style="font-weight:700;margin-bottom:8px;">@_event.Name</MudText>
 
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
-                <MudChip Color="Color.Primary" Icon="@Icons.Material.Filled.LocationOn">@_event.City</MudChip>
-                <MudChip Color="Color.Info" Icon="@Icons.Material.Filled.Place">@_event.Location</MudChip>
+                <span class="event-chip">@_event.City</span>
+                <span class="event-chip event-chip-info">@_event.Location</span>
                 @if (!_event.IsActive)
                 {
-                    <MudChip Color="Color.Error">Bieg nieaktywny</MudChip>
+                    <span class="event-chip event-chip-inactive">Bieg nieaktywny</span>
                 }
             </div>
 
@@ -89,20 +89,12 @@ else
             <MudPaper Elevation="4" Class="pa-4" Style="position:sticky;top:90px;">
                 <MudText Typo="Typo.h6" Class="mb-3">Szczegóły</MudText>
 
-                <MudList Dense="true">
-                    <MudListItem Icon="@Icons.Material.Filled.CalendarToday">
-                        <b>Data biegu:</b>&nbsp;@_event.EventDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("pl-PL"))
-                    </MudListItem>
-                    <MudListItem Icon="@Icons.Material.Filled.EventBusy">
-                        <b>Zapisy do:</b>&nbsp;@_event.RegistrationDeadline.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("pl-PL"))
-                    </MudListItem>
-                    <MudListItem Icon="@Icons.Material.Filled.People">
-                        <b>Max uczestników:</b>&nbsp;@_event.MaxParticipants
-                    </MudListItem>
-                    <MudListItem Icon="@Icons.Material.Filled.Payments">
-                        <b>Opłata startowa:</b>&nbsp;<span style="color:#FF6B35;font-weight:700;">@_event.EntryFee.ToString("C", new System.Globalization.CultureInfo("pl-PL"))</span>
-                    </MudListItem>
-                </MudList>
+                <div class="event-detail-list">
+                    <div><b>Data biegu:</b> @_event.EventDate.ToString("dd.MM.yyyy")</div>
+                    <div><b>Zapisy do:</b> @_event.RegistrationDeadline.ToString("dd.MM.yyyy")</div>
+                    <div><b>Max uczestników:</b> @_event.MaxParticipants</div>
+                    <div><b>Opłata startowa:</b> <span style="color:#FF6B35;font-weight:700;">@FormatMoney(_event.EntryFee)</span></div>
+                </div>
 
                 <MudDivider Class="my-3" />
 
@@ -136,7 +128,7 @@ else
                                    OnClick="HandlePay"
                                    Disabled="_actionLoading"
                                    Class="mb-2">
-                            Zapłać (@_event.EntryFee.ToString("C", new System.Globalization.CultureInfo("pl-PL")))
+                            Zapłać (@FormatMoney(_event.EntryFee))
                         </MudButton>
                     }
 
@@ -207,6 +199,11 @@ else
 
     private async Task HandleRegister()
     {
+        if (_actionLoading || _userRegistration != null)
+        {
+            return;
+        }
+
         _actionLoading = true;
         try
         {
@@ -292,4 +289,22 @@ else
         "Unpaid" => "status-unpaid",
         _ => ""
     };
+
+    private static string GetImageUrl(string? imageUrl)
+    {
+        if (string.IsNullOrWhiteSpace(imageUrl))
+        {
+            return string.Empty;
+        }
+
+        if (imageUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase) || imageUrl.StartsWith('/'))
+        {
+            return imageUrl;
+        }
+
+        return "/" + imageUrl;
+    }
+
+    private static string FormatMoney(decimal amount) =>
+        $"{amount:0.00}".Replace('.', ',') + " zł";
 }

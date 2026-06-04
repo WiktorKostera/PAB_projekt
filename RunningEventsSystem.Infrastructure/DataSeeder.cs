@@ -2,6 +2,9 @@
 using RunningEventsSystem.Infrastructure;
 using System.Security.Cryptography;
 
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+
 public class DataSeeder
 {
     private readonly RunningEventsDbContext _dbContext;
@@ -14,6 +17,7 @@ public class DataSeeder
     public void Seed()
     {
         _dbContext.Database.EnsureCreated();
+        ApplyDatabaseFixups();
 
         if (!_dbContext.Database.CanConnect()) return;
 
@@ -33,95 +37,91 @@ public class DataSeeder
         }
 
         // EVENTS
-        if (!_dbContext.Events.Any())
+        var seedEvents = new List<Event>
         {
-            var events = new List<Event>
+            new Event
             {
-                // przyszłe
-                new Event
-                {
-                    Id = 1,
-                    Name = "Cracovia Marathon 2025",
-                    Description = "Największy maraton w Krakowie",
-                    Location = "Rynek Główny",
-                    City = "Kraków",
-                    EventDate = DateTime.Now.AddMonths(2),
-                    RegistrationDeadline = DateTime.Now.AddMonths(1),
-                    MaxParticipants = 100,
-                    EntryFee = 80,
-                    IsActive = true,
-                    ImageUrl = "images/event-marathon.jpg"
-                },
-                new Event
-                {
-                    Id = 2,
-                    Name = "Warsaw Night Run 2025",
-                    Description = "Nocny bieg ulicami Warszawy",
-                    Location = "Plac Defilad",
-                    City = "Warszawa",
-                    EventDate = DateTime.Now.AddMonths(3),
-                    RegistrationDeadline = DateTime.Now.AddMonths(2),
-                    MaxParticipants = 50,
-                    EntryFee = 60,
-                    IsActive = true,
-                    ImageUrl = "images/event-night-run.jpg"
-                },
-                // przeszłe - mają wyniki
-                new Event
-                {
-                    Id = 3,
-                    Name = "Poznań Half Marathon 2024",
-                    Description = "Półmaraton przez centrum Poznania",
-                    Location = "Stary Rynek",
-                    City = "Poznań",
-                    EventDate = DateTime.Now.AddMonths(-2),
-                    RegistrationDeadline = DateTime.Now.AddMonths(-3),
-                    MaxParticipants = 200,
-                    EntryFee = 50,
-                    IsActive = false,
-                    ImageUrl = "images/event-half-marathon.jpg"
-                },
-                new Event
-                {
-                    Id = 4,
-                    Name = "Gdańsk 10km 2024",
-                    Description = "Bieg przez Stare Miasto w Gdańsku",
-                    Location = "Długi Targ",
-                    City = "Gdańsk",
-                    EventDate = DateTime.Now.AddMonths(-1),
-                    RegistrationDeadline = DateTime.Now.AddMonths(-2),
-                    MaxParticipants = 150,
-                    EntryFee = 40,
-                    IsActive = false,
-                    ImageUrl = "images/event-10k.jpg"
-                }
-            };
-            _dbContext.Events.AddRange(events);
-            _dbContext.SaveChanges();
-        }
-        else
-        {
-            var eventImages = new Dictionary<int, string>
+                Id = 1,
+                Name = "Cracovia Marathon 2025",
+                Description = "Największy maraton w Krakowie",
+                Location = "Rynek Główny",
+                City = "Kraków",
+                EventDate = DateTime.Now.AddMonths(2),
+                RegistrationDeadline = DateTime.Now.AddMonths(1),
+                MaxParticipants = 100,
+                EntryFee = 80,
+                IsActive = true,
+                ImageUrl = "images/event-marathon.jpg"
+            },
+            new Event
             {
-                [1] = "images/event-marathon.jpg",
-                [2] = "images/event-night-run.jpg",
-                [3] = "images/event-half-marathon.jpg",
-                [4] = "images/event-10k.jpg"
-            };
+                Id = 2,
+                Name = "Warsaw Night Run 2025",
+                Description = "Nocny bieg ulicami Warszawy",
+                Location = "Plac Defilad",
+                City = "Warszawa",
+                EventDate = DateTime.Now.AddMonths(3),
+                RegistrationDeadline = DateTime.Now.AddMonths(2),
+                MaxParticipants = 50,
+                EntryFee = 60,
+                IsActive = true,
+                ImageUrl = "images/event-night-run.jpg"
+            },
+            new Event
+            {
+                Id = 3,
+                Name = "Poznań Half Marathon 2024",
+                Description = "Półmaraton przez centrum Poznania",
+                Location = "Stary Rynek",
+                City = "Poznań",
+                EventDate = DateTime.Now.AddMonths(-2),
+                RegistrationDeadline = DateTime.Now.AddMonths(-3),
+                MaxParticipants = 200,
+                EntryFee = 50,
+                IsActive = false,
+                ImageUrl = "images/event-half-marathon.jpg"
+            },
+            new Event
+            {
+                Id = 4,
+                Name = "Gdańsk 10km 2024",
+                Description = "Bieg przez Stare Miasto w Gdańsku",
+                Location = "Długi Targ",
+                City = "Gdańsk",
+                EventDate = DateTime.Now.AddMonths(-1),
+                RegistrationDeadline = DateTime.Now.AddMonths(-2),
+                MaxParticipants = 150,
+                EntryFee = 40,
+                IsActive = false,
+                ImageUrl = "images/event-10k.jpg"
+            }
+        };
 
-            var changed = false;
-            foreach (var ev in _dbContext.Events)
+        foreach (var seedEvent in seedEvents)
+        {
+            var existingEvent = _dbContext.Events.Find(seedEvent.Id);
+            if (existingEvent == null)
             {
-                if (string.IsNullOrWhiteSpace(ev.ImageUrl) && eventImages.TryGetValue(ev.Id, out var imageUrl))
-                {
-                    ev.ImageUrl = imageUrl;
-                    changed = true;
-                }
+                _dbContext.Events.Add(seedEvent);
+                continue;
             }
 
-            if (changed)
-                _dbContext.SaveChanges();
+            existingEvent.Name = seedEvent.Name;
+            existingEvent.Description = seedEvent.Description;
+            existingEvent.Location = seedEvent.Location;
+            existingEvent.City = seedEvent.City;
+            existingEvent.EventDate = seedEvent.EventDate;
+            existingEvent.RegistrationDeadline = seedEvent.RegistrationDeadline;
+            existingEvent.MaxParticipants = seedEvent.MaxParticipants;
+            existingEvent.EntryFee = seedEvent.EntryFee;
+            existingEvent.IsActive = seedEvent.IsActive;
+
+            if (string.IsNullOrWhiteSpace(existingEvent.ImageUrl))
+            {
+                existingEvent.ImageUrl = seedEvent.ImageUrl;
+            }
         }
+        _dbContext.SaveChanges();
 
         // REJESTRACJE dla przeszłych eventów
         if (!_dbContext.Registrations.Any())
@@ -176,4 +176,59 @@ public class DataSeeder
 
         return $"PBKDF2${iterations}${Convert.ToBase64String(salt)}${Convert.ToBase64String(key)}";
     }
+
+    private void ApplyDatabaseFixups()
+    {
+        AddColumnIfMissing("Registrations", "PaidAt", "ALTER TABLE Registrations ADD COLUMN PaidAt TEXT NULL");
+        AddColumnIfMissing("Registrations", "PaymentAmount", "ALTER TABLE Registrations ADD COLUMN PaymentAmount TEXT NOT NULL DEFAULT '0.0'");
+        AddColumnIfMissing("Registrations", "PaymentStatus", "ALTER TABLE Registrations ADD COLUMN PaymentStatus INTEGER NOT NULL DEFAULT 0");
+        AddColumnIfMissing("Registrations", "CancelledAt", "ALTER TABLE Registrations ADD COLUMN CancelledAt TEXT NULL");
+        AddColumnIfMissing("Registrations", "StartNumber", "ALTER TABLE Registrations ADD COLUMN StartNumber INTEGER NULL");
+    }
+
+    private void AddColumnIfMissing(string tableName, string columnName, string sql)
+    {
+        if (ColumnExists(tableName, columnName))
+        {
+            return;
+        }
+
+        _dbContext.Database.ExecuteSqlRaw(sql);
+    }
+
+    private bool ColumnExists(string tableName, string columnName)
+    {
+        var connection = _dbContext.Database.GetDbConnection();
+        var shouldClose = connection.State != System.Data.ConnectionState.Open;
+
+        if (shouldClose)
+        {
+            connection.Open();
+        }
+
+        try
+        {
+            using var command = connection.CreateCommand();
+            command.CommandText = $"PRAGMA table_info({tableName})";
+
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                if (string.Equals(reader.GetString(1), columnName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        finally
+        {
+            if (shouldClose)
+            {
+                connection.Close();
+            }
+        }
+    }
+
 }

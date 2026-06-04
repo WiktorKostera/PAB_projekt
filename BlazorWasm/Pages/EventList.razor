@@ -75,7 +75,7 @@ else
                 <MudCard Elevation="3" Style="height:100%;display:flex;flex-direction:column;">
                     @if (!string.IsNullOrEmpty(ev.ImageUrl))
                     {
-                        <img src="@ev.ImageUrl" alt="@ev.Name" class="event-card-image" onerror="this.style.display='none'" />
+                        <img src="@GetImageUrl(ev.ImageUrl)" alt="@ev.Name" class="event-card-image" onerror="this.style.display='none'" />
                     }
                     else
                     {
@@ -85,15 +85,13 @@ else
                     }
                     <MudCardContent Style="flex:1;">
                         <MudText Typo="Typo.h6" Style="font-weight:600;">@ev.Name</MudText>
-                        <MudChip Size="Size.Small" Color="Color.Primary" Icon="@Icons.Material.Filled.LocationOn" Class="mb-2">
-                            @ev.City
-                        </MudChip>
+                        <span class="event-chip">@ev.City</span>
                         @if (!ev.IsActive)
                         {
-                            <MudChip Size="Size.Small" Color="Color.Error" Class="ml-1 mb-2">Nieaktywny</MudChip>
+                            <span class="event-chip event-chip-inactive">Nieaktywny</span>
                         }
                         <MudText Typo="Typo.body2" Color="Color.Secondary" Style="margin-bottom:8px;">
-                            @ev.Description.Length > 100 ? ev.Description[..97] + "..." : ev.Description
+                            @(ev.Description.Length > 100 ? ev.Description[..97] + "..." : ev.Description)
                         </MudText>
                         <MudDivider Class="my-2" />
                         <MudGrid>
@@ -103,7 +101,7 @@ else
                             </MudItem>
                             <MudItem xs="6">
                                 <MudText Typo="Typo.caption" Color="Color.Secondary">Opłata</MudText>
-                                <MudText Typo="Typo.body2" Style="font-weight:600;color:#FF6B35;">@ev.EntryFee.ToString("C", new System.Globalization.CultureInfo("pl-PL"))</MudText>
+                                <MudText Typo="Typo.body2" Style="font-weight:600;color:#FF6B35;">@FormatMoney(ev.EntryFee)</MudText>
                             </MudItem>
                         </MudGrid>
                         <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mt-1">
@@ -141,7 +139,7 @@ else
     private bool _loading = true;
     private string _searchText = string.Empty;
     private string _selectedCity = string.Empty;
-    private bool _onlyActive;
+    private bool _onlyActive = true;
 
     protected override async Task OnInitializedAsync()
     {
@@ -152,6 +150,24 @@ else
     }
 
     private void FilterEvents() => ApplyFilter();
+
+    private static string GetImageUrl(string? imageUrl)
+    {
+        if (string.IsNullOrWhiteSpace(imageUrl))
+        {
+            return string.Empty;
+        }
+
+        if (imageUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase) || imageUrl.StartsWith('/'))
+        {
+            return imageUrl;
+        }
+
+        return "/" + imageUrl;
+    }
+
+    private static string FormatMoney(decimal amount) =>
+        $"{amount:0.00}".Replace('.', ',') + " zł";
 
     private void ApplyFilter()
     {
