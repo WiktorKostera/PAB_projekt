@@ -23,19 +23,7 @@ public class DataSeeder
 
         RemoveUnwantedTestUsers();
 
-        // USERS
-        if (!_dbContext.Users.Any())
-        {
-            var users = new List<User>
-            {
-                new User { Id = 2, FirstName = "Anna", LastName = "Nowak", Email = "anna@test.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
-                new User { Id = 3, FirstName = "Piotr", LastName = "Wiśniewski", Email = "piotr@test.pl", Password = HashPassword("test123"), Role = UserRole.Admin, IsActive = true },
-                new User { Id = 4, FirstName = "Katarzyna", LastName = "Wójcik", Email = "kasia@test.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
-                new User { Id = 5, FirstName = "Marek", LastName = "Zieliński", Email = "marek@test.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true }
-            };
-            _dbContext.Users.AddRange(users);
-            _dbContext.SaveChanges();
-        }
+        EnsureSeedUsers();
 
         // EVENTS
         var seedEvents = new List<Event>
@@ -213,6 +201,48 @@ public class DataSeeder
         AddColumnIfMissing("Registrations", "PaymentStatus", "ALTER TABLE Registrations ADD COLUMN PaymentStatus INTEGER NOT NULL DEFAULT 0");
         AddColumnIfMissing("Registrations", "CancelledAt", "ALTER TABLE Registrations ADD COLUMN CancelledAt TEXT NULL");
         AddColumnIfMissing("Registrations", "StartNumber", "ALTER TABLE Registrations ADD COLUMN StartNumber INTEGER NULL");
+    }
+
+    private void EnsureSeedUsers()
+    {
+        var users = new List<User>
+        {
+            new User { Id = 2, FirstName = "Anna", LastName = "Nowak", Email = "anna@test.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 3, FirstName = "Piotr", LastName = "Wiśniewski", Email = "piotr@test.pl", Password = HashPassword("test123"), Role = UserRole.Admin, IsActive = true },
+            new User { Id = 4, FirstName = "Katarzyna", LastName = "Wójcik", Email = "kasia@test.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 5, FirstName = "Marek", LastName = "Zieliński", Email = "marek@test.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 30, FirstName = "Kamil", LastName = "Barszcz", Email = "kamilbarszcz@run.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 31, FirstName = "Kamil", LastName = "Ładyga", Email = "kladyga@test.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 32, FirstName = "Zenon", LastName = "Martyniuk", Email = "oczyzielone123@wp.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 33, FirstName = "Mohamed", LastName = "Abdul", Email = "mohamed@mohamed.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 34, FirstName = "Ewa", LastName = "Maj", Email = "ewa.maj@run.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true },
+            new User { Id = 35, FirstName = "Tomasz", LastName = "Kaczmarek", Email = "tomasz.kaczmarek@run.pl", Password = HashPassword("test123"), Role = UserRole.Participant, IsActive = true }
+        };
+
+        foreach (var seedUser in users)
+        {
+            var existingUser = _dbContext.Users.Find(seedUser.Id)
+                ?? _dbContext.Users.FirstOrDefault(user => user.Email.ToLower() == seedUser.Email.ToLower());
+
+            if (existingUser == null)
+            {
+                _dbContext.Users.Add(seedUser);
+                continue;
+            }
+
+            existingUser.FirstName = seedUser.FirstName;
+            existingUser.LastName = seedUser.LastName;
+            existingUser.Email = seedUser.Email;
+            existingUser.Role = seedUser.Role;
+            existingUser.IsActive = true;
+
+            if (string.IsNullOrWhiteSpace(existingUser.Password))
+            {
+                existingUser.Password = seedUser.Password;
+            }
+        }
+
+        _dbContext.SaveChanges();
     }
 
     private void RemoveUnwantedTestUsers()

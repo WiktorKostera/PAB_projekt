@@ -42,7 +42,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RunningEventsSystem.WpfClient",
+              "Title": "RunningEventsSystem.WpfClient.csproj",
               "DocumentMoniker": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WpfClient\\RunningEventsSystem.WpfClient.csproj",
               "RelativeDocumentMoniker": "RunningEventsSystem.WpfClient\\RunningEventsSystem.WpfClient.csproj",
               "ToolTip": "C:\\Users\\rados\\source\\repos\\C#\\PAB_projekt\\RunningEventsSystem.WpfClient\\RunningEventsSystem.WpfClient.csproj",
@@ -62,8 +62,7 @@
               "RelativeToolTip": "RunningEventsSystem.WpfClient\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T17:44:46.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T17:44:46.585Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "RunningEventsSystem.Infrastructure\\DataSeeder.cs",
               "ViewState": "AgIAABwBAAAAAAAAAAAnwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T17:39:32.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T17:39:32.847Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "BlazorServer\\Pages\\_Host.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAnwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-04T11:41:24.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T11:41:24.245Z"
             },
             {
               "$type": "Document",

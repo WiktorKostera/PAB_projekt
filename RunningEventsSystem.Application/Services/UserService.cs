@@ -82,7 +82,32 @@ public class UserService : IUserService
     public void Delete(int id)
     {
         var user = _uow.UserRepository.Get(id) ?? throw new NotFoundException("User not found");
-        user.IsActive = false;
+
+        var userRegistrations = _uow.RegistrationRepository
+            .GetAll()
+            .Where(registration => registration.UserId == id)
+            .ToList();
+
+        var userRegistrationIds = userRegistrations
+            .Select(registration => registration.Id)
+            .ToList();
+
+        var userResults = _uow.ResultRepository
+            .GetAll()
+            .Where(result => result.UserId == id || userRegistrationIds.Contains(result.RegistrationId))
+            .ToList();
+
+        foreach (var result in userResults)
+        {
+            _uow.ResultRepository.Delete(result);
+        }
+
+        foreach (var registration in userRegistrations)
+        {
+            _uow.RegistrationRepository.Delete(registration);
+        }
+
+        _uow.UserRepository.Delete(user);
         _uow.Commit();
     }
 

@@ -47,18 +47,6 @@ else
                                  BadgeStyle="@(u.Role == "Admin" ? BadgeStyle.Warning : BadgeStyle.Info)" />
                 </Template>
             </RadzenDataGridColumn>
-            <RadzenDataGridColumn TItem="UserDto" Property="IsActive" Title="Aktywny" Width="100px">
-                <Template Context="u">
-                    @if (u.IsActive)
-                    {
-                        <RadzenBadge Text="Aktywny" BadgeStyle="BadgeStyle.Success" />
-                    }
-                    else
-                    {
-                        <RadzenBadge Text="Nieaktywny" BadgeStyle="BadgeStyle.Danger" />
-                    }
-                </Template>
-            </RadzenDataGridColumn>
             <RadzenDataGridColumn TItem="UserDto" Title="Akcje" Width="120px" Sortable="false">
                 <Template Context="u">
                     <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small"
@@ -68,7 +56,7 @@ else
         </Columns>
     </RadzenDataGrid>
     <RadzenText TextStyle="TextStyle.Caption" Style="margin-top:8px;color:#888;">
-        Wyświetlono @_filteredUsers.Count z @_allUsers.Count uczestników
+        Wyświetlono @_filteredUsers.Count z @_activeUsersCount uczestników
     </RadzenText>
 }
 
@@ -80,6 +68,7 @@ else
     private string? _roleFilter;
     private string _sortField = "FullName";
     private bool _loading = true;
+    private int _activeUsersCount;
 
     private List<SortOption> _sortOptions = new()
     {
@@ -98,7 +87,8 @@ else
 
     private void ApplyFilter()
     {
-        var q = _allUsers.AsEnumerable();
+        var q = _allUsers.Where(u => u.IsActive);
+        _activeUsersCount = q.Count();
 
         if (!string.IsNullOrEmpty(_searchText))
             q = q.Where(u => u.FullName.Contains(_searchText, StringComparison.OrdinalIgnoreCase)
