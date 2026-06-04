@@ -1,21 +1,21 @@
-RunningEventsSystem - system zarzadzania biegami
+RunningEventsSystem - system zarządzania biegami
 =================================================
 
-Sklad grupy projektowej
+Skład grupy projektowej
 -----------------------
 
 1. Wiktor Kostera
-2. Radoslaw Ciemiega
+2. Radosław Ciemięga
 
 Opis projektu
 -------------
 
-Projekt jest aplikacja biznesowa do obslugi wydarzen biegowych. System pozwala
-na zarzadzanie biegami, uczestnikami, zapisami oraz wynikami. Czesc dla
-administratora jest przygotowana w Blazor Server, a czesc dla uczestnika w
+Projekt jest aplikacją biznesową do obsługi wydarzeń biegowych. System pozwala
+na zarządzanie biegami, uczestnikami, zapisami oraz wynikami. Część dla
+administratora jest przygotowana w Blazor Server, a część dla uczestnika w
 Blazor WebAssembly.
 
-W projekcie zastosowano baze SQLite oraz podzial na warstwy zgodnie z zalozeniami
+W projekcie zastosowano bazę SQLite oraz podział na warstwy zgodnie z założeniami
 czystej architektury.
 
 Wymagania do uruchomienia
@@ -23,20 +23,20 @@ Wymagania do uruchomienia
 
 - .NET 6 SDK
 - Visual Studio 2022
-- Przy pierwszym uruchomieniu Visual Studio moze pobrac brakujace pakiety NuGet.
-  Jezeli pakiety nie odtworza sie automatycznie, nalezy wykonac Restore NuGet
-  Packages dla calego rozwiazania.
+- Przy pierwszym uruchomieniu Visual Studio może pobrać brakujące pakiety NuGet.
+  Jeżeli pakiety nie odtworzą się automatycznie, należy wykonać Restore NuGet
+  Packages dla całego rozwiązania.
 
 Projekty startowe
 -----------------
 
-W Visual Studio najlepiej ustawic kilka projektow startowych:
+W Visual Studio najlepiej ustawić kilka projektów startowych:
 
 1. RunningEventsSystem.WebAPI
 2. RunningEventsSystem.BlazorServer
 3. RunningEventsSystem.BlazorWasm
 
-WebAPI powinno wystartowac na porcie:
+WebAPI powinno wystartować na porcie:
 
 http://localhost:5234
 
@@ -53,19 +53,19 @@ Adres API jest ustawiony w plikach:
 - BlazorServer/appsettings.json
 - BlazorWasm/wwwroot/appsettings.json
 
-Oba powinny wskazywac na:
+Oba powinny wskazywać na:
 
 http://localhost:5234/
 
 Baza danych
 -----------
 
-System korzysta z bazy SQLite. Plik bazy znajduje sie w projekcie WebAPI:
+System korzysta z bazy SQLite. Plik bazy znajduje się w projekcie WebAPI:
 
 RunningEventsSystem.WebAPI/runningevents.db
 
-Baza jest tworzona i uzupelniana danymi startowymi przy uruchomieniu WebAPI.
-W projekcie uzywane sa m.in. tabele:
+Baza jest tworzona i uzupełniana danymi startowymi przy uruchomieniu WebAPI.
+W projekcie używane są m.in. tabele:
 
 - Users
 - Events
@@ -77,87 +77,75 @@ W projekcie uzywane sa m.in. tabele:
 Konta i dane zapisane w bazie
 -----------------------------
 
-Przykladowe konta uzytkownikow tworzone przez seeder:
+Przykładowe konta użytkowników tworzone przez seeder:
 
-- Anna Nowak, anna@test.pl, haslo: test123
-- Piotr Wisniewski, piotr@test.pl, haslo: test123
-- Katarzyna Wojcik, kasia@test.pl, haslo: test123
-- Marek Zielinski, marek@test.pl, haslo: test123
+- Anna Nowak, anna@test.pl, hasło: test123
+- Piotr Wiśniewski, piotr@test.pl, hasło: test123
+- Katarzyna Wójcik, kasia@test.pl, hasło: test123
+- Marek Zieliński, marek@test.pl, hasło: test123
 
-Konto administratora:
-
-- Piotr Wisniewski, piotr@test.pl, haslo: test123
-
-W bazie sa takze przykladowe biegi:
+W bazie są także przykładowe biegi:
 
 - Cracovia Marathon 2026
 - Warsaw Night Run 2026
-- Poznan Half Marathon 2024
-- Gdansk 10km 2024
+- Poznań Half Marathon 2024
+- Gdańsk 10km 2024
 
-Dwa starsze biegi maja przygotowane zapisy uczestnikow oraz wyniki z czasami.
-Dwa nowsze biegi sa aktywne i widoczne po stronie uczestnika jako biegi do zapisu.
+Dwa starsze biegi mają przygotowane zapisy uczestników oraz wyniki z czasami.
+Dwa nowsze biegi są aktywne i widoczne po stronie uczestnika jako biegi do zapisu.
 
 Architektura projektu
 ---------------------
 
-Rozwiazanie sklada sie z nastepujacych projektow:
+Rozwiązanie składa się z następujących projektów:
 
-- RunningEventsSystem.Domain - modele domenowe i interfejsy repozytoriow
+- RunningEventsSystem.Domain - modele domenowe i interfejsy repozytoriów
 - RunningEventsSystem.Application - logika aplikacyjna, serwisy, walidatory
 - RunningEventsSystem.Infrastructure - Entity Framework Core, SQLite, repozytoria, Unit of Work, seeder
 - RunningEventsSystem.WebAPI - kontrolery REST API i Swagger
 - RunningEventsSystem.BlazorServer - panel administratora
 - RunningEventsSystem.BlazorWasm - panel uczestnika
-- RunningEventsSystem.SharedKernel - DTO i elementy wspolne
+- RunningEventsSystem.SharedKernel - DTO i elementy wspólne
 
 Logowanie
 ---------
 
-WebAPI oraz Blazor Server korzystaja z Serilog. Logi sa zapisywane w katalogach
-Logs odpowiednich projektow. System tworzy osobne pliki na kazdy dzien oraz
-osobne pliki dla bledow:
+WebAPI oraz Blazor Server korzystają z Serilog. Logi są zapisywane w katalogach
+Logs odpowiednich projektów. System tworzy osobne pliki na każdy dzień oraz
+osobne pliki dla błędów:
 
 - webapi-.log
 - webapi-errors-.log
 - blazorserver-.log
 - blazorserver-errors-.log
 
-Najwazniejsze funkcje
+Najważniejsze funkcje
 ---------------------
 
 Blazor WebAssembly:
 
 - rejestracja i logowanie uczestnika
-- lista biegow
-- szczegoly wybranego biegu
-- zapis na bieg po oplaceniu
-- podglad wlasnych zapisow
-- anulowanie zapisu
-- podglad wynikow
+- lista biegów
+- szczegóły wybranego biegu
+- zapis na bieg po opłaceniu
+- podgląd własnych zapisów
+- anulowanie zapisu.
 
 Blazor Server:
 
 - pulpit administratora
-- lista biegow
-- dodawanie, edycja i usuwanie biegow
-- lista uczestnikow
-- usuwanie uczestnikow
-- podglad i dodawanie wynikow
+- lista biegów
+- dodawanie, edycja i usuwanie biegów
+- lista uczestników
+- usuwanie uczestników
+- podgląd wyników.
 
 Biblioteki UI
 -------------
 
-W projekcie wykorzystano zewnetrzne biblioteki komponentow:
+W projekcie wykorzystano zewnętrzne biblioteki komponentów:
 
 - Radzen.Blazor w panelu Blazor Server
 - MudBlazor w panelu Blazor WebAssembly
 
-W interfejsie sa wykorzystywane obrazy z katalogow wwwroot/images.
-
-Uwagi
------
-
-Projekt jest przygotowany pod .NET 6. W przypadku problemow z portami nalezy
-zamknac poprzednie uruchomione procesy WebAPI lub Blazor i uruchomic rozwiazanie
-ponownie z Visual Studio.
+W interfejsie są wykorzystywane obrazy z katalogów wwwroot/images.
