@@ -61,8 +61,6 @@ else
             </RadzenDataGridColumn>
             <RadzenDataGridColumn TItem="UserDto" Title="Akcje" Width="120px" Sortable="false">
                 <Template Context="u">
-                    <RadzenButton Icon="visibility" ButtonStyle="ButtonStyle.Light" Size="ButtonSize.Small"
-                                  Click="@(() => ShowUserDetails(u))" Style="margin-right:4px;" Title="Szczegóły" />
                     <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small"
                                   Click="@(() => ConfirmDelete(u))" Title="Usuń" />
                 </Template>
@@ -74,50 +72,6 @@ else
     </RadzenText>
 }
 
-<!-- Panel szczegółów użytkownika -->
-@if (_selectedUser != null)
-{
-    <RadzenCard Style="margin-top:24px;padding:24px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-            <RadzenText TextStyle="TextStyle.H6">📋 Szczegóły: @_selectedUser.FullName</RadzenText>
-            <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Light" Click="@(() => _selectedUser = null)" />
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-            <div>
-                <RadzenLabel Text="E-mail" />
-                <RadzenText>@_selectedUser.Email</RadzenText>
-            </div>
-            <div>
-                <RadzenLabel Text="Rola" />
-                <RadzenText>@_selectedUser.Role</RadzenText>
-            </div>
-            <div>
-                <RadzenLabel Text="Status" />
-                <RadzenText>@(_selectedUser.IsActive ? "Aktywny" : "Nieaktywny")</RadzenText>
-            </div>
-            <div>
-                <RadzenLabel Text="Liczba zapisów" />
-                <RadzenText>@_userRegistrations.Count</RadzenText>
-            </div>
-        </div>
-
-        @if (_userRegistrations.Any())
-        {
-            <RadzenText TextStyle="TextStyle.Subtitle1" Style="margin-bottom:8px;">Zapisy na biegi:</RadzenText>
-            <RadzenDataGrid Data="@_userRegistrations" TItem="RegistrationDto" AllowPaging="true" PageSize="5" Dense="true">
-                <Columns>
-                    <RadzenDataGridColumn TItem="RegistrationDto" Property="EventName" Title="Bieg" />
-                    <RadzenDataGridColumn TItem="RegistrationDto" Property="RegistrationDate" Title="Data zapisu" Width="130px" FormatString="{0:dd.MM.yyyy}" />
-                    <RadzenDataGridColumn TItem="RegistrationDto" Property="Status" Title="Status" Width="120px" />
-                    <RadzenDataGridColumn TItem="RegistrationDto" Property="PaymentStatus" Title="Płatność" Width="110px" />
-                    <RadzenDataGridColumn TItem="RegistrationDto" Property="StartNumber" Title="Nr start." Width="90px" />
-                </Columns>
-            </RadzenDataGrid>
-        }
-    </RadzenCard>
-}
-
 @code {
     private List<UserDto> _allUsers = new();
     private List<UserDto> _filteredUsers = new();
@@ -127,14 +81,11 @@ else
     private string _sortField = "FullName";
     private bool _loading = true;
 
-    private UserDto? _selectedUser;
-    private List<RegistrationDto> _userRegistrations = new();
-
-    private List<(string Label, string Field)> _sortOptions = new()
+    private List<SortOption> _sortOptions = new()
     {
-        ("Nazwisko A-Z", "FullName"),
-        ("E-mail A-Z", "Email"),
-        ("Rola", "Role"),
+        new("Nazwisko A-Z", "FullName"),
+        new("E-mail A-Z", "Email"),
+        new("Rola", "Role"),
     };
 
     protected override async Task OnInitializedAsync()
@@ -174,12 +125,6 @@ else
         ApplyFilter();
     }
 
-    private async Task ShowUserDetails(UserDto user)
-    {
-        _selectedUser = user;
-        _userRegistrations = await Api.GetRegistrationsByUserAsync(user.Id);
-    }
-
     private async Task ConfirmDelete(UserDto user)
     {
         var confirmed = await DialogSvc.Confirm(
@@ -193,8 +138,19 @@ else
         Logger.LogWarning("Usunięto użytkownika ID={Id}", user.Id);
         NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Info, Summary = "Uczestnik usunięty", Duration = 3000 });
 
-        if (_selectedUser?.Id == user.Id) _selectedUser = null;
         _allUsers = await Api.GetUsersAsync();
         ApplyFilter();
+    }
+
+    private sealed class SortOption
+    {
+        public SortOption(string label, string field)
+        {
+            Label = label;
+            Field = field;
+        }
+
+        public string Label { get; }
+        public string Field { get; }
     }
 }

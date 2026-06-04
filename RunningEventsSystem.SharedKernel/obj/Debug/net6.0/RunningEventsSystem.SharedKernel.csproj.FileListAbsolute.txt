@@ -34,3 +34,6 @@ C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.Shared
 C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\refint\RunningEventsSystem.SharedKernel.dll
 C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\RunningEventsSystem.SharedKernel.pdb
 C:\Users\wikto\source\repos\WiktorKostera\PAB_projekt\RunningEventsSystem.SharedKernel\obj\Debug\net6.0\ref\RunningEventsSystem.SharedKernel.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\_buildcheck\BlazorServer\RunningEventsSystem.SharedKernel.deps.json
+C:\Users\rados\source\repos\C#\PAB_projekt\_buildcheck\BlazorServer\RunningEventsSystem.SharedKernel.dll
+C:\Users\rados\source\repos\C#\PAB_projekt\_buildcheck\BlazorServer\RunningEventsSystem.SharedKernel.pdb

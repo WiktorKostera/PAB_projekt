@@ -495,3 +495,1178 @@ System.ObjectDisposedException: Cannot access a disposed object.
 2026-06-04 14:06:01 [INF] Sending HTTP request GET "http://localhost:5234/user"
 2026-06-04 14:06:01 [INF] Received HTTP response headers after 2.3659ms - 200
 2026-06-04 14:06:01 [INF] End processing HTTP request after 2.8225ms - 200
+2026-06-04 17:39:26 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 17:39:28 [WRN] Failed to determine the https port for redirect.
+2026-06-04 17:39:28 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:39:28 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:28 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:31 [INF] Received HTTP response headers after 2408.7056ms - 200
+2026-06-04 17:39:31 [INF] End processing HTTP request after 2434.0723ms - 200
+2026-06-04 17:39:31 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:31 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:31 [INF] Received HTTP response headers after 102.7585ms - 200
+2026-06-04 17:39:31 [INF] End processing HTTP request after 103.32ms - 200
+2026-06-04 17:39:32 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:39:32 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:32 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:32 [INF] Received HTTP response headers after 6.4286ms - 200
+2026-06-04 17:39:32 [INF] End processing HTTP request after 6.7788ms - 200
+2026-06-04 17:39:32 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:32 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:32 [INF] Received HTTP response headers after 2.3361ms - 200
+2026-06-04 17:39:32 [INF] End processing HTTP request after 2.7424ms - 200
+2026-06-04 17:39:42 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:39:42 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:42 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:42 [INF] Received HTTP response headers after 3.2404ms - 200
+2026-06-04 17:39:42 [INF] End processing HTTP request after 3.9443ms - 200
+2026-06-04 17:39:42 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:42 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:42 [INF] Received HTTP response headers after 6.2221ms - 200
+2026-06-04 17:39:42 [INF] End processing HTTP request after 7.1343ms - 200
+2026-06-04 17:39:46 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:39:46 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:46 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:46 [INF] Received HTTP response headers after 8.887ms - 200
+2026-06-04 17:39:46 [INF] End processing HTTP request after 9.2512ms - 200
+2026-06-04 17:39:46 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:46 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:39:46 [INF] Received HTTP response headers after 18.3612ms - 200
+2026-06-04 17:39:46 [INF] End processing HTTP request after 19.9849ms - 200
+2026-06-04 17:39:52 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:39:52 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:52 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:39:52 [INF] Received HTTP response headers after 2.5656ms - 200
+2026-06-04 17:39:52 [INF] End processing HTTP request after 3.2706ms - 200
+2026-06-04 17:40:22 [INF] Start processing HTTP request DELETE "http://localhost:5234/event/3"
+2026-06-04 17:40:22 [INF] Sending HTTP request DELETE "http://localhost:5234/event/3"
+2026-06-04 17:40:22 [INF] Received HTTP response headers after 137.1663ms - 204
+2026-06-04 17:40:22 [INF] End processing HTTP request after 137.6405ms - 204
+2026-06-04 17:40:22 [WRN] Usunięto bieg ID=3 Name=Poznań Half Marathon 2024
+2026-06-04 17:40:22 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:40:22 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:40:22 [INF] Received HTTP response headers after 2.2358ms - 200
+2026-06-04 17:40:22 [INF] End processing HTTP request after 2.6713ms - 200
+2026-06-04 17:40:33 [WRN] Unhandled exception rendering component: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+System.InvalidOperationException: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.ThrowForUnknownIncomingParameterName(Type targetType, String parameterName)
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.SetProperties(ParameterView& parameters, Object target)
+   at Microsoft.AspNetCore.Components.ParameterView.SetParameterProperties(Object target)
+   at Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SupplyCombinedParameters(ParameterView directAndCascadingParameters)
+2026-06-04 17:40:34 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.Append(T[] source, Int32 startIndex, Int32 length)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 17:40:38 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:40:38 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:40:38 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:40:38 [INF] Received HTTP response headers after 10.0436ms - 200
+2026-06-04 17:40:38 [INF] End processing HTTP request after 13.2399ms - 200
+2026-06-04 17:40:38 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:40:38 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:40:38 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:40:38 [INF] Received HTTP response headers after 2.1009ms - 200
+2026-06-04 17:40:38 [INF] End processing HTTP request after 2.3476ms - 200
+2026-06-04 17:41:14 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:41:14 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:14 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:14 [INF] Received HTTP response headers after 4.1732ms - 200
+2026-06-04 17:41:14 [INF] End processing HTTP request after 5.1809ms - 200
+2026-06-04 17:41:14 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-04 17:41:14 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 17:41:20 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:41:20 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:41:20 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:41:20 [INF] Received HTTP response headers after 4.9717ms - 200
+2026-06-04 17:41:20 [INF] End processing HTTP request after 5.6351ms - 200
+2026-06-04 17:41:20 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:20 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:20 [INF] Received HTTP response headers after 3.9436ms - 200
+2026-06-04 17:41:20 [INF] End processing HTTP request after 4.497ms - 200
+2026-06-04 17:41:20 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:41:20 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:41:20 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:41:20 [INF] Received HTTP response headers after 3.0528ms - 200
+2026-06-04 17:41:20 [INF] End processing HTTP request after 3.5918ms - 200
+2026-06-04 17:41:20 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:20 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:20 [INF] Received HTTP response headers after 2.6396ms - 200
+2026-06-04 17:41:20 [INF] End processing HTTP request after 3.1052ms - 200
+2026-06-04 17:41:21 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 17:41:21 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:41:21 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:41:21 [INF] Received HTTP response headers after 2.1355ms - 200
+2026-06-04 17:41:21 [INF] End processing HTTP request after 2.8236ms - 200
+2026-06-04 17:41:24 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/1"
+2026-06-04 17:41:24 [INF] Sending HTTP request GET "http://localhost:5234/result/event/1"
+2026-06-04 17:41:24 [INF] Received HTTP response headers after 182.0742ms - 200
+2026-06-04 17:41:24 [INF] End processing HTTP request after 182.6587ms - 200
+2026-06-04 17:41:27 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 17:41:27 [INF] Sending HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 17:41:27 [INF] Received HTTP response headers after 57.5367ms - 200
+2026-06-04 17:41:27 [INF] End processing HTTP request after 58.0653ms - 200
+2026-06-04 17:41:31 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 17:41:31 [INF] Sending HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 17:41:31 [INF] Received HTTP response headers after 6.0775ms - 200
+2026-06-04 17:41:31 [INF] End processing HTTP request after 6.6351ms - 200
+2026-06-04 17:41:33 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/1"
+2026-06-04 17:41:33 [INF] Sending HTTP request GET "http://localhost:5234/result/event/1"
+2026-06-04 17:41:33 [INF] Received HTTP response headers after 4.4326ms - 200
+2026-06-04 17:41:33 [INF] End processing HTTP request after 5.0113ms - 200
+2026-06-04 17:41:34 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:41:34 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:34 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:34 [INF] Received HTTP response headers after 10.4728ms - 200
+2026-06-04 17:41:34 [INF] End processing HTTP request after 11.9682ms - 200
+2026-06-04 17:41:34 [WRN] Unhandled exception rendering component: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+System.ArgumentException: 'Field' is not a member of type 'System.ValueTuple`2[System.String,System.String]' (Parameter 'propertyOrFieldName')
+   at System.Linq.Expressions.Expression.PropertyOrField(Expression expression, String propertyOrFieldName)
+   at Radzen.PropertyAccess.Getter[TItem,TValue](String propertyName, Type type)
+   at Radzen.DropDownBase`1.OnParametersSet()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Radzen.RadzenComponent.SetParametersAsync(ParameterView parameters)
+   at Radzen.DataBoundFormComponent`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.DropDownBase`1.SetParametersAsync(ParameterView parameters)
+   at Radzen.Blazor.RadzenDropDown`1.SetParametersAsync(ParameterView parameters)
+2026-06-04 17:41:34 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 17:41:39 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:41:39 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:39 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:41:39 [INF] Received HTTP response headers after 5.0901ms - 200
+2026-06-04 17:41:39 [INF] End processing HTTP request after 5.4147ms - 200
+2026-06-04 17:44:02 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 17:44:09 [WRN] Failed to determine the https port for redirect.
+2026-06-04 17:44:10 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:44:10 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:44:10 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:44:10 [INF] Received HTTP response headers after 163.1438ms - 200
+2026-06-04 17:44:10 [INF] End processing HTTP request after 177.144ms - 200
+2026-06-04 17:44:52 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:44:52 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:44:52 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:44:52 [INF] Received HTTP response headers after 9.2391ms - 200
+2026-06-04 17:44:52 [INF] End processing HTTP request after 9.5184ms - 200
+2026-06-04 17:44:53 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:44:53 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:44:53 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:44:53 [INF] Received HTTP response headers after 1.594ms - 200
+2026-06-04 17:44:53 [INF] End processing HTTP request after 1.8731ms - 200
+2026-06-04 17:45:45 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 17:45:48 [WRN] Failed to determine the https port for redirect.
+2026-06-04 17:45:49 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:45:49 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:45:49 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:45:53 [INF] Received HTTP response headers after 4328.7623ms - 200
+2026-06-04 17:45:53 [INF] End processing HTTP request after 4379.8777ms - 200
+2026-06-04 17:45:53 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:45:53 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:45:54 [INF] Received HTTP response headers after 158.7564ms - 200
+2026-06-04 17:45:54 [INF] End processing HTTP request after 159.4041ms - 200
+2026-06-04 17:45:55 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:45:55 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:45:55 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:45:55 [INF] Received HTTP response headers after 10.0958ms - 200
+2026-06-04 17:45:55 [INF] End processing HTTP request after 10.542ms - 200
+2026-06-04 17:45:55 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:45:55 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:45:55 [INF] Received HTTP response headers after 3.4579ms - 200
+2026-06-04 17:45:55 [INF] End processing HTTP request after 3.9744ms - 200
+2026-06-04 17:46:05 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:46:05 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:46:05 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:46:05 [INF] Received HTTP response headers after 14.1124ms - 200
+2026-06-04 17:46:05 [INF] End processing HTTP request after 14.5416ms - 200
+2026-06-04 17:46:10 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:46:10 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:46:10 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:46:10 [INF] Received HTTP response headers after 1.9155ms - 200
+2026-06-04 17:46:10 [INF] End processing HTTP request after 2.5913ms - 200
+2026-06-04 17:46:10 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:46:10 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:46:10 [INF] Received HTTP response headers after 5.0735ms - 200
+2026-06-04 17:46:10 [INF] End processing HTTP request after 8.6488ms - 200
+2026-06-04 17:46:23 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:46:23 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:46:23 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:46:23 [INF] Received HTTP response headers after 2.9125ms - 200
+2026-06-04 17:46:23 [INF] End processing HTTP request after 3.6017ms - 200
+2026-06-04 17:47:16 [WRN] Unhandled exception rendering component: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+System.InvalidOperationException: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.ThrowForUnknownIncomingParameterName(Type targetType, String parameterName)
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.SetProperties(ParameterView& parameters, Object target)
+   at Microsoft.AspNetCore.Components.ParameterView.SetParameterProperties(Object target)
+   at Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SupplyCombinedParameters(ParameterView directAndCascadingParameters)
+2026-06-04 17:47:16 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.Append(T[] source, Int32 startIndex, Int32 length)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 17:47:29 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:47:29 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:47:29 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:47:29 [INF] Received HTTP response headers after 9.8664ms - 200
+2026-06-04 17:47:29 [INF] End processing HTTP request after 10.212ms - 200
+2026-06-04 17:47:29 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:47:29 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:47:29 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:47:29 [INF] Received HTTP response headers after 6.3388ms - 200
+2026-06-04 17:47:29 [INF] End processing HTTP request after 6.7311ms - 200
+2026-06-04 17:47:31 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:47:31 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:47:31 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:47:31 [INF] Received HTTP response headers after 22.5251ms - 200
+2026-06-04 17:47:31 [INF] End processing HTTP request after 34.404ms - 200
+2026-06-04 17:47:45 [INF] Start processing HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 17:47:45 [INF] Sending HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 17:47:46 [INF] Received HTTP response headers after 132.1217ms - 204
+2026-06-04 17:47:46 [INF] End processing HTTP request after 132.9376ms - 204
+2026-06-04 17:47:46 [WRN] Usunięto użytkownika ID=1
+2026-06-04 17:47:46 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:47:46 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:47:46 [INF] Received HTTP response headers after 3.6197ms - 200
+2026-06-04 17:47:46 [INF] End processing HTTP request after 4.0175ms - 200
+2026-06-04 17:48:49 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 17:48:49 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 17:48:49 [INF] Received HTTP response headers after 232.0094ms - 200
+2026-06-04 17:48:49 [INF] End processing HTTP request after 232.5432ms - 200
+2026-06-04 17:49:07 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 17:49:07 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:49:07 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:49:07 [INF] Received HTTP response headers after 40.493ms - 200
+2026-06-04 17:49:07 [INF] End processing HTTP request after 40.8482ms - 200
+2026-06-04 17:49:12 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 17:49:12 [INF] Sending HTTP request GET "http://localhost:5234/result/event/2"
+2026-06-04 17:49:12 [INF] Received HTTP response headers after 21.0127ms - 200
+2026-06-04 17:49:12 [INF] End processing HTTP request after 21.4621ms - 200
+2026-06-04 17:49:14 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 17:49:14 [INF] Sending HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 17:49:14 [INF] Received HTTP response headers after 13.0077ms - 200
+2026-06-04 17:49:14 [INF] End processing HTTP request after 13.5402ms - 200
+2026-06-04 17:49:18 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 17:49:18 [INF] Sending HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 17:49:18 [INF] Received HTTP response headers after 39.5769ms - 200
+2026-06-04 17:49:18 [INF] End processing HTTP request after 40.1507ms - 200
+2026-06-04 17:50:17 [INF] Start processing HTTP request POST "http://localhost:5234/result"
+2026-06-04 17:50:17 [INF] Sending HTTP request POST "http://localhost:5234/result"
+2026-06-04 17:51:07 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 17:51:08 [WRN] Failed to determine the https port for redirect.
+2026-06-04 17:51:09 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:51:09 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:09 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:13 [INF] Received HTTP response headers after 3912.8731ms - 200
+2026-06-04 17:51:13 [INF] End processing HTTP request after 3943.5945ms - 200
+2026-06-04 17:51:13 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:13 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:13 [INF] Received HTTP response headers after 132.7676ms - 200
+2026-06-04 17:51:13 [INF] End processing HTTP request after 133.3721ms - 200
+2026-06-04 17:51:15 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:51:15 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:15 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:15 [INF] Received HTTP response headers after 20.9328ms - 200
+2026-06-04 17:51:15 [INF] End processing HTTP request after 21.5004ms - 200
+2026-06-04 17:51:15 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:15 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:15 [INF] Received HTTP response headers after 5.4046ms - 200
+2026-06-04 17:51:15 [INF] End processing HTTP request after 6.395ms - 200
+2026-06-04 17:51:19 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:51:19 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:19 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:19 [INF] Received HTTP response headers after 1.9114ms - 200
+2026-06-04 17:51:19 [INF] End processing HTTP request after 2.2786ms - 200
+2026-06-04 17:51:39 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:51:39 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:39 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:39 [INF] Received HTTP response headers after 7.3854ms - 200
+2026-06-04 17:51:39 [INF] End processing HTTP request after 7.8368ms - 200
+2026-06-04 17:51:41 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 17:51:41 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:41 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:41 [INF] Received HTTP response headers after 3.0706ms - 200
+2026-06-04 17:51:41 [INF] End processing HTTP request after 4.708ms - 200
+2026-06-04 17:51:44 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 17:51:44 [INF] Sending HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 17:51:44 [INF] Received HTTP response headers after 128.0776ms - 200
+2026-06-04 17:51:44 [INF] End processing HTTP request after 128.4774ms - 200
+2026-06-04 17:51:49 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 17:51:49 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:49 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:49 [INF] Received HTTP response headers after 2.857ms - 200
+2026-06-04 17:51:49 [INF] End processing HTTP request after 3.3461ms - 200
+2026-06-04 17:51:51 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:51:51 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:51 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:51 [INF] Received HTTP response headers after 19.3685ms - 200
+2026-06-04 17:51:51 [INF] End processing HTTP request after 21.9285ms - 200
+2026-06-04 17:51:53 [INF] Ładowanie pulpitu administratora
+2026-06-04 17:51:53 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:53 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:53 [INF] Received HTTP response headers after 3.4265ms - 200
+2026-06-04 17:51:53 [INF] End processing HTTP request after 4.1158ms - 200
+2026-06-04 17:51:53 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:53 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 17:51:53 [INF] Received HTTP response headers after 1.7872ms - 200
+2026-06-04 17:51:53 [INF] End processing HTTP request after 2.5784ms - 200
+2026-06-04 17:51:55 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:51:55 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:55 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:51:55 [INF] Received HTTP response headers after 2.4573ms - 200
+2026-06-04 17:51:55 [INF] End processing HTTP request after 3.3694ms - 200
+2026-06-04 17:58:51 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 17:58:59 [WRN] Failed to determine the https port for redirect.
+2026-06-04 17:58:59 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:58:59 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:58:59 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:58:59 [INF] Received HTTP response headers after 315.3844ms - 200
+2026-06-04 17:58:59 [INF] End processing HTTP request after 334.8122ms - 200
+2026-06-04 17:59:00 [INF] Ładowanie listy biegów (admin)
+2026-06-04 17:59:00 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:59:00 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 17:59:00 [INF] Received HTTP response headers after 171.3961ms - 200
+2026-06-04 17:59:00 [INF] End processing HTTP request after 172.1519ms - 200
+2026-06-04 17:59:10 [WRN] Unhandled exception rendering component: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+System.InvalidOperationException: Object of type 'Radzen.Blazor.RadzenDialog' does not have a property matching the name 'ChildContent'.
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.ThrowForUnknownIncomingParameterName(Type targetType, String parameterName)
+   at Microsoft.AspNetCore.Components.Reflection.ComponentProperties.SetProperties(ParameterView& parameters, Object target)
+   at Microsoft.AspNetCore.Components.ParameterView.SetParameterProperties(Object target)
+   at Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SupplyCombinedParameters(ParameterView directAndCascadingParameters)
+2026-06-04 17:59:10 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.ThrowObjectDisposedException()
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.Append(T[] source, Int32 startIndex, Int32 length)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2026-06-04 18:00:43 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:00:49 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:00:49 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:00:49 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:00:49 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:00:50 [INF] Received HTTP response headers after 59.6529ms - 200
+2026-06-04 18:00:50 [INF] End processing HTTP request after 68.8569ms - 200
+2026-06-04 18:00:50 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:00:50 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:00:50 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:00:50 [INF] Received HTTP response headers after 2.0784ms - 200
+2026-06-04 18:00:50 [INF] End processing HTTP request after 2.3065ms - 200
+2026-06-04 18:02:26 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:02:33 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:02:34 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:02:34 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:02:34 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:02:34 [INF] Received HTTP response headers after 58.748ms - 200
+2026-06-04 18:02:34 [INF] End processing HTTP request after 69.1793ms - 200
+2026-06-04 18:02:34 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:02:34 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:02:34 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:02:34 [INF] Received HTTP response headers after 1.423ms - 200
+2026-06-04 18:02:34 [INF] End processing HTTP request after 1.6597ms - 200
+2026-06-04 18:03:25 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:03:33 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:03:34 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:03:34 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:03:34 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:03:34 [INF] Received HTTP response headers after 60.0572ms - 200
+2026-06-04 18:03:34 [INF] End processing HTTP request after 73.9783ms - 200
+2026-06-04 18:03:34 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:03:34 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:03:34 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:03:34 [INF] Received HTTP response headers after 1.7109ms - 200
+2026-06-04 18:03:34 [INF] End processing HTTP request after 1.9022ms - 200
+2026-06-04 18:04:27 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:04:34 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:04:35 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:04:35 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:04:35 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:04:35 [INF] Received HTTP response headers after 57.8032ms - 200
+2026-06-04 18:04:35 [INF] End processing HTTP request after 67.5919ms - 200
+2026-06-04 18:04:35 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:04:35 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:04:35 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:04:35 [INF] Received HTTP response headers after 1.3152ms - 200
+2026-06-04 18:04:35 [INF] End processing HTTP request after 1.5973ms - 200
+2026-06-04 18:05:22 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:05:30 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:05:30 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:05:30 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:05:30 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:05:30 [INF] Received HTTP response headers after 57.9088ms - 200
+2026-06-04 18:05:30 [INF] End processing HTTP request after 67.3593ms - 200
+2026-06-04 18:05:31 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:05:31 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:05:31 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:05:31 [INF] Received HTTP response headers after 2.3102ms - 200
+2026-06-04 18:05:31 [INF] End processing HTTP request after 2.6472ms - 200
+2026-06-04 18:09:10 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:09:25 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:09:25 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:09:25 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:09:25 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:09:25 [INF] Received HTTP response headers after 99.9084ms - 200
+2026-06-04 18:09:25 [INF] End processing HTTP request after 119.9135ms - 200
+2026-06-04 18:09:26 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:09:26 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:09:26 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:09:26 [INF] Received HTTP response headers after 3.974ms - 200
+2026-06-04 18:09:26 [INF] End processing HTTP request after 4.6833ms - 200
+2026-06-04 18:11:08 [INF] Start processing HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:11:08 [INF] Sending HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:11:08 [INF] Received HTTP response headers after 182.6365ms - 201
+2026-06-04 18:11:08 [INF] End processing HTTP request after 183.1021ms - 201
+2026-06-04 18:11:08 [INF] Utworzono nowy bieg: Biegtesst
+2026-06-04 18:11:08 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:11:08 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:11:08 [INF] Received HTTP response headers after 1.9362ms - 200
+2026-06-04 18:11:08 [INF] End processing HTTP request after 2.1309ms - 200
+2026-06-04 18:11:28 [INF] Start processing HTTP request DELETE "http://localhost:5234/event/5"
+2026-06-04 18:11:28 [INF] Sending HTTP request DELETE "http://localhost:5234/event/5"
+2026-06-04 18:11:28 [INF] Received HTTP response headers after 22.0122ms - 204
+2026-06-04 18:11:28 [INF] End processing HTTP request after 22.428ms - 204
+2026-06-04 18:11:28 [WRN] Usunięto bieg ID=5 Name=Biegtesst
+2026-06-04 18:11:28 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:11:28 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:11:28 [INF] Received HTTP response headers after 2.4478ms - 200
+2026-06-04 18:11:28 [INF] End processing HTTP request after 2.7727ms - 200
+2026-06-04 18:11:53 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:11:56 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:12:06 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:12:06 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:12:06 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:12:06 [INF] Received HTTP response headers after 56.286ms - 200
+2026-06-04 18:12:06 [INF] End processing HTTP request after 66.0834ms - 200
+2026-06-04 18:12:07 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:12:07 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:12:07 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:12:07 [INF] Received HTTP response headers after 3.4537ms - 200
+2026-06-04 18:12:07 [INF] End processing HTTP request after 4.146ms - 200
+2026-06-04 18:12:23 [INF] Start processing HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:12:23 [INF] Sending HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:12:23 [INF] Received HTTP response headers after 34.5935ms - 201
+2026-06-04 18:12:23 [INF] End processing HTTP request after 35.3795ms - 201
+2026-06-04 18:12:23 [INF] Utworzono nowy bieg: Testowy Bieg Codex
+2026-06-04 18:12:23 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:12:23 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:12:23 [INF] Received HTTP response headers after 3.3329ms - 200
+2026-06-04 18:12:23 [INF] End processing HTTP request after 3.853ms - 200
+2026-06-04 18:18:31 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:18:32 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:18:32 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:18:32 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:18:32 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:18:32 [INF] Received HTTP response headers after 19.8162ms - 200
+2026-06-04 18:18:32 [INF] End processing HTTP request after 47.2426ms - 200
+2026-06-04 18:18:32 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:18:32 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:18:33 [INF] Received HTTP response headers after 17.1547ms - 200
+2026-06-04 18:18:33 [INF] End processing HTTP request after 17.6828ms - 200
+2026-06-04 18:18:33 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:18:33 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:18:33 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:18:33 [INF] Received HTTP response headers after 2.348ms - 200
+2026-06-04 18:18:33 [INF] End processing HTTP request after 2.8031ms - 200
+2026-06-04 18:18:33 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:18:33 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:18:33 [INF] Received HTTP response headers after 2.8286ms - 200
+2026-06-04 18:18:33 [INF] End processing HTTP request after 3.3276ms - 200
+2026-06-04 18:19:04 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:19:04 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:19:04 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:19:04 [INF] Received HTTP response headers after 4.6234ms - 200
+2026-06-04 18:19:04 [INF] End processing HTTP request after 4.9997ms - 200
+2026-06-04 18:19:04 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:19:04 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:19:04 [INF] Received HTTP response headers after 9.9942ms - 200
+2026-06-04 18:19:04 [INF] End processing HTTP request after 10.5263ms - 200
+2026-06-04 18:19:06 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:19:06 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:19:06 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:19:06 [INF] Received HTTP response headers after 2.081ms - 200
+2026-06-04 18:19:06 [INF] End processing HTTP request after 2.6576ms - 200
+2026-06-04 18:19:50 [INF] Start processing HTTP request DELETE "http://localhost:5234/event/3"
+2026-06-04 18:19:50 [INF] Sending HTTP request DELETE "http://localhost:5234/event/3"
+2026-06-04 18:19:50 [INF] Received HTTP response headers after 10.4866ms - 204
+2026-06-04 18:19:50 [INF] End processing HTTP request after 10.9624ms - 204
+2026-06-04 18:19:50 [WRN] Usunięto bieg ID=3 Name=Poznań Half Marathon 2024
+2026-06-04 18:19:50 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:19:50 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:19:50 [INF] Received HTTP response headers after 2.0753ms - 200
+2026-06-04 18:19:50 [INF] End processing HTTP request after 2.679ms - 200
+2026-06-04 18:21:09 [INF] Start processing HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:21:09 [INF] Sending HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:21:09 [INF] Received HTTP response headers after 60.2172ms - 201
+2026-06-04 18:21:09 [INF] End processing HTTP request after 60.7412ms - 201
+2026-06-04 18:21:09 [INF] Utworzono nowy bieg: Rzeszów Run
+2026-06-04 18:21:09 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:21:09 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:21:09 [INF] Received HTTP response headers after 1.8349ms - 200
+2026-06-04 18:21:09 [INF] End processing HTTP request after 2.1515ms - 200
+2026-06-04 18:21:37 [INF] Start processing HTTP request DELETE "http://localhost:5234/event/7"
+2026-06-04 18:21:37 [INF] Sending HTTP request DELETE "http://localhost:5234/event/7"
+2026-06-04 18:21:37 [INF] Received HTTP response headers after 10.85ms - 204
+2026-06-04 18:21:37 [INF] End processing HTTP request after 11.5209ms - 204
+2026-06-04 18:21:37 [WRN] Usunięto bieg ID=7 Name=Rzeszów Run
+2026-06-04 18:21:37 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:21:37 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:21:37 [INF] Received HTTP response headers after 4.3646ms - 200
+2026-06-04 18:21:37 [INF] End processing HTTP request after 7.3698ms - 200
+2026-06-04 18:21:39 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:21:39 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:21:39 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:21:39 [INF] Received HTTP response headers after 7.4353ms - 200
+2026-06-04 18:21:39 [INF] End processing HTTP request after 7.9411ms - 200
+2026-06-04 18:21:43 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:21:43 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:21:43 [INF] Received HTTP response headers after 86.4211ms - 200
+2026-06-04 18:21:43 [INF] End processing HTTP request after 86.8387ms - 200
+2026-06-04 18:21:44 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:21:44 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:21:44 [INF] Received HTTP response headers after 8.171ms - 200
+2026-06-04 18:21:44 [INF] End processing HTTP request after 8.5671ms - 200
+2026-06-04 18:21:44 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:21:44 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:21:44 [INF] Received HTTP response headers after 3.6988ms - 200
+2026-06-04 18:21:44 [INF] End processing HTTP request after 4.1871ms - 200
+2026-06-04 18:21:45 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/18"
+2026-06-04 18:21:45 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/18"
+2026-06-04 18:21:45 [INF] Received HTTP response headers after 4.2121ms - 200
+2026-06-04 18:21:45 [INF] End processing HTTP request after 5.0572ms - 200
+2026-06-04 18:21:46 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/8"
+2026-06-04 18:21:46 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/8"
+2026-06-04 18:21:46 [INF] Received HTTP response headers after 3.5379ms - 200
+2026-06-04 18:21:46 [INF] End processing HTTP request after 4.1622ms - 200
+2026-06-04 18:21:47 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/8"
+2026-06-04 18:21:47 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/8"
+2026-06-04 18:21:47 [INF] Received HTTP response headers after 2.2159ms - 200
+2026-06-04 18:21:47 [INF] End processing HTTP request after 2.8776ms - 200
+2026-06-04 18:21:47 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/8"
+2026-06-04 18:21:47 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/8"
+2026-06-04 18:21:47 [INF] Received HTTP response headers after 1.8684ms - 200
+2026-06-04 18:21:47 [INF] End processing HTTP request after 2.2546ms - 200
+2026-06-04 18:21:49 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:49 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:49 [INF] Received HTTP response headers after 27.4142ms - 200
+2026-06-04 18:21:49 [INF] End processing HTTP request after 28.3207ms - 200
+2026-06-04 18:21:49 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:49 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:49 [INF] Received HTTP response headers after 4.4825ms - 200
+2026-06-04 18:21:49 [INF] End processing HTTP request after 5.5646ms - 200
+2026-06-04 18:21:49 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:49 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:49 [INF] Received HTTP response headers after 2.8362ms - 200
+2026-06-04 18:21:49 [INF] End processing HTTP request after 3.4033ms - 200
+2026-06-04 18:21:50 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:50 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/6"
+2026-06-04 18:21:50 [INF] Received HTTP response headers after 3.3076ms - 200
+2026-06-04 18:21:50 [INF] End processing HTTP request after 4.4066ms - 200
+2026-06-04 18:21:51 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 18:21:51 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 18:21:51 [INF] Received HTTP response headers after 5.2274ms - 200
+2026-06-04 18:21:51 [INF] End processing HTTP request after 6.1987ms - 200
+2026-06-04 18:21:51 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 18:21:51 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 18:21:51 [INF] Received HTTP response headers after 2.4545ms - 200
+2026-06-04 18:21:51 [INF] End processing HTTP request after 2.7737ms - 200
+2026-06-04 18:21:53 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/2"
+2026-06-04 18:21:53 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/2"
+2026-06-04 18:21:53 [INF] Received HTTP response headers after 2.9292ms - 200
+2026-06-04 18:21:53 [INF] End processing HTTP request after 3.5904ms - 200
+2026-06-04 18:21:53 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/2"
+2026-06-04 18:21:53 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/2"
+2026-06-04 18:21:53 [INF] Received HTTP response headers after 3.4568ms - 200
+2026-06-04 18:21:53 [INF] End processing HTTP request after 4.478ms - 200
+2026-06-04 18:21:54 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/14"
+2026-06-04 18:21:54 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/14"
+2026-06-04 18:21:54 [INF] Received HTTP response headers after 2.9747ms - 200
+2026-06-04 18:21:54 [INF] End processing HTTP request after 3.7628ms - 200
+2026-06-04 18:21:54 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/14"
+2026-06-04 18:21:54 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/14"
+2026-06-04 18:21:54 [INF] Received HTTP response headers after 2.2601ms - 200
+2026-06-04 18:21:54 [INF] End processing HTTP request after 2.6717ms - 200
+2026-06-04 18:21:55 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/10"
+2026-06-04 18:21:55 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/10"
+2026-06-04 18:21:55 [INF] Received HTTP response headers after 1.772ms - 200
+2026-06-04 18:21:55 [INF] End processing HTTP request after 3.7379ms - 200
+2026-06-04 18:22:10 [INF] Start processing HTTP request DELETE "http://localhost:5234/user/18"
+2026-06-04 18:22:10 [INF] Sending HTTP request DELETE "http://localhost:5234/user/18"
+2026-06-04 18:22:10 [INF] Received HTTP response headers after 52.3005ms - 204
+2026-06-04 18:22:10 [INF] End processing HTTP request after 52.6896ms - 204
+2026-06-04 18:22:10 [WRN] Usunięto użytkownika ID=18
+2026-06-04 18:22:10 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:10 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:10 [INF] Received HTTP response headers after 10.4591ms - 200
+2026-06-04 18:22:10 [INF] End processing HTTP request after 11.4528ms - 200
+2026-06-04 18:22:14 [INF] Start processing HTTP request DELETE "http://localhost:5234/user/19"
+2026-06-04 18:22:14 [INF] Sending HTTP request DELETE "http://localhost:5234/user/19"
+2026-06-04 18:22:14 [INF] Received HTTP response headers after 9.012ms - 204
+2026-06-04 18:22:14 [INF] End processing HTTP request after 12.4085ms - 204
+2026-06-04 18:22:14 [WRN] Usunięto użytkownika ID=19
+2026-06-04 18:22:14 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:14 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:14 [INF] Received HTTP response headers after 21.0468ms - 200
+2026-06-04 18:22:14 [INF] End processing HTTP request after 21.6885ms - 200
+2026-06-04 18:22:17 [INF] Start processing HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 18:22:17 [INF] Sending HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 18:22:17 [INF] Received HTTP response headers after 3.7476ms - 204
+2026-06-04 18:22:17 [INF] End processing HTTP request after 6.0531ms - 204
+2026-06-04 18:22:17 [WRN] Usunięto użytkownika ID=1
+2026-06-04 18:22:17 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:17 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:17 [INF] Received HTTP response headers after 7.6318ms - 200
+2026-06-04 18:22:17 [INF] End processing HTTP request after 8.0723ms - 200
+2026-06-04 18:22:19 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 18:22:19 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:19 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:19 [INF] Received HTTP response headers after 1.5258ms - 200
+2026-06-04 18:22:19 [INF] End processing HTTP request after 1.9095ms - 200
+2026-06-04 18:22:23 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 18:22:23 [INF] Sending HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 18:22:23 [INF] Received HTTP response headers after 77.6334ms - 200
+2026-06-04 18:22:23 [INF] End processing HTTP request after 78.4406ms - 200
+2026-06-04 18:22:26 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:22:26 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:26 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:26 [INF] Received HTTP response headers after 2.4643ms - 200
+2026-06-04 18:22:26 [INF] End processing HTTP request after 3.0359ms - 200
+2026-06-04 18:22:26 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:22:26 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:26 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:26 [INF] Received HTTP response headers after 2.7122ms - 200
+2026-06-04 18:22:26 [INF] End processing HTTP request after 3.4816ms - 200
+2026-06-04 18:22:27 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:22:27 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:27 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:27 [INF] Received HTTP response headers after 1.4562ms - 200
+2026-06-04 18:22:27 [INF] End processing HTTP request after 1.8965ms - 200
+2026-06-04 18:22:27 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:27 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:27 [INF] Received HTTP response headers after 1.6878ms - 200
+2026-06-04 18:22:27 [INF] End processing HTTP request after 3.3968ms - 200
+2026-06-04 18:22:28 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:22:28 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:28 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:28 [INF] Received HTTP response headers after 2.6772ms - 200
+2026-06-04 18:22:28 [INF] End processing HTTP request after 3.5774ms - 200
+2026-06-04 18:22:29 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:22:29 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:29 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:22:29 [INF] Received HTTP response headers after 2.8754ms - 200
+2026-06-04 18:22:29 [INF] End processing HTTP request after 3.7471ms - 200
+2026-06-04 18:22:37 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:22:37 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:37 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:37 [INF] Received HTTP response headers after 2.1946ms - 200
+2026-06-04 18:22:37 [INF] End processing HTTP request after 3.0311ms - 200
+2026-06-04 18:22:50 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:22:50 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:50 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:50 [INF] Received HTTP response headers after 1.4773ms - 200
+2026-06-04 18:22:50 [INF] End processing HTTP request after 1.7255ms - 200
+2026-06-04 18:22:50 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:22:50 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:50 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:22:50 [INF] Received HTTP response headers after 1.752ms - 200
+2026-06-04 18:22:50 [INF] End processing HTTP request after 2.4305ms - 200
+2026-06-04 18:23:40 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:23:41 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:23:42 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:23:42 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:23:42 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:23:42 [INF] Received HTTP response headers after 8.9869ms - 200
+2026-06-04 18:23:42 [INF] End processing HTTP request after 37.9898ms - 200
+2026-06-04 18:23:42 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:23:42 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:23:42 [INF] Received HTTP response headers after 2.5117ms - 200
+2026-06-04 18:23:42 [INF] End processing HTTP request after 3.152ms - 200
+2026-06-04 18:23:43 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:23:43 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:23:43 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:23:43 [INF] Received HTTP response headers after 2.4138ms - 200
+2026-06-04 18:23:43 [INF] End processing HTTP request after 3.2206ms - 200
+2026-06-04 18:23:43 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:23:43 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:23:43 [INF] Received HTTP response headers after 1.7512ms - 200
+2026-06-04 18:23:43 [INF] End processing HTTP request after 2.2486ms - 200
+2026-06-04 18:24:46 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:24:47 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:24:48 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:24:48 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:24:48 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:24:48 [INF] Received HTTP response headers after 176.6955ms - 200
+2026-06-04 18:24:48 [INF] End processing HTTP request after 249.0065ms - 200
+2026-06-04 18:24:48 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:24:48 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:24:48 [INF] Received HTTP response headers after 17.1039ms - 200
+2026-06-04 18:24:48 [INF] End processing HTTP request after 17.6183ms - 200
+2026-06-04 18:38:28 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:38:29 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:38:29 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:38:29 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:38:29 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:38:33 [INF] Received HTTP response headers after 3683.1999ms - 200
+2026-06-04 18:38:33 [INF] End processing HTTP request after 3718.2438ms - 200
+2026-06-04 18:38:33 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:38:33 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:38:33 [INF] Received HTTP response headers after 86.4422ms - 200
+2026-06-04 18:38:33 [INF] End processing HTTP request after 86.9913ms - 200
+2026-06-04 18:38:35 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:38:35 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:38:35 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:38:35 [INF] Received HTTP response headers after 31.2469ms - 200
+2026-06-04 18:38:35 [INF] End processing HTTP request after 31.699ms - 200
+2026-06-04 18:38:35 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:38:35 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:38:35 [INF] Received HTTP response headers after 7.9591ms - 200
+2026-06-04 18:38:35 [INF] End processing HTTP request after 8.4145ms - 200
+2026-06-04 18:42:41 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:42:41 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:42:41 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:42:41 [INF] Received HTTP response headers after 30.4118ms - 200
+2026-06-04 18:42:41 [INF] End processing HTTP request after 38.7576ms - 200
+2026-06-04 18:42:44 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:42:44 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:42:44 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:42:44 [INF] Received HTTP response headers after 5.4056ms - 200
+2026-06-04 18:42:44 [INF] End processing HTTP request after 5.9961ms - 200
+2026-06-04 18:42:45 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 18:42:45 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:42:45 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:42:45 [INF] Received HTTP response headers after 2.5468ms - 200
+2026-06-04 18:42:45 [INF] End processing HTTP request after 2.9864ms - 200
+2026-06-04 18:42:49 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 18:42:49 [INF] Sending HTTP request GET "http://localhost:5234/result/event/3"
+2026-06-04 18:42:49 [INF] Received HTTP response headers after 184.1494ms - 200
+2026-06-04 18:42:49 [INF] End processing HTTP request after 184.9691ms - 200
+2026-06-04 18:42:53 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 18:42:53 [INF] Sending HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 18:42:53 [INF] Received HTTP response headers after 40.2525ms - 200
+2026-06-04 18:42:53 [INF] End processing HTTP request after 41.0015ms - 200
+2026-06-04 18:42:57 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:42:57 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:42:57 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:42:57 [INF] Received HTTP response headers after 4.1846ms - 200
+2026-06-04 18:42:57 [INF] End processing HTTP request after 4.9768ms - 200
+2026-06-04 18:43:01 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:43:01 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:43:01 [INF] Received HTTP response headers after 58.2774ms - 200
+2026-06-04 18:43:01 [INF] End processing HTTP request after 59.0745ms - 200
+2026-06-04 18:43:02 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 18:43:02 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/20"
+2026-06-04 18:43:02 [INF] Received HTTP response headers after 30.5729ms - 200
+2026-06-04 18:43:02 [INF] End processing HTTP request after 31.3121ms - 200
+2026-06-04 18:43:03 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/14"
+2026-06-04 18:43:03 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/14"
+2026-06-04 18:43:03 [INF] Received HTTP response headers after 6.5827ms - 200
+2026-06-04 18:43:03 [INF] End processing HTTP request after 7.1958ms - 200
+2026-06-04 18:43:04 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/11"
+2026-06-04 18:43:04 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/11"
+2026-06-04 18:43:04 [INF] Received HTTP response headers after 6.0853ms - 200
+2026-06-04 18:43:04 [INF] End processing HTTP request after 6.7554ms - 200
+2026-06-04 18:43:05 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/15"
+2026-06-04 18:43:05 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/15"
+2026-06-04 18:43:05 [INF] Received HTTP response headers after 4.8628ms - 200
+2026-06-04 18:43:05 [INF] End processing HTTP request after 5.4585ms - 200
+2026-06-04 18:43:06 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/7"
+2026-06-04 18:43:06 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/7"
+2026-06-04 18:43:06 [INF] Received HTTP response headers after 4.8766ms - 200
+2026-06-04 18:43:06 [INF] End processing HTTP request after 5.4352ms - 200
+2026-06-04 18:43:07 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:43:07 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:07 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:07 [INF] Received HTTP response headers after 4.3776ms - 200
+2026-06-04 18:43:07 [INF] End processing HTTP request after 4.7668ms - 200
+2026-06-04 18:43:32 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:43:32 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:32 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:32 [INF] Received HTTP response headers after 2.5834ms - 200
+2026-06-04 18:43:32 [INF] End processing HTTP request after 3.9653ms - 200
+2026-06-04 18:43:32 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:43:32 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:43:32 [INF] Received HTTP response headers after 2.9303ms - 200
+2026-06-04 18:43:32 [INF] End processing HTTP request after 3.7525ms - 200
+2026-06-04 18:43:39 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:43:39 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:39 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:39 [INF] Received HTTP response headers after 4.2564ms - 200
+2026-06-04 18:43:39 [INF] End processing HTTP request after 5.1153ms - 200
+2026-06-04 18:43:43 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:43:43 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:43 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:43 [INF] Received HTTP response headers after 3.3444ms - 200
+2026-06-04 18:43:43 [INF] End processing HTTP request after 3.9551ms - 200
+2026-06-04 18:43:43 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:43:43 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:43:43 [INF] Received HTTP response headers after 3.7384ms - 200
+2026-06-04 18:43:43 [INF] End processing HTTP request after 4.4924ms - 200
+2026-06-04 18:43:57 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:43:57 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:57 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:57 [INF] Received HTTP response headers after 2.1559ms - 200
+2026-06-04 18:43:57 [INF] End processing HTTP request after 2.4748ms - 200
+2026-06-04 18:43:57 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:43:57 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:43:57 [INF] Received HTTP response headers after 2.6487ms - 200
+2026-06-04 18:43:57 [INF] End processing HTTP request after 3.195ms - 200
+2026-06-04 18:43:58 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:43:58 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:58 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:43:58 [INF] Received HTTP response headers after 3.6676ms - 200
+2026-06-04 18:43:58 [INF] End processing HTTP request after 4.8311ms - 200
+2026-06-04 18:44:02 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:44:02 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:44:02 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:44:02 [INF] Received HTTP response headers after 2.8473ms - 200
+2026-06-04 18:44:02 [INF] End processing HTTP request after 3.3169ms - 200
+2026-06-04 18:44:02 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:44:02 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:44:02 [INF] Received HTTP response headers after 4.3775ms - 200
+2026-06-04 18:44:02 [INF] End processing HTTP request after 12.2248ms - 200
+2026-06-04 18:46:36 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:46:38 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:46:38 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:46:39 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:46:39 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:46:44 [INF] Received HTTP response headers after 5877.75ms - 200
+2026-06-04 18:46:44 [INF] End processing HTTP request after 5921.2268ms - 200
+2026-06-04 18:46:44 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:46:44 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:46:45 [INF] Received HTTP response headers after 131.1216ms - 200
+2026-06-04 18:46:45 [INF] End processing HTTP request after 131.7531ms - 200
+2026-06-04 18:46:46 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:46:46 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:46:46 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:46:46 [INF] Received HTTP response headers after 11.5726ms - 200
+2026-06-04 18:46:46 [INF] End processing HTTP request after 11.9946ms - 200
+2026-06-04 18:46:46 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:46:46 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:46:46 [INF] Received HTTP response headers after 2.7602ms - 200
+2026-06-04 18:46:46 [INF] End processing HTTP request after 3.2659ms - 200
+2026-06-04 18:47:45 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:47:45 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:47:45 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:47:45 [INF] Received HTTP response headers after 23.728ms - 200
+2026-06-04 18:47:45 [INF] End processing HTTP request after 24.2066ms - 200
+2026-06-04 18:48:15 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:48:15 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:15 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:15 [INF] Received HTTP response headers after 3.921ms - 200
+2026-06-04 18:48:15 [INF] End processing HTTP request after 4.3142ms - 200
+2026-06-04 18:48:18 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:48:18 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/9"
+2026-06-04 18:48:18 [INF] Received HTTP response headers after 207.8118ms - 200
+2026-06-04 18:48:18 [INF] End processing HTTP request after 208.2653ms - 200
+2026-06-04 18:48:19 [INF] Start processing HTTP request GET "http://localhost:5234/registration/user/1"
+2026-06-04 18:48:19 [INF] Sending HTTP request GET "http://localhost:5234/registration/user/1"
+2026-06-04 18:48:19 [INF] Received HTTP response headers after 27.9034ms - 200
+2026-06-04 18:48:19 [INF] End processing HTTP request after 28.5682ms - 200
+2026-06-04 18:48:22 [INF] Start processing HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 18:48:22 [INF] Sending HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 18:48:22 [INF] Received HTTP response headers after 46.5788ms - 204
+2026-06-04 18:48:22 [INF] End processing HTTP request after 47.1046ms - 204
+2026-06-04 18:48:22 [WRN] Usunięto użytkownika ID=1
+2026-06-04 18:48:22 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:22 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:22 [INF] Received HTTP response headers after 7.2175ms - 200
+2026-06-04 18:48:22 [INF] End processing HTTP request after 7.5652ms - 200
+2026-06-04 18:48:33 [INF] Start processing HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 18:48:33 [INF] Sending HTTP request DELETE "http://localhost:5234/user/1"
+2026-06-04 18:48:33 [INF] Received HTTP response headers after 3.2157ms - 204
+2026-06-04 18:48:33 [INF] End processing HTTP request after 3.6477ms - 204
+2026-06-04 18:48:33 [WRN] Usunięto użytkownika ID=1
+2026-06-04 18:48:33 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:33 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:33 [INF] Received HTTP response headers after 2.3317ms - 200
+2026-06-04 18:48:33 [INF] End processing HTTP request after 2.7177ms - 200
+2026-06-04 18:48:51 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 18:48:51 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:48:51 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:48:51 [INF] Received HTTP response headers after 26.0225ms - 200
+2026-06-04 18:48:51 [INF] End processing HTTP request after 26.3515ms - 200
+2026-06-04 18:48:55 [INF] Start processing HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 18:48:55 [INF] Sending HTTP request GET "http://localhost:5234/result/event/4"
+2026-06-04 18:48:55 [INF] Received HTTP response headers after 52.9981ms - 200
+2026-06-04 18:48:55 [INF] End processing HTTP request after 53.5429ms - 200
+2026-06-04 18:48:56 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:48:56 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:56 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:48:56 [INF] Received HTTP response headers after 2.4423ms - 200
+2026-06-04 18:48:56 [INF] End processing HTTP request after 3.3883ms - 200
+2026-06-04 18:48:59 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:48:59 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:48:59 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:48:59 [INF] Received HTTP response headers after 72.7764ms - 200
+2026-06-04 18:48:59 [INF] End processing HTTP request after 73.7801ms - 200
+2026-06-04 18:49:00 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:49:00 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:49:00 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:49:00 [INF] Received HTTP response headers after 10.8194ms - 200
+2026-06-04 18:49:00 [INF] End processing HTTP request after 14.382ms - 200
+2026-06-04 18:53:23 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:53:24 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:53:25 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:53:25 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:25 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:28 [INF] Received HTTP response headers after 3525.66ms - 200
+2026-06-04 18:53:28 [INF] End processing HTTP request after 3554.8119ms - 200
+2026-06-04 18:53:28 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:53:28 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:53:28 [INF] Received HTTP response headers after 84.9484ms - 200
+2026-06-04 18:53:28 [INF] End processing HTTP request after 85.4452ms - 200
+2026-06-04 18:53:29 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:53:29 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:29 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:29 [INF] Received HTTP response headers after 9.0945ms - 200
+2026-06-04 18:53:29 [INF] End processing HTTP request after 9.5459ms - 200
+2026-06-04 18:53:29 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:53:29 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:53:29 [INF] Received HTTP response headers after 5.5582ms - 200
+2026-06-04 18:53:29 [INF] End processing HTTP request after 6.0479ms - 200
+2026-06-04 18:53:36 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:53:36 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:36 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:36 [INF] Received HTTP response headers after 9.6201ms - 200
+2026-06-04 18:53:36 [INF] End processing HTTP request after 10.9185ms - 200
+2026-06-04 18:53:42 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 18:53:42 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:53:42 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:53:42 [INF] Received HTTP response headers after 6.0289ms - 200
+2026-06-04 18:53:42 [INF] End processing HTTP request after 6.3869ms - 200
+2026-06-04 18:53:50 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 18:53:50 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:50 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:50 [INF] Received HTTP response headers after 2.4284ms - 200
+2026-06-04 18:53:50 [INF] End processing HTTP request after 2.8655ms - 200
+2026-06-04 18:53:54 [INF] Ładowanie listy biegów (admin)
+2026-06-04 18:53:54 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:54 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:53:54 [INF] Received HTTP response headers after 3.2926ms - 200
+2026-06-04 18:53:54 [INF] End processing HTTP request after 3.717ms - 200
+2026-06-04 18:54:56 [INF] Start processing HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:54:56 [INF] Sending HTTP request POST "http://localhost:5234/event"
+2026-06-04 18:54:57 [INF] Received HTTP response headers after 417.0908ms - 201
+2026-06-04 18:54:57 [INF] End processing HTTP request after 417.6709ms - 201
+2026-06-04 18:54:57 [INF] Utworzono nowy bieg: Bieg123
+2026-06-04 18:54:57 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:54:57 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:54:57 [INF] Received HTTP response headers after 2.5904ms - 200
+2026-06-04 18:54:57 [INF] End processing HTTP request after 2.943ms - 200
+2026-06-04 18:59:01 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 18:59:03 [WRN] Failed to determine the https port for redirect.
+2026-06-04 18:59:03 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:59:03 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:59:03 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:59:07 [INF] Received HTTP response headers after 3788.81ms - 200
+2026-06-04 18:59:07 [INF] End processing HTTP request after 3819.2691ms - 200
+2026-06-04 18:59:07 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:59:07 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:59:07 [INF] Received HTTP response headers after 88.3796ms - 200
+2026-06-04 18:59:07 [INF] End processing HTTP request after 88.9554ms - 200
+2026-06-04 18:59:08 [INF] Ładowanie pulpitu administratora
+2026-06-04 18:59:08 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:59:08 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 18:59:08 [INF] Received HTTP response headers after 8.9565ms - 200
+2026-06-04 18:59:08 [INF] End processing HTTP request after 9.3857ms - 200
+2026-06-04 18:59:08 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:59:08 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 18:59:08 [INF] Received HTTP response headers after 8.9471ms - 200
+2026-06-04 18:59:08 [INF] End processing HTTP request after 9.3571ms - 200
+2026-06-04 19:12:22 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 19:12:24 [WRN] Failed to determine the https port for redirect.
+2026-06-04 19:12:25 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:12:25 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:12:25 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:12:33 [INF] Received HTTP response headers after 7163.2049ms - 200
+2026-06-04 19:12:33 [INF] End processing HTTP request after 7231.3397ms - 200
+2026-06-04 19:12:33 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:12:33 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:12:33 [INF] Received HTTP response headers after 199.8004ms - 200
+2026-06-04 19:12:33 [INF] End processing HTTP request after 202.2599ms - 200
+2026-06-04 19:12:34 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:12:34 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:12:34 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:12:34 [INF] Received HTTP response headers after 25.3744ms - 200
+2026-06-04 19:12:34 [INF] End processing HTTP request after 26.3704ms - 200
+2026-06-04 19:12:34 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:12:34 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:12:34 [INF] Received HTTP response headers after 13.1383ms - 200
+2026-06-04 19:12:34 [INF] End processing HTTP request after 13.7826ms - 200
+2026-06-04 19:13:34 [INF] Ładowanie listy biegów (admin)
+2026-06-04 19:13:34 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:13:34 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:13:34 [INF] Received HTTP response headers after 24.5328ms - 200
+2026-06-04 19:13:34 [INF] End processing HTTP request after 25.1745ms - 200
+2026-06-04 19:13:41 [INF] Start processing HTTP request DELETE "http://localhost:5234/event/8"
+2026-06-04 19:13:41 [INF] Sending HTTP request DELETE "http://localhost:5234/event/8"
+2026-06-04 19:13:42 [INF] Received HTTP response headers after 144.7379ms - 204
+2026-06-04 19:13:42 [INF] End processing HTTP request after 145.337ms - 204
+2026-06-04 19:13:42 [WRN] Usunięto bieg ID=8 Name=Bieg123
+2026-06-04 19:13:42 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:13:42 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:13:42 [INF] Received HTTP response headers after 2.4522ms - 200
+2026-06-04 19:13:42 [INF] End processing HTTP request after 2.898ms - 200
+2026-06-04 19:14:22 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 19:14:24 [WRN] Failed to determine the https port for redirect.
+2026-06-04 19:14:24 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:14:25 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:14:25 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:14:33 [INF] Received HTTP response headers after 8590.8651ms - 200
+2026-06-04 19:14:33 [INF] End processing HTTP request after 8642.4669ms - 200
+2026-06-04 19:14:33 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:14:33 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:14:33 [INF] Received HTTP response headers after 172.4449ms - 200
+2026-06-04 19:14:33 [INF] End processing HTTP request after 173.7322ms - 200
+2026-06-04 19:14:35 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:14:35 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:14:35 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:14:35 [INF] Received HTTP response headers after 15.3801ms - 200
+2026-06-04 19:14:35 [INF] End processing HTTP request after 16.2666ms - 200
+2026-06-04 19:14:35 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:14:35 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:14:35 [INF] Received HTTP response headers after 5.4584ms - 200
+2026-06-04 19:14:35 [INF] End processing HTTP request after 6.1816ms - 200
+2026-06-04 19:18:45 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 19:18:47 [WRN] Failed to determine the https port for redirect.
+2026-06-04 19:18:47 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:18:47 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:18:47 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:18:50 [INF] Received HTTP response headers after 3019.7905ms - 200
+2026-06-04 19:18:50 [INF] End processing HTTP request after 3079.7101ms - 200
+2026-06-04 19:18:50 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:18:50 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:18:50 [INF] Received HTTP response headers after 258.5828ms - 200
+2026-06-04 19:18:50 [INF] End processing HTTP request after 259.399ms - 200
+2026-06-04 19:18:53 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:18:53 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:18:53 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:18:53 [INF] Received HTTP response headers after 11.856ms - 200
+2026-06-04 19:18:53 [INF] End processing HTTP request after 12.4279ms - 200
+2026-06-04 19:18:53 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:18:53 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:18:53 [INF] Received HTTP response headers after 12.8372ms - 200
+2026-06-04 19:18:53 [INF] End processing HTTP request after 21.1513ms - 200
+2026-06-04 19:20:26 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 19:20:28 [WRN] Failed to determine the https port for redirect.
+2026-06-04 19:20:29 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:20:29 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:20:29 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:20:34 [INF] Received HTTP response headers after 5249.8931ms - 200
+2026-06-04 19:20:34 [INF] End processing HTTP request after 5472.744ms - 200
+2026-06-04 19:20:34 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:20:34 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:20:35 [INF] Received HTTP response headers after 133.6436ms - 200
+2026-06-04 19:20:35 [INF] End processing HTTP request after 134.338ms - 200
+2026-06-04 19:20:36 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:20:36 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:20:36 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:20:36 [INF] Received HTTP response headers after 13.3436ms - 200
+2026-06-04 19:20:36 [INF] End processing HTTP request after 13.8994ms - 200
+2026-06-04 19:20:36 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:20:36 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:20:36 [INF] Received HTTP response headers after 4.0608ms - 200
+2026-06-04 19:20:36 [INF] End processing HTTP request after 4.7762ms - 200
+2026-06-04 19:36:54 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 19:36:56 [WRN] Failed to determine the https port for redirect.
+2026-06-04 19:36:56 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:36:57 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:36:57 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:36:59 [INF] Received HTTP response headers after 2704.1987ms - 200
+2026-06-04 19:36:59 [INF] End processing HTTP request after 2749.8888ms - 200
+2026-06-04 19:36:59 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:36:59 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:36:59 [INF] Received HTTP response headers after 130.6019ms - 200
+2026-06-04 19:36:59 [INF] End processing HTTP request after 131.1275ms - 200
+2026-06-04 19:37:01 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:37:01 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:01 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:01 [INF] Received HTTP response headers after 15.6285ms - 200
+2026-06-04 19:37:01 [INF] End processing HTTP request after 16.1484ms - 200
+2026-06-04 19:37:01 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:01 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:01 [INF] Received HTTP response headers after 3.6992ms - 200
+2026-06-04 19:37:01 [INF] End processing HTTP request after 4.2994ms - 200
+2026-06-04 19:37:08 [INF] Ładowanie listy uczestników (admin)
+2026-06-04 19:37:08 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:08 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:08 [INF] Received HTTP response headers after 4.3124ms - 200
+2026-06-04 19:37:08 [INF] End processing HTTP request after 4.783ms - 200
+2026-06-04 19:37:15 [INF] Ładowanie panelu wyników (admin)
+2026-06-04 19:37:15 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:15 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:15 [INF] Received HTTP response headers after 5.1503ms - 200
+2026-06-04 19:37:15 [INF] End processing HTTP request after 5.43ms - 200
+2026-06-04 19:37:18 [INF] Ładowanie listy biegów (admin)
+2026-06-04 19:37:18 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:18 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:18 [INF] Received HTTP response headers after 2.5173ms - 200
+2026-06-04 19:37:18 [INF] End processing HTTP request after 3.1551ms - 200
+2026-06-04 19:37:19 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:37:19 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:19 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:19 [INF] Received HTTP response headers after 3.2752ms - 200
+2026-06-04 19:37:19 [INF] End processing HTTP request after 3.965ms - 200
+2026-06-04 19:37:19 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:19 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:19 [INF] Received HTTP response headers after 3.6561ms - 200
+2026-06-04 19:37:19 [INF] End processing HTTP request after 6.7665ms - 200
+2026-06-04 19:37:27 [INF] BlazorServer (Admin Panel) uruchomiony
+2026-06-04 19:37:29 [WRN] Failed to determine the https port for redirect.
+2026-06-04 19:37:30 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:37:30 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:30 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:36 [INF] Received HTTP response headers after 5895.3655ms - 200
+2026-06-04 19:37:36 [INF] End processing HTTP request after 5948.3819ms - 200
+2026-06-04 19:37:36 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:36 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:36 [INF] Received HTTP response headers after 141.4778ms - 200
+2026-06-04 19:37:36 [INF] End processing HTTP request after 142.0573ms - 200
+2026-06-04 19:37:37 [INF] Ładowanie pulpitu administratora
+2026-06-04 19:37:37 [INF] Start processing HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:37 [INF] Sending HTTP request GET "http://localhost:5234/event"
+2026-06-04 19:37:37 [INF] Received HTTP response headers after 8.656ms - 200
+2026-06-04 19:37:37 [INF] End processing HTTP request after 9.2629ms - 200
+2026-06-04 19:37:37 [INF] Start processing HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:37 [INF] Sending HTTP request GET "http://localhost:5234/user"
+2026-06-04 19:37:37 [INF] Received HTTP response headers after 9.5933ms - 200
+2026-06-04 19:37:37 [INF] End processing HTTP request after 10.1752ms - 200

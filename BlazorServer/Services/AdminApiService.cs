@@ -61,6 +61,7 @@ public class AdminApiService : IAdminApiService
     public async Task CreateEventAsync(CreateEventDto dto)
     {
         var r = await _http.PostAsJsonAsync("event", dto);
+        r.EnsureSuccessStatusCode();
         if (!r.IsSuccessStatusCode)
             _logger.LogError("Błąd tworzenia eventu: {Status}", r.StatusCode);
     }

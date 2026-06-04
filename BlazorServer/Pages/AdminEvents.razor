@@ -75,59 +75,65 @@ else
 <!-- Dialog tworzenia / edycji -->
 @if (_showDialog)
 {
-    <RadzenDialog>
+    <div style="position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:1000;display:flex;align-items:flex-start;justify-content:center;padding-top:48px;">
         <RadzenCard Style="min-width:520px;max-width:640px;padding:24px;">
             <RadzenText TextStyle="TextStyle.H6" Style="margin-bottom:16px;">
                 @(_editingEvent == null ? "➕ Nowy bieg" : "✏️ Edytuj bieg")
             </RadzenText>
 
-            <RadzenTemplateForm TItem="EventFormModel" Data="@_form" Submit="OnFormSubmit" InvalidSubmit="OnInvalidSubmit">
+            <div>
                 <div style="display:grid;gap:12px;">
-                    <RadzenFormField Text="Nazwa biegu *">
-                        <RadzenTextBox @bind-Value="_form.Name" Name="Name" Style="width:100%;" />
-                        <RadzenRequiredValidator Component="Name" Text="Nazwa jest wymagana" />
-                    </RadzenFormField>
+                    <label style="display:grid;gap:4px;">
+                        <span>Nazwa biegu *</span>
+                        <input class="rz-inputtext" style="width:100%;" @bind="_form.Name" @bind:event="oninput" />
+                    </label>
 
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                        <RadzenFormField Text="Miasto *">
-                            <RadzenTextBox @bind-Value="_form.City" Name="City" />
-                            <RadzenRequiredValidator Component="City" Text="Wymagane" />
-                        </RadzenFormField>
-                        <RadzenFormField Text="Lokalizacja *">
-                            <RadzenTextBox @bind-Value="_form.Location" Name="Location" />
-                            <RadzenRequiredValidator Component="Location" Text="Wymagana" />
-                        </RadzenFormField>
+                        <label style="display:grid;gap:4px;">
+                            <span>Miasto *</span>
+                            <input class="rz-inputtext" style="width:100%;" @bind="_form.City" @bind:event="oninput" />
+                        </label>
+                        <label style="display:grid;gap:4px;">
+                            <span>Lokalizacja *</span>
+                            <input class="rz-inputtext" style="width:100%;" @bind="_form.Location" @bind:event="oninput" />
+                        </label>
                     </div>
 
-                    <RadzenFormField Text="Opis">
-                        <RadzenTextArea @bind-Value="_form.Description" Rows="3" Style="width:100%;" />
-                    </RadzenFormField>
+                    <label style="display:grid;gap:4px;">
+                        <span>Opis *</span>
+                        <textarea class="rz-inputtext" rows="3" style="width:100%;resize:vertical;" @bind="_form.Description" @bind:event="oninput"></textarea>
+                    </label>
 
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                        <RadzenFormField Text="Data biegu *">
-                            <RadzenDatePicker @bind-Value="_form.EventDate" Name="EventDate" DateFormat="dd.MM.yyyy" />
-                            <RadzenRequiredValidator Component="EventDate" Text="Wymagana" />
-                        </RadzenFormField>
-                        <RadzenFormField Text="Zapisy do *">
-                            <RadzenDatePicker @bind-Value="_form.RegistrationDeadline" Name="RegDeadline" DateFormat="dd.MM.yyyy" />
-                            <RadzenRequiredValidator Component="RegDeadline" Text="Wymagana" />
-                        </RadzenFormField>
+                        <label style="display:grid;gap:4px;">
+                            <span>Data biegu *</span>
+                            <input class="rz-inputtext" type="date" style="width:100%;" @bind="_form.EventDate" />
+                        </label>
+                        <label style="display:grid;gap:4px;">
+                            <span>Zapisy do *</span>
+                            <input class="rz-inputtext" type="date" style="width:100%;" @bind="_form.RegistrationDeadline" />
+                        </label>
                     </div>
 
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                        <RadzenFormField Text="Maks. uczestników *">
-                            <RadzenNumeric @bind-Value="_form.MaxParticipants" Name="MaxP" Min="1" />
-                            <RadzenRequiredValidator Component="MaxP" Text="Wymagane" />
-                        </RadzenFormField>
-                        <RadzenFormField Text="Opłata startowa (PLN) *">
-                            <RadzenNumeric @bind-Value="_form.EntryFee" Name="Fee" Min="0" Step="5" TValue="decimal" />
-                            <RadzenRequiredValidator Component="Fee" Text="Wymagana" />
-                        </RadzenFormField>
+                        <label style="display:grid;gap:4px;">
+                            <span>Maks. uczestników *</span>
+                            <input class="rz-inputtext" type="number" min="1" step="1" style="width:100%;"
+                                   value="@_form.MaxParticipants"
+                                   @oninput="@(e => _form.MaxParticipants = ParseInt(e.Value, _form.MaxParticipants))" />
+                        </label>
+                        <label style="display:grid;gap:4px;">
+                            <span>Opłata startowa (PLN) *</span>
+                            <input class="rz-inputtext" type="number" min="0" step="0.01" style="width:100%;"
+                                   value="@_form.EntryFee"
+                                   @oninput="@(e => _form.EntryFee = ParseDecimal(e.Value, _form.EntryFee))" />
+                        </label>
                     </div>
 
-                    <RadzenFormField Text="URL grafiki (opcjonalnie)">
-                        <RadzenTextBox @bind-Value="_form.ImageUrl" Style="width:100%;" />
-                    </RadzenFormField>
+                    <label style="display:grid;gap:4px;">
+                        <span>URL grafiki (opcjonalnie)</span>
+                        <input class="rz-inputtext" style="width:100%;" @bind="_form.ImageUrl" @bind:event="oninput" />
+                    </label>
 
                     @if (_editingEvent != null)
                     {
@@ -139,12 +145,20 @@ else
                 </div>
 
                 <div style="display:flex;gap:8px;margin-top:20px;justify-content:flex-end;">
-                    <RadzenButton ButtonType="ButtonType.Submit" Text="Zapisz" ButtonStyle="ButtonStyle.Primary" Icon="save" />
+                    <button type="button"
+                            disabled="@_saving"
+                            class="rz-button rz-button-md rz-variant-filled rz-primary rz-shade-default"
+                            @onclick="OnFormSubmit">
+                        <span class="rz-button-box">
+                            <span class="rz-button-icon-left rzi">save</span>
+                            <span class="rz-button-text">@(_saving ? "Zapisywanie..." : "Zapisz")</span>
+                        </span>
+                    </button>
                     <RadzenButton Text="Anuluj" ButtonStyle="ButtonStyle.Light" Click="CloseDialog" />
                 </div>
-            </RadzenTemplateForm>
+            </div>
         </RadzenCard>
-    </RadzenDialog>
+    </div>
 }
 
 @code {
@@ -156,6 +170,7 @@ else
     private string? _cityFilter;
     private bool _onlyActive;
     private bool _showDialog;
+    private bool _saving;
     private EventDto? _editingEvent;
     private EventFormModel _form = new();
     private RadzenDataGrid<EventDto>? _grid;
@@ -219,37 +234,114 @@ else
 
     private async Task OnFormSubmit()
     {
-        if (_editingEvent == null)
+        if (_saving)
         {
-            var dto = new CreateEventDto
-            {
-                Name = _form.Name!, Description = _form.Description ?? "", City = _form.City!, Location = _form.Location!,
-                EventDate = _form.EventDate, RegistrationDeadline = _form.RegistrationDeadline,
-                MaxParticipants = _form.MaxParticipants, EntryFee = _form.EntryFee, ImageUrl = _form.ImageUrl
-            };
-            await Api.CreateEventAsync(dto);
-            Logger.LogInformation("Utworzono nowy bieg: {Name}", dto.Name);
-            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Bieg utworzony!", Duration = 3000 });
-        }
-        else
-        {
-            var dto = new UpdateEventDto
-            {
-                Id = _editingEvent.Id, Name = _form.Name!, Description = _form.Description ?? "", City = _form.City!, Location = _form.Location!,
-                EventDate = _form.EventDate, RegistrationDeadline = _form.RegistrationDeadline,
-                MaxParticipants = _form.MaxParticipants, EntryFee = _form.EntryFee, ImageUrl = _form.ImageUrl, IsActive = _form.IsActive
-            };
-            await Api.UpdateEventAsync(_editingEvent.Id, dto);
-            Logger.LogInformation("Zaktualizowano bieg ID={Id}", _editingEvent.Id);
-            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Bieg zaktualizowany!", Duration = 3000 });
+            return;
         }
 
-        _showDialog = false;
-        await LoadEvents();
+        if (!ValidateForm())
+        {
+            return;
+        }
+
+        _saving = true;
+
+        try
+        {
+            if (_editingEvent == null)
+            {
+                var dto = new CreateEventDto
+                {
+                    Name = _form.Name!, Description = _form.Description ?? "", City = _form.City!, Location = _form.Location!,
+                    EventDate = _form.EventDate, RegistrationDeadline = _form.RegistrationDeadline,
+                    MaxParticipants = _form.MaxParticipants, EntryFee = _form.EntryFee, ImageUrl = _form.ImageUrl
+                };
+                await Api.CreateEventAsync(dto);
+                Logger.LogInformation("Utworzono nowy bieg: {Name}", dto.Name);
+                NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Bieg utworzony!", Duration = 3000 });
+            }
+            else
+            {
+                var dto = new UpdateEventDto
+                {
+                    Id = _editingEvent.Id, Name = _form.Name!, Description = _form.Description ?? "", City = _form.City!, Location = _form.Location!,
+                    EventDate = _form.EventDate, RegistrationDeadline = _form.RegistrationDeadline,
+                    MaxParticipants = _form.MaxParticipants, EntryFee = _form.EntryFee, ImageUrl = _form.ImageUrl, IsActive = _form.IsActive
+                };
+                await Api.UpdateEventAsync(_editingEvent.Id, dto);
+                Logger.LogInformation("Zaktualizowano bieg ID={Id}", _editingEvent.Id);
+                NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Bieg zaktualizowany!", Duration = 3000 });
+            }
+
+            _showDialog = false;
+            await LoadEvents();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Błąd zapisu biegu");
+            NotifySvc.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Error,
+                Summary = "Nie udało się zapisać biegu",
+                Detail = ex.Message,
+                Duration = 6000
+            });
+        }
+        finally
+        {
+            _saving = false;
+        }
     }
 
-    private void OnInvalidSubmit() =>
-        NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Wypełnij wszystkie wymagane pola", Duration = 3000 });
+    private bool ValidateForm()
+    {
+        if (string.IsNullOrWhiteSpace(_form.Name)
+            || string.IsNullOrWhiteSpace(_form.City)
+            || string.IsNullOrWhiteSpace(_form.Location)
+            || string.IsNullOrWhiteSpace(_form.Description))
+        {
+            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Wypełnij nazwę, miasto, lokalizację i opis", Duration = 4000 });
+            return false;
+        }
+
+        if (_form.EventDate <= DateTime.Now)
+        {
+            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Data biegu musi być w przyszłości", Duration = 4000 });
+            return false;
+        }
+
+        if (_form.RegistrationDeadline >= _form.EventDate)
+        {
+            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Termin zapisów musi być przed datą biegu", Duration = 4000 });
+            return false;
+        }
+
+        if (_form.MaxParticipants <= 0)
+        {
+            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Maksymalna liczba uczestników musi być większa od zera", Duration = 4000 });
+            return false;
+        }
+
+        if (_form.EntryFee < 0)
+        {
+            NotifySvc.Notify(new NotificationMessage { Severity = NotificationSeverity.Warning, Summary = "Opłata nie może być ujemna", Duration = 4000 });
+            return false;
+        }
+
+        return true;
+    }
+
+    private static int ParseInt(object? value, int fallback) =>
+        int.TryParse(Convert.ToString(value), out var result) ? result : fallback;
+
+    private static decimal ParseDecimal(object? value, decimal fallback)
+    {
+        var text = Convert.ToString(value);
+        return decimal.TryParse(text, System.Globalization.NumberStyles.Number, System.Globalization.CultureInfo.InvariantCulture, out var result)
+            || decimal.TryParse(text, out result)
+                ? result
+                : fallback;
+    }
 
     private async Task ConfirmDelete(EventDto ev)
     {

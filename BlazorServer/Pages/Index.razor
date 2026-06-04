@@ -56,19 +56,11 @@ else
                     }
                 </Template>
             </RadzenDataGridColumn>
-            <RadzenDataGridColumn TItem="EventDto" Title="Akcje" Width="120px" Sortable="false">
-                <Template Context="ev">
-                    <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Light" Size="ButtonSize.Small"
-                                  Click="@(() => Nav.NavigateTo($"/admin/events/edit/{ev.Id}"))" />
-                </Template>
-            </RadzenDataGridColumn>
         </Columns>
     </RadzenDataGrid>
 }
 
 @code {
-    [Inject] NavigationManager Nav { get; set; } = null!;
-
     private int _eventCount, _activeEventCount, _userCount, _upcomingCount;
     private List<EventDto> _upcomingEvents = new();
     private bool _loading = true;

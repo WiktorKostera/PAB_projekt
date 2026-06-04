@@ -34,7 +34,8 @@
                           OnDebounceIntervalElapsed="FilterEvents" />
         </MudItem>
         <MudItem xs="12" md="3">
-            <MudSelect T="string" Label="Miasto" @bind-Value="_selectedCity" AnchorOrigin="Origin.BottomLeft">
+            <MudSelect T="string" Value="_selectedCity" ValueChanged="OnCityChanged"
+                       Placeholder="Wszystkie miasta" AnchorOrigin="Origin.BottomLeft">
                 <MudSelectItem Value="@("")">Wszystkie miasta</MudSelectItem>
                 @foreach (var city in _cities)
                 {
@@ -43,7 +44,7 @@
             </MudSelect>
         </MudItem>
         <MudItem xs="12" md="3" Class="d-flex align-center">
-            <MudCheckBox @bind-Checked="_onlyActive" Label="Tylko aktywne" Color="Color.Primary" />
+            <MudCheckBox T="bool" Value="_onlyActive" ValueChanged="OnOnlyActiveChanged" Label="Tylko aktywne" Color="Color.Primary" />
         </MudItem>
     </MudGrid>
 </MudPaper>
@@ -128,7 +129,7 @@ else
         }
     </MudGrid>
     <MudText Typo="Typo.caption" Color="Color.Secondary" Class="mt-4 d-block text-center">
-        Wyświetlono @_filteredEvents.Count z @_allEvents.Count biegów
+        @GetCounterText()
     </MudText>
 }
 
@@ -151,6 +152,18 @@ else
 
     private void FilterEvents() => ApplyFilter();
 
+    private void OnCityChanged(string city)
+    {
+        _selectedCity = city;
+        ApplyFilter();
+    }
+
+    private void OnOnlyActiveChanged(bool onlyActive)
+    {
+        _onlyActive = onlyActive;
+        ApplyFilter();
+    }
+
     private static string GetImageUrl(string? imageUrl)
     {
         if (string.IsNullOrWhiteSpace(imageUrl))
@@ -168,6 +181,17 @@ else
 
     private static string FormatMoney(decimal amount) =>
         $"{amount:0.00}".Replace('.', ',') + " zł";
+
+    private string GetCounterText()
+    {
+        if (_onlyActive)
+        {
+            var activeCount = _allEvents.Count(e => e.IsActive);
+            return $"Wyświetlono {_filteredEvents.Count} z {activeCount} aktywnych biegów";
+        }
+
+        return $"Wyświetlono {_filteredEvents.Count} z {_allEvents.Count} biegów";
+    }
 
     private void ApplyFilter()
     {
